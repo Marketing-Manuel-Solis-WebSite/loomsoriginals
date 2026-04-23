@@ -27,13 +27,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title,
     description,
-    alternates: {
-      canonical,
-      languages: {
-        "es-US": canonical,
-        "en-US": `/en${canonical}`,
-      },
-    },
+    alternates: { canonical },
     openGraph: {
       type: "video.episode",
       title: `${title} — ${ep.series.title_es}`,
@@ -70,7 +64,7 @@ export default async function EpisodePage({ params }: { params: Params }) {
   const { slug, season, episodeSlug } = await params;
   const ep = await getEpisodeBySlug(slug, episodeSlug).catch(() => null);
   if (!ep) notFound();
-  const seasonNumber = parseInt(season, 10);
+  const seasonNumber = parseInt(String(season).replace(/^t/i, ""), 10);
   if (!Number.isFinite(seasonNumber) || seasonNumber !== ep.season.season_number) notFound();
 
   const [seriesDetail, related] = await Promise.all([

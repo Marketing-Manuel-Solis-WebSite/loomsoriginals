@@ -16,13 +16,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `${cat.name_es} — Loom Originals`,
     description: cat.description_es ?? undefined,
-    alternates: {
-      canonical: `/categorias/${cat.slug}`,
-      languages: {
-        "es-US": `/categorias/${cat.slug}`,
-        "en-US": `/en/categories/${cat.slug}`,
-      },
-    },
+    alternates: { canonical: `/categorias/${cat.slug}` },
   };
 }
 

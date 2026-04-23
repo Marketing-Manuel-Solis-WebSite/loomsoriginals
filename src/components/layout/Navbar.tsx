@@ -7,7 +7,7 @@ import { Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
-import { ButtonLink } from "@/components/ui/Button";
+import { AccountMenu } from "./AccountMenu";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -15,8 +15,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
 
-  const locale: "es" | "en" = pathname?.startsWith("/en") ? "en" : "es";
-  const links = NAV[locale];
+  const links = NAV.es;
 
   useEffect(() => {
     const sentinel = sentinelRef.current;
@@ -54,14 +53,14 @@ export function Navbar() {
       >
         <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-10">
           <div className="flex items-center gap-10">
-            <Link href={locale === "en" ? "/en" : "/"} className="shrink-0" aria-label="Loom Originals">
+            <Link href="/" className="shrink-0" aria-label="Loom Originals">
               <Logo subtitle />
             </Link>
             <nav aria-label="Navegación principal" className="hidden md:flex items-center gap-8">
               {links.map((link) => {
                 const active =
                   pathname === link.href ||
-                  (link.href !== "/" && link.href !== "/en" && pathname?.startsWith(link.href));
+                  (link.href !== "/" && pathname?.startsWith(link.href));
                 return (
                   <Link
                     key={link.href}
@@ -81,22 +80,14 @@ export function Navbar() {
             </nav>
           </div>
           <div className="flex items-center gap-2 md:gap-3">
-            <LocaleSwitcher locale={locale} pathname={pathname ?? "/"} />
             <Link
-              href={locale === "en" ? "/en/search" : "/buscar"}
+              href="/buscar"
               aria-label="Buscar"
               className="hidden sm:grid h-10 w-10 place-items-center rounded-full text-ivory-200 hover:text-gold-500 hover:bg-white/5 transition-colors"
             >
               <Search className="h-[18px] w-[18px]" />
             </Link>
-            <ButtonLink
-              href={locale === "en" ? "/en/login" : "/login"}
-              variant="ghost"
-              size="sm"
-              className="hidden md:inline-flex"
-            >
-              {locale === "en" ? "Sign in" : "Iniciar sesión"}
-            </ButtonLink>
+            <AccountMenu locale="es" />
             <button
               type="button"
               aria-label={open ? "Cerrar menú" : "Abrir menú"}
@@ -116,41 +107,9 @@ export function Navbar() {
         open={open}
         onClose={() => setOpen(false)}
         links={links}
-        locale={locale}
       />
       <div aria-hidden className="h-16" />
     </>
-  );
-}
-
-function LocaleSwitcher({ locale, pathname }: { locale: "es" | "en"; pathname: string }) {
-  const baseEn = pathname.startsWith("/en") ? pathname : `/en${pathname === "/" ? "" : pathname}`;
-  const baseEs = pathname.startsWith("/en") ? pathname.replace(/^\/en/, "") || "/" : pathname;
-  return (
-    <div
-      role="group"
-      aria-label="Cambiar idioma"
-      className="flex items-center gap-0.5 rounded-full border border-white/8 bg-white/[0.03] p-0.5 text-[11px] font-semibold uppercase tracking-[0.18em]"
-    >
-      <Link
-        href={baseEs}
-        className={cn(
-          "rounded-full px-2.5 py-1 transition-colors",
-          locale === "es" ? "bg-gold-500 text-navy-950" : "text-ivory-200 hover:text-ivory-50"
-        )}
-      >
-        ES
-      </Link>
-      <Link
-        href={baseEn}
-        className={cn(
-          "rounded-full px-2.5 py-1 transition-colors",
-          locale === "en" ? "bg-gold-500 text-navy-950" : "text-ivory-200 hover:text-ivory-50"
-        )}
-      >
-        EN
-      </Link>
-    </div>
   );
 }
 
@@ -159,13 +118,11 @@ function MobileMenu({
   open,
   onClose,
   links,
-  locale,
 }: {
   id: string;
   open: boolean;
   onClose: () => void;
   links: readonly { href: string; label: string }[];
-  locale: "es" | "en";
 }) {
   return (
     <div
@@ -196,11 +153,6 @@ function MobileMenu({
             </Link>
           ))}
         </nav>
-        <div className="mt-auto flex flex-col gap-3">
-          <ButtonLink href={locale === "en" ? "/en/login" : "/login"} variant="primary" size="lg">
-            {locale === "en" ? "Sign in" : "Iniciar sesión"}
-          </ButtonLink>
-        </div>
       </div>
     </div>
   );

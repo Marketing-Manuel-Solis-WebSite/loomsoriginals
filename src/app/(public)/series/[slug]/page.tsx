@@ -30,10 +30,6 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     description,
     alternates: {
       canonical: `/series/${series.slug}`,
-      languages: {
-        "es-US": `/series/${series.slug}`,
-        "en-US": `/en/series/${series.slug}`,
-      },
     },
     openGraph: {
       type: "video.tv_show",

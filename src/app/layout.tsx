@@ -68,11 +68,6 @@ export const metadata: Metadata = {
   formatDetection: { email: false, address: false, telephone: false },
   alternates: {
     canonical: "/",
-    languages: {
-      "es-US": "/",
-      "en-US": "/en",
-      "x-default": "/",
-    },
     types: {
       "application/rss+xml": [{ url: "/feed.xml", title: `${SITE.name} — RSS` }],
     },
@@ -80,7 +75,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_US",
-    alternateLocale: ["en_US"],
     url: SITE.url,
     siteName: SITE.name,
     title: `${SITE.name} — ${SITE.tagline}`,

@@ -38,7 +38,7 @@ export function WebSiteJsonLd() {
     "@type": "WebSite",
     name: SITE.name,
     url: SITE.url,
-    inLanguage: ["es-US", "en-US"],
+    inLanguage: ["es-US"],
     publisher: { "@type": "Organization", name: SITE.name },
     potentialAction: {
       "@type": "SearchAction",

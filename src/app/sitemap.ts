@@ -9,13 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = SITE.url;
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [
-    {
-      url: `${base}/`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 1,
-      alternates: { languages: { es: `${base}/`, en: `${base}/en` } },
-    },
+    { url: `${base}/`, lastModified: now, changeFrequency: "daily", priority: 1 },
     { url: `${base}/series`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/categorias`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/buscar`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
@@ -34,12 +28,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: now,
         changeFrequency: "weekly",
         priority: 0.85,
-        alternates: {
-          languages: {
-            es: `${base}/series/${s.slug}`,
-            en: `${base}/en/series/${s.slug}`,
-          },
-        },
       });
       const detail = await getSeriesBySlug(s.slug).catch(() => null);
       if (!detail) continue;
@@ -51,12 +39,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             lastModified: published,
             changeFrequency: "monthly",
             priority: 0.9,
-            alternates: {
-              languages: {
-                es: `${base}/series/${s.slug}/t${season.season_number}/${ep.slug}`,
-                en: `${base}/en/series/${s.slug}/t${season.season_number}/${ep.slug}`,
-              },
-            },
           });
         }
       }
