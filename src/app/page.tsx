@@ -1,65 +1,46 @@
-import Image from "next/image";
+import { Container } from "@/components/ui/Container";
+import { ButtonLink } from "@/components/ui/Button";
+import { ChevronRight } from "lucide-react";
+import { HomePage } from "@/components/home/HomePage";
+import { WebSiteJsonLd } from "@/components/seo/JsonLd";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <WebSiteJsonLd />
+      <HomePage />
+      <Container size="xl" className="py-24">
+        <div className="glass-strong relative overflow-hidden rounded-3xl px-8 py-16 sm:px-14 sm:py-20">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-gold-500/10 blur-3xl"
+          />
+          <div className="relative flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-500">
+                Consulta gratuita — Bufete Manuel Solís
+              </p>
+              <h2 className="mt-4 font-display text-3xl italic text-ivory-50 sm:text-5xl leading-tight text-balance">
+                ¿Necesita ayuda con su caso migratorio?
+              </h2>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-ivory-200/85 text-pretty">
+                Nuestro equipo ha representado a miles de familias en procesos de reunificación,
+                asilo, visas de trabajo y ciudadanía. Hable hoy con un abogado licenciado.
+              </p>
+            </div>
+            <ButtonLink
+              href="https://manuelsolis.com/consulta?utm_source=looms&utm_medium=cta-home&utm_campaign=consulta"
+              variant="primary"
+              size="lg"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Agende su consulta
+              <ChevronRight className="h-5 w-5" />
+            </ButtonLink>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </Container>
+    </>
   );
 }

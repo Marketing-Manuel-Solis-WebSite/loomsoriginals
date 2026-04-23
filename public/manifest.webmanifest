@@ -1,0 +1,17 @@
+{
+  "name": "Loom Originals",
+  "short_name": "Loom",
+  "description": "Historias que reúnen familias. Estudio editorial del Bufete Manuel Solís.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060f1f",
+  "theme_color": "#060f1f",
+  "lang": "es",
+  "dir": "ltr",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
