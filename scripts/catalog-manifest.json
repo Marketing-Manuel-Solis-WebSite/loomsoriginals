@@ -1,0 +1,3582 @@
+{
+  "series": {
+    "uniendo-familias-manuel-solis": {
+      "title_es": "Uniendo Familias con Manuel Solís",
+      "title_en": "Reuniting Families with Manuel Solís",
+      "synopsis_es": "Serie insignia de Loom Originals. Historias reales de familias que reconstruyeron su camino migratorio con el acompañamiento del Bufete Manuel Solís.",
+      "is_featured": true,
+      "featured_order": 1
+    },
+    "testimonios-reales": {
+      "title_es": "Testimonios Reales",
+      "title_en": "Real Testimonies",
+      "synopsis_es": "Clientes del Bufete Manuel Solís cuentan en primera persona cómo se transformaron sus vidas al obtener su residencia permanente, reunirse con sus familias o proteger sus derechos en Estados Unidos.",
+      "is_featured": false,
+      "featured_order": 2
+    },
+    "guia-migratoria": {
+      "title_es": "Guía Migratoria",
+      "title_en": "Immigration Guide",
+      "synopsis_es": "Cápsulas informativas sobre procesos migratorios — Visa T, Visa U, VAWA, SIJS, I-130, habeas corpus, defensa contra ICE y más. Presentadas por el equipo legal de Manuel Solís.",
+      "is_featured": false,
+      "featured_order": 3
+    },
+    "en-vivo": {
+      "title_es": "En Vivo y Podcasts",
+      "title_en": "Live & Podcasts",
+      "synopsis_es": "Sesiones en vivo, podcasts y entrevistas del Bufete Manuel Solís donde se responden dudas reales de la comunidad migrante.",
+      "is_featured": false,
+      "featured_order": 4
+    },
+    "el-bufete": {
+      "title_es": "El Bufete",
+      "title_en": "About the Firm",
+      "synopsis_es": "Conozca al equipo, la historia y los valores del Bufete Manuel Solís — 35 años acompañando a familias migrantes.",
+      "is_featured": false,
+      "featured_order": 5
+    },
+    "historias-cortas": {
+      "title_es": "Historias Cortas",
+      "title_en": "Short Stories",
+      "synopsis_es": "Momentos breves — frases, reflexiones y fragmentos del trabajo diario del Bufete Manuel Solís.",
+      "is_featured": false,
+      "featured_order": 6
+    }
+  },
+  "videos": [
+    {
+      "youtube_id": "s2jwy1VGnS8",
+      "series_slug": "guia-migratoria",
+      "slug": "tu-llamada-esta-en-camino-contesta-con-confianza",
+      "title": "¡Tu llamada está en camino! Contesta con confianza",
+      "duration_seconds": 147,
+      "published_at": null,
+      "episode_number": 1,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "biGYEynojJU",
+      "series_slug": "en-vivo",
+      "slug": "acompana-al-abogado-juan-solis-en-nuestro-live-arreglando-con-los-abogados-solis",
+      "title": "Acompaña al abogado Juan Solís en nuestro LIVE: 🎙️ Arreglando con los Abogados Solís",
+      "duration_seconds": 27,
+      "published_at": "2026-04-07T00:00:00",
+      "episode_number": 1,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "kxINo0mrpkY",
+      "series_slug": "testimonios-reales",
+      "slug": "pense-que-mi-caso-no-tenia-salida-hasta-que-por-fin-alguien-me-escucho-de-verdad",
+      "title": "Pensé que mi caso no tenía salida hasta que por fin alguien me escuchó de verdad. 🌟 #Greencard #USA",
+      "duration_seconds": 11,
+      "published_at": "2026-04-16T00:00:00",
+      "episode_number": 1,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "scd22DsVwuY",
+      "series_slug": "guia-migratoria",
+      "slug": "un-juez-federal-puede-intervenir-en-un-caso-de-inmigracion-abogadodeinmigracion",
+      "title": "¿Un juez federal puede intervenir en un caso de inmigración? #abogadodeinmigracion #habeascorpus",
+      "duration_seconds": 20,
+      "published_at": "2026-04-21T00:00:00",
+      "episode_number": 2,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "L_NvJt7smYE",
+      "series_slug": "testimonios-reales",
+      "slug": "ya-le-pagaste-a-un-abogado-y-tu-caso-de-inmigracion-quedo-en-el-aire-greencard-u",
+      "title": "¿Ya le pagaste a un abogado y tu caso de inmigración quedó en el aire? #greencard #usa",
+      "duration_seconds": 26,
+      "published_at": "2026-04-18T00:00:00",
+      "episode_number": 2,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "LfFDu3DIJBg",
+      "series_slug": "historias-cortas",
+      "slug": "pense-que-mi-caso-no-tenia-salida-hasta-que-por-fin-alguien-me-escucho-de-verdad",
+      "title": "Pensé que mi caso no tenía salida hasta que por fin alguien me escuchó de verdad. #inmigracion ✨",
+      "duration_seconds": 16,
+      "published_at": "2026-04-14T00:00:00",
+      "episode_number": 1,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "L_vhZLf4rj4",
+      "series_slug": "testimonios-reales",
+      "slug": "de-sonar-a-lograrlo-su-residencia-permanente-aprobada",
+      "title": "De soñar a lograrlo: su residencia permanente aprobada",
+      "duration_seconds": 29,
+      "published_at": "2026-04-10T00:00:00",
+      "episode_number": 3,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "ktYqaP6yTnM",
+      "series_slug": "guia-migratoria",
+      "slug": "un-familiar-fue-detenido-por-ice-y-no-sabes-que-hacer-habeascorpus-detencionmigr",
+      "title": "¿Un familiar fue detenido por ICE y no sabes qué hacer? #habeascorpus #detencionmigratoria",
+      "duration_seconds": 32,
+      "published_at": "2026-04-22T00:00:00",
+      "episode_number": 3,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "EZS5K6jq2fE",
+      "series_slug": "guia-migratoria",
+      "slug": "en-minutos-lo-perdiste-todo-por-las-tormentas-en-illinois-danosportormenta-illin",
+      "title": "¿En minutos lo perdiste todo por las tormentas en Illinois? 🌪️ #DañosPorTormenta #illinois",
+      "duration_seconds": 39,
+      "published_at": "2026-04-21T00:00:00",
+      "episode_number": 4,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "NY1kkrK3qQo",
+      "series_slug": "guia-migratoria",
+      "slug": "ranking-de-accidentes-de-auto-que-mas-terminan-en-demanda-en-ee-uu",
+      "title": "RANKING de accidentes de auto que MÁS terminan en demanda en EE.UU.",
+      "duration_seconds": 3403,
+      "published_at": "2026-04-23T00:00:00",
+      "episode_number": 5,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "_vamAVuzUcg",
+      "series_slug": "guia-migratoria",
+      "slug": "informate-deja-atras-los-mitos-y-empieza-a-tomar-el-control-de-tu-futuro",
+      "title": "Infórmate, deja atrás los mitos y empieza a tomar el control de tu futuro. ⭐️",
+      "duration_seconds": 72,
+      "published_at": "2026-04-15T00:00:00",
+      "episode_number": 6,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "v55ibHdc7L0",
+      "series_slug": "historias-cortas",
+      "slug": "30-anos-sin-ver-a-su-madre-hasta-este-momento-proximamente",
+      "title": "30 Años Sin Ver a Su Madre… Hasta Este Momento | Próximamente",
+      "duration_seconds": 42,
+      "published_at": "2026-03-24T00:00:00",
+      "episode_number": 2,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "5cmEmHdPApc",
+      "series_slug": "historias-cortas",
+      "slug": "estas-a-una-decision-de-estar-legalmente-preparado-ante-inmigracion",
+      "title": "🔐 Estás a una decisión de estar legalmente preparado ante inmigración",
+      "duration_seconds": 81,
+      "published_at": "2026-02-05T00:00:00",
+      "episode_number": 3,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "YAL-s5VwjJo",
+      "series_slug": "testimonios-reales",
+      "slug": "24-anos-lejos-de-su-familia-no-se-borran-facil-greencard-usa-residenciapermanent",
+      "title": "24 años lejos de su familia no se borran fácil. #Greencard #USA #residenciapermanente",
+      "duration_seconds": 17,
+      "published_at": "2026-04-17T00:00:00",
+      "episode_number": 4,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "2QJY36Sgxq8",
+      "series_slug": "testimonios-reales",
+      "slug": "te-imaginas-recibir-la-noticia-de-que-tu-residencia-permanente-fue-aprobada-gree",
+      "title": "¿Te imaginas recibir la noticia de que tu residencia permanente fue aprobada? ✅#greencard",
+      "duration_seconds": 10,
+      "published_at": "2026-04-21T00:00:00",
+      "episode_number": 5,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "Van5DNdqdMg",
+      "series_slug": "historias-cortas",
+      "slug": "lo-que-te-paso-en-el-hospital-no-siempre-fue-un-accidente-negligenciamedica-dere",
+      "title": "Lo que te pasó en el hospital no siempre fue un accidente. 🚨#negligenciamédica #derechosdelpaciente",
+      "duration_seconds": 21,
+      "published_at": "2026-04-20T00:00:00",
+      "episode_number": 4,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "zvFOREbQh-8",
+      "series_slug": "guia-migratoria",
+      "slug": "cambios-en-la-visa-t-que-debes-saber-en-2025",
+      "title": "¡Cambios en la Visa T que DEBES Saber en 2025!",
+      "duration_seconds": 45,
+      "published_at": "2025-04-14T00:00:00",
+      "episode_number": 7,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "xVnKPF2tKZs",
+      "series_slug": "testimonios-reales",
+      "slug": "crees-que-obtener-la-residencia-permanente-es-imposible-greencard-casodeexito",
+      "title": "¿Crees que obtener la residencia permanente es imposible? #greencard #casodeéxito",
+      "duration_seconds": 8,
+      "published_at": "2026-04-22T00:00:00",
+      "episode_number": 6,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "k7A-c5XX1WQ",
+      "series_slug": "guia-migratoria",
+      "slug": "errores-migratorios-que-inmigracion-no-te-perdona",
+      "title": "Errores migratorios que inmigración NO te perdona",
+      "duration_seconds": 3000,
+      "published_at": "2026-04-16T00:00:00",
+      "episode_number": 8,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "30mbJxZlD-c",
+      "series_slug": "guia-migratoria",
+      "slug": "formulario-g-28-tu-escudo-legal-en-inmigracion",
+      "title": "Formulario G-28: tu escudo legal en inmigración",
+      "duration_seconds": 58,
+      "published_at": "2025-12-10T00:00:00",
+      "episode_number": 9,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "4LO09FfDuto",
+      "series_slug": "testimonios-reales",
+      "slug": "official-teaser-2-uniendo-familias-con-manuel-solis-capitulo-2",
+      "title": "Official Teaser 2 — Uniendo Familias con Manuel Solís — Capitulo 2",
+      "duration_seconds": 83,
+      "published_at": "2026-03-29T00:00:00",
+      "episode_number": 7,
+      "categories": [
+        "reunificacion-familiar",
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "z2m1OmsJ8w0",
+      "series_slug": "testimonios-reales",
+      "slug": "todo-comenzo-con-una-decision-hoy-jesus-es-residente-permanente",
+      "title": "💭 Todo comenzó con una decisión… hoy Jesús es residente permanente",
+      "duration_seconds": 32,
+      "published_at": "2026-04-03T00:00:00",
+      "episode_number": 8,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "ifWPY6as5po",
+      "series_slug": "en-vivo",
+      "slug": "miercoles-15-de-abril-1-00pm",
+      "title": "🗓️Miércoles 15 de abril 1:00PM",
+      "duration_seconds": 26,
+      "published_at": "2026-04-13T00:00:00",
+      "episode_number": 2,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "fk2oTkAsjcM",
+      "series_slug": "testimonios-reales",
+      "slug": "no-te-pierdas-este-testimonio-que-podria-cambiar-tu-forma-de-ver-la-inmigracion",
+      "title": "No te pierdas este testimonio que podría cambiar tu forma de ver la inmigración.",
+      "duration_seconds": 17,
+      "published_at": "2026-04-08T00:00:00",
+      "episode_number": 9,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "fgrNfSQxoqI",
+      "series_slug": "guia-migratoria",
+      "slug": "que-pasa-si-usas-un-seguro-social-falso-en-ee-uu-inmigracion",
+      "title": "¿Qué pasa si usas un seguro social falso en EE.UU? #inmigración",
+      "duration_seconds": 31,
+      "published_at": "2025-05-18T00:00:00",
+      "episode_number": 10,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "upHytnoFgns",
+      "series_slug": "testimonios-reales",
+      "slug": "te-imaginas-recibir-la-noticia-que-cambia-tu-vida-hoy-me-aprobaron-mi-residencia",
+      "title": "¿Te imaginas recibir la noticia que cambia tu vida? “Hoy me aprobaron mi residencia.” 🙌 #greencard",
+      "duration_seconds": 27,
+      "published_at": "2026-04-19T00:00:00",
+      "episode_number": 10,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "3acnmVZ36a0",
+      "series_slug": "historias-cortas",
+      "slug": "lo-que-te-paso-puede-ayudarte-en-tu-caso-de-inmigracion-si-leiste-bien",
+      "title": "🚨 Lo que te pasó puede ayudarte en tu caso de inmigración. Sí, leíste bien.",
+      "duration_seconds": 92,
+      "published_at": "2026-04-16T00:00:00",
+      "episode_number": 5,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "e0xu5mj42cU",
+      "series_slug": "guia-migratoria",
+      "slug": "explosion-en-texas-que-derechos-tienes-si-una-empresa-pone-en-riesgo-tu-vida",
+      "title": "Explosión en Texas: ¿Qué derechos tienes si una empresa pone en riesgo tu vida?",
+      "duration_seconds": 2881,
+      "published_at": "2026-04-09T00:00:00",
+      "episode_number": 11,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "cCQ6-ByLyOA",
+      "series_slug": "testimonios-reales",
+      "slug": "caso-real-residencia-permanente-en-estados-unidos-historia-de-maria-lourdes",
+      "title": "🎯 Caso real: residencia permanente en Estados Unidos | Historia de María Lourdes",
+      "duration_seconds": 33,
+      "published_at": "2026-04-07T00:00:00",
+      "episode_number": 11,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "DOAU43YhKb4",
+      "series_slug": "guia-migratoria",
+      "slug": "descubre-los-requisitos-de-la-visa-vawa",
+      "title": "Descubre los requisitos de la visa #vawa 🇺🇸",
+      "duration_seconds": 42,
+      "published_at": "2024-08-06T00:00:00",
+      "episode_number": 12,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "Gfd2H4UQ7BQ",
+      "series_slug": "testimonios-reales",
+      "slug": "caso-real-como-ramiro-escobedo-obtuvo-su-residencia-permanente",
+      "title": "🎯 Caso real: cómo Ramiro Escobedo obtuvo su residencia permanente",
+      "duration_seconds": 29,
+      "published_at": "2026-04-05T00:00:00",
+      "episode_number": 12,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "8mc5NOGaxcE",
+      "series_slug": "guia-migratoria",
+      "slug": "sabias-que-existe-una-visa-en-estados-unidos-para-victimas-de-delitos",
+      "title": "🚨 ¿Sabías que existe una visa en Estados Unidos para víctimas de delitos?",
+      "duration_seconds": 69,
+      "published_at": "2026-04-06T00:00:00",
+      "episode_number": 13,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "52Ffs-M0u88",
+      "series_slug": "testimonios-reales",
+      "slug": "caso-real-visa-de-matrimonio-aprobada",
+      "title": "💍 Caso real: visa de matrimonio aprobada",
+      "duration_seconds": 34,
+      "published_at": "2026-04-13T00:00:00",
+      "episode_number": 13,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "-cWJ23wvij0",
+      "series_slug": "guia-migratoria",
+      "slug": "guia-rapida-para-localizar-a-un-familiar-detenido-por-ice",
+      "title": "Guía rápida para localizar a un familiar detenido por ICE",
+      "duration_seconds": 135,
+      "published_at": "2025-07-17T00:00:00",
+      "episode_number": 14,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "r2o_CvcX0no",
+      "series_slug": "guia-migratoria",
+      "slug": "sabias-que-puedes-obtener-estatus-legal-en-estados-unidos-sin-depender-de-tu-par",
+      "title": "¿Sabías que puedes obtener estatus legal en Estados Unidos sin depender de tu pareja?",
+      "duration_seconds": 92,
+      "published_at": "2026-04-13T00:00:00",
+      "episode_number": 15,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "iucbyf0t0sY",
+      "series_slug": "guia-migratoria",
+      "slug": "35-anos-de-experiencia-en-inmigracion-accidentes-y-negligencia-medica",
+      "title": "⭐ 35 años de experiencia en inmigración, accidentes y negligencia médica.",
+      "duration_seconds": 40,
+      "published_at": null,
+      "episode_number": 16,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "qbSnZXP_eDo",
+      "series_slug": "testimonios-reales",
+      "slug": "de-la-espera-al-alivio-la-historia-de-rosa-arredondo",
+      "title": "💭 De la espera al alivio: la historia de Rosa Arredondo",
+      "duration_seconds": 18,
+      "published_at": "2026-04-06T00:00:00",
+      "episode_number": 14,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "XRjJuABUyrk",
+      "series_slug": "testimonios-reales",
+      "slug": "llevas-anos-esperando-una-oportunidad-para-arreglar-tu-estatus-migratorio-greenc",
+      "title": "¿Llevas años esperando una oportunidad para arreglar tu estatus migratorio? #greencard #visa #usa",
+      "duration_seconds": 20,
+      "published_at": "2026-04-17T00:00:00",
+      "episode_number": 15,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "hGfA_pQ1SgU",
+      "series_slug": "testimonios-reales",
+      "slug": "hoy-ya-soy-residente-permanente-y-todo-valio-la-pena",
+      "title": "“Hoy ya soy residente permanente… y todo valió la pena.”",
+      "duration_seconds": 38,
+      "published_at": "2026-04-15T00:00:00",
+      "episode_number": 16,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "Bl3vYTcicV4",
+      "series_slug": "testimonios-reales",
+      "slug": "lo-que-hizo-jose-alvarado-para-obtener-su-residencia",
+      "title": "⚠️ Lo que hizo José Alvarado para obtener su residencia 🇺🇸",
+      "duration_seconds": 40,
+      "published_at": "2026-04-04T00:00:00",
+      "episode_number": 17,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "FHsS5H_M20M",
+      "series_slug": "guia-migratoria",
+      "slug": "ley-sijs-para-jovenes-informacion-del-abogado-manuel-solis",
+      "title": "Ley SIJS para jóvenes: información del Abogado Manuel Solís",
+      "duration_seconds": 84,
+      "published_at": "2025-12-01T00:00:00",
+      "episode_number": 17,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "T8nZpL3GmF4",
+      "series_slug": "testimonios-reales",
+      "slug": "caso-real-residencia-permanente-aprobada-senti-mucha-alegria-de-obtener-mi-resid",
+      "title": "Caso real: residencia permanente aprobada “Sentí mucha alegría de obtener mi residencia.” 🙌",
+      "duration_seconds": 41,
+      "published_at": "2026-04-02T00:00:00",
+      "episode_number": 18,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "mbuvf6QFNIs",
+      "series_slug": "testimonios-reales",
+      "slug": "penso-que-ese-momento-nunca-iba-a-llegar-despues-de-anos-de-distancia-todo-cambi",
+      "title": "Pensó que ese momento nunca iba a llegar… después de años de distancia, todo cambió.",
+      "duration_seconds": 30,
+      "published_at": "2026-04-07T00:00:00",
+      "episode_number": 19,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "unvcW6X5W-U",
+      "series_slug": "historias-cortas",
+      "slug": "ahora-podre-conseguir-un-mejor-empleo-y-estar-mas-tranquila-con-mi-familia",
+      "title": "💍 “Ahora podré conseguir un mejor empleo y estar más tranquila con mi familia.”",
+      "duration_seconds": 41,
+      "published_at": "2026-04-01T00:00:00",
+      "episode_number": 6,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "uhyaJ9vUFSU",
+      "series_slug": "guia-migratoria",
+      "slug": "puedes-solicitar-la-visa-t-abogado-responde-y-aclara-dudas-live",
+      "title": "¿Puedes solicitar la Visa T? Abogado responde y aclara dudas (LIVE)",
+      "duration_seconds": 2264,
+      "published_at": "2025-02-08T00:00:00",
+      "episode_number": 18,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "Xn0lrCXH2gI",
+      "series_slug": "guia-migratoria",
+      "slug": "que-es-la-visa-juvenil-sijs-y-como-te-beneficia",
+      "title": "¿Qué es la visa juvenil (SIJS) y cómo te beneficia?",
+      "duration_seconds": 62,
+      "published_at": "2025-04-23T00:00:00",
+      "episode_number": 19,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "wF_FX4m5ei8",
+      "series_slug": "testimonios-reales",
+      "slug": "caso-real-residencia-permanente-aprobada",
+      "title": "Caso real: ¡Residencia permanente aprobada! 🙌",
+      "duration_seconds": 23,
+      "published_at": "2026-04-09T00:00:00",
+      "episode_number": 20,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "9jKn_M3xuc0",
+      "series_slug": "testimonios-reales",
+      "slug": "kimberly-flores-comparte-su-experiencia-al-obtener-su-residencia-permanente-en-e",
+      "title": "Kimberly Flores comparte su experiencia al obtener su residencia permanente en Estados Unido",
+      "duration_seconds": 27,
+      "published_at": "2026-04-11T00:00:00",
+      "episode_number": 21,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "gWmzdAtzsmc",
+      "series_slug": "el-bufete",
+      "slug": "35-anos-de-experiencia-nos-respaldan-oficina-del-abogado-manuel-solis",
+      "title": "35 Años de Experiencia nos Respaldan - Oficina del Abogado Manuel Solís",
+      "duration_seconds": 46,
+      "published_at": null,
+      "episode_number": 1,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "cLpE_zM9BCI",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-rocio-davila-una-historia-que-inspira",
+      "title": "🎥 Reacción al testimonio de Rocío Dávila | Una historia que inspira",
+      "duration_seconds": 29,
+      "published_at": "2026-03-31T00:00:00",
+      "episode_number": 22,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "zoEvvBKfiJM",
+      "series_slug": "testimonios-reales",
+      "slug": "te-imaginas-pasar-de-ansiedad-y-el-miedo-a-escuchar-hoy-me-aprobaron-mi-residenc",
+      "title": "¿Te imaginas pasar de ansiedad y el miedo a escuchar: “Hoy me aprobaron mi residencia”? #greencard",
+      "duration_seconds": 19,
+      "published_at": "2026-04-20T00:00:00",
+      "episode_number": 23,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "6ClNA45Ky7M",
+      "series_slug": "testimonios-reales",
+      "slug": "la-historia-de-agustin-quiroz-cuando-decides-dar-el-primer-paso",
+      "title": "La historia de Agustín Quiroz: cuando decides dar el primer paso",
+      "duration_seconds": 142,
+      "published_at": "2026-03-31T00:00:00",
+      "episode_number": 24,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "_YtjKc_eVA4",
+      "series_slug": "el-bufete",
+      "slug": "manuel-solis-tu-equipo-legal-para-la-tranquilidad-migratoria",
+      "title": "Manuel Solís: tu equipo legal para la tranquilidad migratoria",
+      "duration_seconds": 123,
+      "published_at": "2026-01-30T00:00:00",
+      "episode_number": 2,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "tQgLR67ClTk",
+      "series_slug": "testimonios-reales",
+      "slug": "yaztiri-morales-comparte-su-experiencia-al-obtener-su-residencia-permanente-en-e",
+      "title": "Yaztiri Morales comparte su experiencia al obtener su residencia permanente en Estados Unidos",
+      "duration_seconds": 35,
+      "published_at": "2026-04-08T00:00:00",
+      "episode_number": 25,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "9SASYgZRkNU",
+      "series_slug": "en-vivo",
+      "slug": "consejos-con-el-abogado-manuel-solis",
+      "title": "Consejos con EL Abogado Manuel Solis",
+      "duration_seconds": 298,
+      "published_at": "2019-01-12T00:00:00",
+      "episode_number": 3,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "SRuxv3eZykk",
+      "series_slug": "guia-migratoria",
+      "slug": "explosion-en-texas-que-derechos-tienes-si-una-empresa-pone-en-riesgo-tu-vida-2",
+      "title": "Explosión en Texas: ¿Qué derechos tienes si una empresa pone en riesgo tu vida?",
+      "duration_seconds": 2339,
+      "published_at": "2026-04-02T00:00:00",
+      "episode_number": 20,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "sntlMia91N8",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-t-en-estados-unidos-lo-que-debes-saber-si-sufriste-explotacion-laboral",
+      "title": "Visa T en Estados Unidos: lo que debes saber si sufriste explotación laboral",
+      "duration_seconds": 171,
+      "published_at": "2025-09-08T00:00:00",
+      "episode_number": 21,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "RDce5PXMtbc",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-u-en-estados-unidos-que-es-y-como-puede-cambiar-tu-vida",
+      "title": "Visa U en Estados Unidos: qué es y cómo puede cambiar tu vida",
+      "duration_seconds": 177,
+      "published_at": "2025-09-08T00:00:00",
+      "episode_number": 22,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "VdPSFIJD8ZQ",
+      "series_slug": "guia-migratoria",
+      "slug": "recibo-abuso-financiero-y-emocional-aplico-para-vawa",
+      "title": "Recibo abuso financiero y emocional ¿aplico para VAWA?",
+      "duration_seconds": 44,
+      "published_at": "2024-07-16T00:00:00",
+      "episode_number": 23,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "xNvfV0pAtf8",
+      "series_slug": "guia-migratoria",
+      "slug": "verdad-o-mito-sobre-visas-humanitarias",
+      "title": "⚖️ ¿Verdad o mito sobre visas humanitarias?",
+      "duration_seconds": 68,
+      "published_at": "2026-04-08T00:00:00",
+      "episode_number": 24,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "MItukg4_DBc",
+      "series_slug": "testimonios-reales",
+      "slug": "el-abrazo-que-esperaron-decadas-uniendo-familias-con-manuel-solis",
+      "title": "El Abrazo Que Esperaron Décadas 💔➡️❤️ | Uniendo Familias con Manuel Solís",
+      "duration_seconds": 36,
+      "published_at": "2026-03-25T00:00:00",
+      "episode_number": 26,
+      "categories": [
+        "reunificacion-familiar",
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "2oJsA1hTvRU",
+      "series_slug": "guia-migratoria",
+      "slug": "te-citaron-a-corte-de-inmigracion-esto-es-lo-que-necesitas-saber",
+      "title": "¿Te citaron a corte de inmigración? Esto es lo que necesitas saber",
+      "duration_seconds": 52,
+      "published_at": "2025-12-15T00:00:00",
+      "episode_number": 25,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "dtKRXVMxcHU",
+      "series_slug": "testimonios-reales",
+      "slug": "despues-de-anos-en-ee-uu-por-fin-obtuvo-su-residencia-y-podra-ver-a-su-mama",
+      "title": "Después de años en EE.UU., por fin obtuvo su residencia y podrá ver a su mamá",
+      "duration_seconds": 206,
+      "published_at": "2025-06-24T00:00:00",
+      "episode_number": 27,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "xknt1jDXc7Q",
+      "series_slug": "historias-cortas",
+      "slug": "proximamente-lo-que-vivio-podria-pasarle-a-cualquiera",
+      "title": "🚨 PROXIMAMENTE 🚨 Lo que vivió… podría pasarle a cualquiera. 💔",
+      "duration_seconds": 15,
+      "published_at": "2026-04-10T00:00:00",
+      "episode_number": 7,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "IWXhvEEGFqw",
+      "series_slug": "el-bufete",
+      "slug": "por-que-recomiendan-al-abogado-manuel-solis-parte-1",
+      "title": "¿Por qué recomiendan al abogado Manuel Solís? Parte 1",
+      "duration_seconds": 33,
+      "published_at": "2025-07-02T00:00:00",
+      "episode_number": 3,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Kkdb9rOFcI4",
+      "series_slug": "guia-migratoria",
+      "slug": "live-podcast-i-abogado-civil-todo-lo-que-necesita-saber",
+      "title": "Live Podcast I Abogado Civil: Todo lo que necesita saber",
+      "duration_seconds": 2286,
+      "published_at": "2024-09-27T00:00:00",
+      "episode_number": 26,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Rn8zcXfzl7U",
+      "series_slug": "guia-migratoria",
+      "slug": "quieres-arreglar-tu-estatus-migratorio",
+      "title": "¿Quieres arreglar tu estatus migratorio?",
+      "duration_seconds": 20,
+      "published_at": "2024-07-12T00:00:00",
+      "episode_number": 27,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "kCQ2VElEQ2A",
+      "series_slug": "en-vivo",
+      "slug": "consejos-con-el-abogado-manuel-solis-2",
+      "title": "Consejos con EL Abogado Manuel Solis",
+      "duration_seconds": 31,
+      "published_at": "2026-03-23T00:00:00",
+      "episode_number": 4,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "qnEwI-f53Bc",
+      "series_slug": "guia-migratoria",
+      "slug": "ice-detuvo-a-tu-familiar-lo-que-debes-saber-ahora",
+      "title": "ICE detuvo a tu familiar: lo que debes saber ahora",
+      "duration_seconds": 25,
+      "published_at": "2026-03-20T00:00:00",
+      "episode_number": 28,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "3Uo_pd_yrWQ",
+      "series_slug": "guia-migratoria",
+      "slug": "beneficios-de-la-visa-t-que-no-conocias",
+      "title": "Beneficios de la Visa T que no conocías",
+      "duration_seconds": 80,
+      "published_at": "2025-04-16T00:00:00",
+      "episode_number": 29,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "4w6z62MrhnM",
+      "series_slug": "testimonios-reales",
+      "slug": "testimonio-real-como-la-visa-vawa-puede-cambiar-una-vida",
+      "title": "💙 Testimonio real: cómo la Visa VAWA puede cambiar una vida",
+      "duration_seconds": 25,
+      "published_at": "2025-10-10T00:00:00",
+      "episode_number": 28,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "MEEGRayQfuk",
+      "series_slug": "guia-migratoria",
+      "slug": "accidentes-automovilisticos-lo-que-debes-saber-para-proteger-tus-derechos",
+      "title": "Accidentes automovilísticos: lo que debes saber para proteger tus derechos",
+      "duration_seconds": 59,
+      "published_at": "2026-03-30T00:00:00",
+      "episode_number": 30,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "V4aK8ypx9Tg",
+      "series_slug": "en-vivo",
+      "slug": "abogados-de-inmigracion-manuel-solis-despierta-houston-tv",
+      "title": "Abogados de Inmigración Manuel Solis - Despierta Houston (TV)",
+      "duration_seconds": 31,
+      "published_at": "2018-12-13T00:00:00",
+      "episode_number": 5,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "cWRQri-qCu0",
+      "series_slug": "testimonios-reales",
+      "slug": "te-imaginas-todo-lo-que-puede-cambiar-cuando-aprueban-tu-residencia-permanente-r",
+      "title": "¿Te imaginas todo lo que puede cambiar cuando aprueban tu residencia permanente? ✅\n\n \n\nRosa Arre",
+      "duration_seconds": 2,
+      "published_at": "2026-04-21T00:00:00",
+      "episode_number": 29,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "n0RkYpjOZ44",
+      "series_slug": "guia-migratoria",
+      "slug": "si-hoy-el-ice-detuviera-a-alguien-de-tu-familia-sabrias-que-hacer-ice-habeascorp",
+      "title": "¿Si hoy el ICE detuviera a alguien de tu familia… sabrías qué hacer? 🚨#ice #habeascorpus",
+      "duration_seconds": 15,
+      "published_at": "2026-04-20T00:00:00",
+      "episode_number": 31,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "qsXBDYk6j3Y",
+      "series_slug": "el-bufete",
+      "slug": "confia-en-el-bufete-de-abogados-manuel-solis-inmigracion",
+      "title": "Confía en El Bufete de Abogados Manuel Solis #inmigracion",
+      "duration_seconds": 19,
+      "published_at": "2025-03-31T00:00:00",
+      "episode_number": 4,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "uVIyX1KtTwY",
+      "series_slug": "guia-migratoria",
+      "slug": "si-ya-tienes-la-visa-t-podrias-solicitar-un-permiso-de-trabajo-en-ee-uu",
+      "title": "Si ya tienes la Visa T, podrías solicitar un permiso de trabajo en EE.UU",
+      "duration_seconds": 49,
+      "published_at": "2025-04-19T00:00:00",
+      "episode_number": 32,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "z2_2qClA1P8",
+      "series_slug": "testimonios-reales",
+      "slug": "el-reencuentro-despues-de-30-anos-teaser-oficial-uniendo-familias-con-manuel-sol",
+      "title": "El Reencuentro Después de 30 Años | Teaser Oficial — Uniendo Familias con Manuel Solís PE. 2",
+      "duration_seconds": 65,
+      "published_at": "2026-03-26T00:00:00",
+      "episode_number": 30,
+      "categories": [
+        "reunificacion-familiar",
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "CN84hQPkc0U",
+      "series_slug": "guia-migratoria",
+      "slug": "calificas-para-el-estatus-de-inmigrante-juvenil-especial-sijs",
+      "title": "¿Calificas para el Estatus de Inmigrante Juvenil Especial (SIJS)?",
+      "duration_seconds": 76,
+      "published_at": "2025-04-30T00:00:00",
+      "episode_number": 33,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "dRr_bhpEaIU",
+      "series_slug": "guia-migratoria",
+      "slug": "en-vivo-boletin-informativo-que-pasa-si-me-estampan-una-i-275",
+      "title": "¡EN VIVO! Boletín informativo: ¿Qué pasa si me estampan una I-275?",
+      "duration_seconds": 54,
+      "published_at": "2016-04-05T00:00:00",
+      "episode_number": 34,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "oNrV9TByRPE",
+      "series_slug": "guia-migratoria",
+      "slug": "si-tienes-un-familiar-militar-esto-te-puede-dar-estatus-legal",
+      "title": "Si tienes un familiar militar… esto te puede dar estatus legal.",
+      "duration_seconds": 40,
+      "published_at": "2025-11-25T00:00:00",
+      "episode_number": 35,
+      "categories": [
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "qccZRhenvfA",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-e-2-evita-errores-en-tu-proceso",
+      "title": "⚠️ Visa E-2: evita errores en tu proceso",
+      "duration_seconds": 50,
+      "published_at": "2026-04-03T00:00:00",
+      "episode_number": 36,
+      "categories": [
+        "visas-de-trabajo"
+      ]
+    },
+    {
+      "youtube_id": "uvL7g_jIA8o",
+      "series_slug": "guia-migratoria",
+      "slug": "arregle-con-la-visa-t",
+      "title": "¡Arregle con la Visa T!",
+      "duration_seconds": 58,
+      "published_at": "2024-10-29T00:00:00",
+      "episode_number": 37,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "wMTrmF0rOSE",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-t-lo-que-debes-saber-sobre-este-beneficio-migratorio",
+      "title": "Visa T: lo que debes saber sobre este beneficio migratorio",
+      "duration_seconds": 77,
+      "published_at": "2026-03-25T00:00:00",
+      "episode_number": 38,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "BSBGzrEwOsI",
+      "series_slug": "guia-migratoria",
+      "slug": "reaccion-a-dramatizacion-una-historia-que-invita-a-reflexionar",
+      "title": "🎥 Reacción a dramatización: una historia que invita a reflexionar",
+      "duration_seconds": 152,
+      "published_at": "2026-03-27T00:00:00",
+      "episode_number": 39,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "I_izmKcEgS8",
+      "series_slug": "guia-migratoria",
+      "slug": "puedo-arreglar-mi-situacion-migratoria-abogado-manuel-solis-analiza-casos-en-viv",
+      "title": "¿Puedo arreglar mi situación migratoria? Abogado Manuel Solis analiza casos en vivo (LIVE)",
+      "duration_seconds": 1408,
+      "published_at": "2018-12-28T00:00:00",
+      "episode_number": 40,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "J0vWmYvXJL4",
+      "series_slug": "guia-migratoria",
+      "slug": "invertir-y-emprender-en-ee-uu-una-oportunidad-que-muchos-estan-explorando",
+      "title": "Invertir y emprender en EE.UU.: una oportunidad que muchos están explorando",
+      "duration_seconds": 30,
+      "published_at": "2026-03-30T00:00:00",
+      "episode_number": 41,
+      "categories": [
+        "visas-de-trabajo"
+      ]
+    },
+    {
+      "youtube_id": "VSB6kuBQ7PI",
+      "series_slug": "guia-migratoria",
+      "slug": "conoce-mas-sobre-la-visa-u",
+      "title": "Conoce más sobre la Visa U",
+      "duration_seconds": 39,
+      "published_at": "2024-07-18T00:00:00",
+      "episode_number": 42,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "XnV8pF9Grzs",
+      "series_slug": "historias-cortas",
+      "slug": "la-obligaron-a-trabajar-sin-descanso-pero-un-dia-todo-cambio-gracias-a-esta-visa",
+      "title": "😱 La obligaron a trabajar sin descanso… pero un día todo cambió gracias a esta visa 💥",
+      "duration_seconds": 407,
+      "published_at": "2026-01-24T00:00:00",
+      "episode_number": 8,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "tilRNNZTs5s",
+      "series_slug": "historias-cortas",
+      "slug": "tu-ser-querido-fue-detenido-por-inmigracion-y-no-sabes-donde-esta",
+      "title": "¿Tu ser querido fue detenido por inmigración y no sabes dónde está?",
+      "duration_seconds": 36,
+      "published_at": "2025-09-24T00:00:00",
+      "episode_number": 9,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "x66wc8da-A0",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-francisco-corral-una-historia-que-inspira",
+      "title": "Reacción al testimonio de Francisco Corral | Una historia que inspira",
+      "duration_seconds": 27,
+      "published_at": "2026-03-29T00:00:00",
+      "episode_number": 31,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "1CngDZCxuQ4",
+      "series_slug": "en-vivo",
+      "slug": "consejos-con-el-abogado-manuel-solis-3",
+      "title": "Consejos con EL Abogado Manuel Solis",
+      "duration_seconds": 1712,
+      "published_at": "2020-12-18T00:00:00",
+      "episode_number": 6,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "3LrABt_WvRs",
+      "series_slug": "guia-migratoria",
+      "slug": "accidentes-automovilisticos-lo-que-debes-saber-live-con-el-abogado-juan-solis",
+      "title": "🎥 Accidentes automovilísticos: lo que debes saber (Live con el Abogado Juan Solís)",
+      "duration_seconds": 34,
+      "published_at": "2026-03-09T00:00:00",
+      "episode_number": 43,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "3ho-HzWbBnY",
+      "series_slug": "historias-cortas",
+      "slug": "abogado-de-inmigracion-vs-notario-publico-la-diferencia-que-podria-cambiar-tu-fu",
+      "title": "⚠️ Abogado de inmigración vs. Notario Público: la diferencia que podría cambiar tu futuro legal",
+      "duration_seconds": 225,
+      "published_at": "2025-09-17T00:00:00",
+      "episode_number": 10,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "EqgAW4okpLs",
+      "series_slug": "testimonios-reales",
+      "slug": "de-la-incertidumbre-a-la-tranquilidad-la-historia-de-alicia-y-mauro",
+      "title": "🎥 De la incertidumbre a la tranquilidad: la historia de Alicia y Mauro",
+      "duration_seconds": 216,
+      "published_at": "2026-03-17T00:00:00",
+      "episode_number": 32,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "L-H3DIXILv8",
+      "series_slug": "testimonios-reales",
+      "slug": "no-dejo-que-el-miedo-decidiera-su-futuro-migratorio-maria-lourdes-hoy-comparte-u",
+      "title": "No dejó que el miedo decidiera su futuro migratorio.\nMaría Lourdes hoy comparte una de las mayores",
+      "duration_seconds": 15,
+      "published_at": "2026-04-18T00:00:00",
+      "episode_number": 33,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "O1b1zwhHkXk",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-t-una-opcion-legal-que-podria-cambiar-tu-situacion",
+      "title": "Visa T: una opción legal que podría cambiar tu situación",
+      "duration_seconds": 115,
+      "published_at": "2026-03-25T00:00:00",
+      "episode_number": 44,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "Uq4gDkbYQoM",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-juvenil-sijs-lo-que-muchos-padres-desconocen",
+      "title": "🎥 Visa Juvenil (SIJS): lo que muchos padres desconocen",
+      "duration_seconds": 21,
+      "published_at": "2026-03-06T00:00:00",
+      "episode_number": 45,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "YqqqhYW95fY",
+      "series_slug": "historias-cortas",
+      "slug": "por-que-elegir-las-oficinas-legales-de-manuel-solis",
+      "title": "¿Por que elegir las oficinas legales de Manuel Solis?",
+      "duration_seconds": 9,
+      "published_at": "2024-09-30T00:00:00",
+      "episode_number": 11,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "aRcufgmBHpk",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-vanessa-diaz-una-historia-que-inspira",
+      "title": "Reacción al testimonio de Vanessa Díaz | Una historia que inspira",
+      "duration_seconds": 43,
+      "published_at": "2026-03-27T00:00:00",
+      "episode_number": 34,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "eFCAZ6NsZ_w",
+      "series_slug": "guia-migratoria",
+      "slug": "quiere-aplicar-para-la-visa-u",
+      "title": "¿Quiere aplicar para la visa U? 🇺🇸",
+      "duration_seconds": 32,
+      "published_at": "2024-10-09T00:00:00",
+      "episode_number": 46,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "pK9CDAlxTdY",
+      "series_slug": "guia-migratoria",
+      "slug": "accidentes-automovilisticos-lo-que-debes-saber-para-proteger-tus-derechos-2",
+      "title": "Accidentes automovilísticos: lo que debes saber para proteger tus derechos",
+      "duration_seconds": 80,
+      "published_at": "2026-03-27T00:00:00",
+      "episode_number": 47,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "sol8nG9_8ck",
+      "series_slug": "historias-cortas",
+      "slug": "cuatro-abogados-les-dijeron-que-no-hasta-que-alguien-creyo-en-ellos",
+      "title": "💔 “Cuatro abogados les dijeron que no… hasta que alguien creyó en ellos” 💙",
+      "duration_seconds": 686,
+      "published_at": "2026-01-31T00:00:00",
+      "episode_number": 12,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "y5BwL3Owhzg",
+      "series_slug": "testimonios-reales",
+      "slug": "ellos-lograron-su-residencia-aprobada-en-ee-uu-tu-tambien-podrias-lograrlo",
+      "title": "Ellos lograron su residencia aprobada en EE.UU, ¡tú también podrías lograrlo!",
+      "duration_seconds": 453,
+      "published_at": "2025-05-21T00:00:00",
+      "episode_number": 35,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "-htNShqnutI",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-margarita-rios-una-historia-que-inspira",
+      "title": "Reacción al testimonio de Margarita Ríos | Una historia que inspira",
+      "duration_seconds": 28,
+      "published_at": "2026-03-28T00:00:00",
+      "episode_number": 36,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "-o2UD1voQ9k",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-testimonio-real",
+      "title": "Residencia Permanente | Testimonio Real",
+      "duration_seconds": 38,
+      "published_at": "2026-01-22T00:00:00",
+      "episode_number": 37,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "0Fry2AeAx_0",
+      "series_slug": "guia-migratoria",
+      "slug": "accidentes-automovilisticos-lo-que-debes-saber-para-proteger-tus-derechos-3",
+      "title": "Accidentes automovilísticos: lo que debes saber para proteger tus derechos",
+      "duration_seconds": 44,
+      "published_at": "2026-03-23T00:00:00",
+      "episode_number": 48,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "1Q8ovhUKH2E",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-preguntas-y-respuestas-sobre-peticion-y-el-programa-roi",
+      "title": "¡EN VIVO! Preguntas y respuestas sobre petición y el programa ROI.",
+      "duration_seconds": 595,
+      "published_at": "2019-01-20T00:00:00",
+      "episode_number": 7,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "2qcFfxEpBp4",
+      "series_slug": "historias-cortas",
+      "slug": "consecuencias-de-manejar-en-estado-de-ebriedad",
+      "title": "Consecuencias de manejar en estado de ebriedad",
+      "duration_seconds": 35,
+      "published_at": "2019-01-07T00:00:00",
+      "episode_number": 13,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "3m9xqyx_OKM",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-u-vs-vawa-la-diferencia-que-puede-definir-tu-estatus",
+      "title": "🚨 Visa U vs VAWA: La diferencia que puede definir tu estatus",
+      "duration_seconds": 187,
+      "published_at": "2026-03-11T00:00:00",
+      "episode_number": 49,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "6x_D4FKV698",
+      "series_slug": "historias-cortas",
+      "slug": "corte-migratoria-sin-abogado-posibles-soluciones-que-debes-conocer",
+      "title": "Corte migratoria sin abogado: posibles soluciones que debes conocer",
+      "duration_seconds": 46,
+      "published_at": "2026-03-18T00:00:00",
+      "episode_number": 14,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "8HrcTpmc54g",
+      "series_slug": "historias-cortas",
+      "slug": "su-coyote-lo-traiciono-al-cruzar-la-frontera",
+      "title": "¿Su coyote lo traicionó al cruzar la frontera?",
+      "duration_seconds": 21,
+      "published_at": "2024-10-17T00:00:00",
+      "episode_number": 15,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "97vvtvhvIK8",
+      "series_slug": "historias-cortas",
+      "slug": "victima-de-extorsion",
+      "title": "¿Víctima de extorsión? 🤔",
+      "duration_seconds": 21,
+      "published_at": "2024-08-26T00:00:00",
+      "episode_number": 16,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Bl8jho3CNSc",
+      "series_slug": "historias-cortas",
+      "slug": "mujer-descubre-que-sufre-4bus0-psicologico-por-parte-de-su-pareja",
+      "title": "Mujer descubre que sufre 4bus0 psicológico por parte de su pareja 🤵‍♂️",
+      "duration_seconds": 97,
+      "published_at": "2024-10-11T00:00:00",
+      "episode_number": 17,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "BoOja07co4s",
+      "series_slug": "testimonios-reales",
+      "slug": "el-testimonio-de-hilda-andrade-una-historia-que-inspira",
+      "title": "El testimonio de Hilda Andrade | Una historia que inspira",
+      "duration_seconds": 68,
+      "published_at": "2026-03-21T00:00:00",
+      "episode_number": 38,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "Cbw0W_4UMt8",
+      "series_slug": "testimonios-reales",
+      "slug": "el-testimonio-de-rocio-davila-una-historia-que-inspira",
+      "title": "El testimonio de Rocío Dávila | Una historia que inspira",
+      "duration_seconds": 29,
+      "published_at": "2026-03-19T00:00:00",
+      "episode_number": 39,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "CgKjyGB8EL0",
+      "series_slug": "guia-migratoria",
+      "slug": "casos-en-corte-de-inmigracion-responde-el-abogado-solis-iii",
+      "title": "Casos en Corte de Inmigración – Responde el Abogado Solís III",
+      "duration_seconds": 2826,
+      "published_at": "2025-07-23T00:00:00",
+      "episode_number": 50,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "EWaVqD7jlRM",
+      "series_slug": "historias-cortas",
+      "slug": "estas-considerando-pedir-asilo-politico-en-ee-uu",
+      "title": "¿Estás considerando pedir asilo político en EE.UU.?",
+      "duration_seconds": 136,
+      "published_at": "2025-09-29T00:00:00",
+      "episode_number": 18,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "H71OwoAucDg",
+      "series_slug": "historias-cortas",
+      "slug": "esta-sufriendo-de-violencia-domestica",
+      "title": "¿Esta sufriendo de violencia domestica? 😢",
+      "duration_seconds": 23,
+      "published_at": "2024-09-20T00:00:00",
+      "episode_number": 19,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "ISZhP5M-MyU",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-aprobada-en-ee-uu-historias-reales-resultados-reales",
+      "title": "Residencia aprobada en EE.UU.: historias reales, resultados reales 🇺🇸",
+      "duration_seconds": 27,
+      "published_at": null,
+      "episode_number": 40,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "Ne6oFWu2bkI",
+      "series_slug": "guia-migratoria",
+      "slug": "necesitas-abogado-para-tu-corte-de-inmigracion-esto-debes-saber",
+      "title": "¿Necesitas abogado para tu corte de inmigración? Esto debes saber",
+      "duration_seconds": 45,
+      "published_at": "2025-12-16T00:00:00",
+      "episode_number": 51,
+      "categories": [
+        "deportacion"
+      ]
+    },
+    {
+      "youtube_id": "NeITdhPg7xs",
+      "series_slug": "el-bufete",
+      "slug": "por-que-recomiendan-al-abogado-manuel-solis-parte-3",
+      "title": "¿Por qué recomiendan al abogado Manuel Solís? Parte 3",
+      "duration_seconds": 25,
+      "published_at": "2025-07-10T00:00:00",
+      "episode_number": 5,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "QXOZHRpSjSA",
+      "series_slug": "testimonios-reales",
+      "slug": "despues-de-anos-de-espera-al-fin-obtuve-mi-residencia-en-ee-uu",
+      "title": "¡Después de años de espera, al fin obtuve mi residencia en EE.UU.! ✅",
+      "duration_seconds": 152,
+      "published_at": "2025-03-21T00:00:00",
+      "episode_number": 41,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "SFocXZG8KM8",
+      "series_slug": "historias-cortas",
+      "slug": "485016-epimaco-garcia-036",
+      "title": "485016 Epimaco García #036",
+      "duration_seconds": 82,
+      "published_at": "2021-12-14T00:00:00",
+      "episode_number": 20,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "T8qhJqKH0Mk",
+      "series_slug": "historias-cortas",
+      "slug": "el-error-que-mas-afecta-tu-proceso-migratorio",
+      "title": "El error que más afecta tu proceso migratorio",
+      "duration_seconds": 24,
+      "published_at": "2025-12-07T00:00:00",
+      "episode_number": 21,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "U3OBkQHKn54",
+      "series_slug": "testimonios-reales",
+      "slug": "el-testimonio-de-maria-romero-una-historia-de-esperanza",
+      "title": "El testimonio de María Romero | Una historia de esperanza",
+      "duration_seconds": 31,
+      "published_at": "2026-03-20T00:00:00",
+      "episode_number": 42,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "UUC7IDbdKqg",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-mi-cunado-se-esta-retirando-y-estaba-usando-mi-seguro-que-hago-durante-l",
+      "title": "¡EN VIVO! Mi cuñado se esta retirando y estaba usando mi seguro. ¿Que hago durante la investigación?",
+      "duration_seconds": 285,
+      "published_at": "2016-03-03T00:00:00",
+      "episode_number": 8,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "YDCTlhw9RLk",
+      "series_slug": "guia-migratoria",
+      "slug": "eres-elegible-para-una-visa-humanitaria",
+      "title": "¿Eres elegible para una visa humanitaria?",
+      "duration_seconds": 32,
+      "published_at": "2025-04-21T00:00:00",
+      "episode_number": 52,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "_SLX8fKp72c",
+      "series_slug": "historias-cortas",
+      "slug": "lo-que-debes-saber-antes-de-solicitar-asilo",
+      "title": "Lo que debes saber antes de solicitar asilo ✨",
+      "duration_seconds": 31,
+      "published_at": "2025-12-10T00:00:00",
+      "episode_number": 22,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "_hhwX7Jbtb8",
+      "series_slug": "historias-cortas",
+      "slug": "te-pueden-demandar-por-esto-casos-que-te-sorprenderan",
+      "title": "¿Te pueden demandar por esto? Casos que te sorprenderán",
+      "duration_seconds": 3265,
+      "published_at": "2026-03-26T00:00:00",
+      "episode_number": 23,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "dVsMOcEdebU",
+      "series_slug": "historias-cortas",
+      "slug": "empleado-llega-tarde-a-laborar-y-patron-le-da-sabio-consejo",
+      "title": "Empleado llega tarde a laborar y patron le da sabio consejo 🇺🇸🚙",
+      "duration_seconds": 35,
+      "published_at": "2024-10-04T00:00:00",
+      "episode_number": 24,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "fSTdXbCnLJU",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-abogado-manuel-solis-sirviendo-la-comunidad-desde-1990-40-000-casos-gana",
+      "title": "¡EN VIVO! Abogado Manuel Solís sirviendo la comunidad desde 1990. ¡40,000 casos ganados!",
+      "duration_seconds": 779,
+      "published_at": "2016-02-16T00:00:00",
+      "episode_number": 9,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "gMRUoaQqgMM",
+      "series_slug": "testimonios-reales",
+      "slug": "familias-reunidas-confia-en-los-abogados-manuel-solis-inmigracion-greencard",
+      "title": "¡Familias reunidas! 🇺🇸 Confía en los Abogados Manuel Solis #inmigracion #greencard",
+      "duration_seconds": 18,
+      "published_at": "2025-03-26T00:00:00",
+      "episode_number": 43,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "gq4BKHPefCE",
+      "series_slug": "historias-cortas",
+      "slug": "agradecimientos-a-irma-y-a-los-abogados-manuel-solis",
+      "title": "Agradecimientos a Irma y a los Abogados Manuel Solís",
+      "duration_seconds": 99,
+      "published_at": "2019-01-30T00:00:00",
+      "episode_number": 25,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "kT9ZXCFW5KM",
+      "series_slug": "testimonios-reales",
+      "slug": "despues-de-anos-separadas-su-hija-la-pidio-y-logro-la-residencia-en-ee-uu",
+      "title": "Después de años separadas, su hija la pidió y logró la residencia en EE.UU. 🇺🇸",
+      "duration_seconds": 149,
+      "published_at": "2025-04-25T00:00:00",
+      "episode_number": 44,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "lJKswyLs9Fs",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-stephanie-gonzalez-una-historia-que-inspira",
+      "title": "🎥 Reacción al testimonio de Stephanie González | Una historia que inspira",
+      "duration_seconds": 26,
+      "published_at": "2026-03-30T00:00:00",
+      "episode_number": 45,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "lQSeBjI5E3w",
+      "series_slug": "guia-migratoria",
+      "slug": "enfrentas-deportacion-conoce-tus-opciones-de-estatus-migratorio-en-estados-unido",
+      "title": "¿Enfrentas deportación? Conoce tus opciones de estatus migratorio en Estados Unidos (LIVE)",
+      "duration_seconds": 2612,
+      "published_at": "2025-02-18T00:00:00",
+      "episode_number": 53,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "n5nzkgBDUEE",
+      "series_slug": "historias-cortas",
+      "slug": "quien-paga-los-danos-lo-que-inquilinos-y-propietarios-deben-saber",
+      "title": "🎥 ¿Quién paga los daños? Lo que inquilinos y propietarios deben saber",
+      "duration_seconds": 51,
+      "published_at": "2026-03-06T00:00:00",
+      "episode_number": 26,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "nheOQP_ifgw",
+      "series_slug": "historias-cortas",
+      "slug": "dac001-shalom-rodriguez-019",
+      "title": "DAC001 Shalom Rodriguez #019",
+      "duration_seconds": 406,
+      "published_at": "2021-12-14T00:00:00",
+      "episode_number": 27,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "ntd8_3nbe1s",
+      "series_slug": "historias-cortas",
+      "slug": "5-senales-de-que-tu-abogado-de-inmigracion-es-confiable",
+      "title": "5 señales de que tu abogado de inmigración es confiable",
+      "duration_seconds": 105,
+      "published_at": "2025-06-17T00:00:00",
+      "episode_number": 28,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "nv2RsttrdaQ",
+      "series_slug": "guia-migratoria",
+      "slug": "lo-que-debes-saber-sobre-visa-vawa-y-violencia-psicologica-con-el-abogado-manuel",
+      "title": "Lo que debes saber sobre Visa VAWA y violencia psicológica con el Abogado Manuel Solis III (LIVE)",
+      "duration_seconds": 2027,
+      "published_at": "2024-12-11T00:00:00",
+      "episode_number": 54,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "nyZsRCQAjGU",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-t-una-opcion-real-para-victimas-de-explotacion-laboral-en-ee-uu",
+      "title": "Visa T: una opción real para víctimas de explotación laboral en EE.UU. 🇺🇸",
+      "duration_seconds": 29,
+      "published_at": null,
+      "episode_number": 55,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "p1aEeal6FGI",
+      "series_slug": "guia-migratoria",
+      "slug": "5-cosas-que-necesitas-saber-sobre-la-peticion-familiar-i-130",
+      "title": "5 cosas que necesitas saber sobre la Petición Familiar I-130",
+      "duration_seconds": 139,
+      "published_at": "2025-08-07T00:00:00",
+      "episode_number": 56,
+      "categories": [
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "rCtPPELObF8",
+      "series_slug": "historias-cortas",
+      "slug": "necesitas-arreglar-tus-papeles",
+      "title": "¿Necesitas arreglar tus papeles? ⚖️ 🇺🇸",
+      "duration_seconds": 12,
+      "published_at": "2024-07-17T00:00:00",
+      "episode_number": 29,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "s4zjQqnVQ-8",
+      "series_slug": "guia-migratoria",
+      "slug": "en-vivo-boletin-informativo-consecuencias-de-una-i-275",
+      "title": "¡EN VIVO! Boletín informativo: Consecuencias de una I-275.",
+      "duration_seconds": 49,
+      "published_at": "2016-04-04T00:00:00",
+      "episode_number": 57,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "sfgD-pi7O4M",
+      "series_slug": "historias-cortas",
+      "slug": "casada-o-casado-con-un-residente-o-ciudadano",
+      "title": "¿Casada o casado con un residente o ciudadano? 🇺🇸🤵‍♂️👰🏼",
+      "duration_seconds": 10,
+      "published_at": "2024-09-02T00:00:00",
+      "episode_number": 30,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "tAhbNAc3zf0",
+      "series_slug": "guia-migratoria",
+      "slug": "vawa-como-arreglar-sin-depender-de-tu-pareja",
+      "title": "VAWA: Cómo arreglar sin depender de tu pareja",
+      "duration_seconds": 100,
+      "published_at": "2025-04-09T00:00:00",
+      "episode_number": 58,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "uDapI1rpYwg",
+      "series_slug": "en-vivo",
+      "slug": "asi-funciona-la-cancelacion-de-remocion-y-el-programa-roi-contra-la-deportacion",
+      "title": "Así funciona la CANCELACIÓN DE REMOCIÓN y el PROGRAMA ROI contra la DEPORTACIÓN (LIVE)",
+      "duration_seconds": 912,
+      "published_at": "2018-12-04T00:00:00",
+      "episode_number": 10,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "vGEOhQ5wRxA",
+      "series_slug": "en-vivo",
+      "slug": "consultas-en-vivo-abogado-manuel-solis-iii-responde-sobre-inmigracion-en-ee-uu-l",
+      "title": "Consultas en vivo: Abogado Manuel Solis III responde sobre inmigración en EE.UU (LIVE)",
+      "duration_seconds": 3856,
+      "published_at": "2024-12-07T00:00:00",
+      "episode_number": 11,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "wZ7uJ0mHZjk",
+      "series_slug": "el-bufete",
+      "slug": "historias-que-inspiran-un-nuevo-caso-de-exito-con-nuestro-equipo-legal",
+      "title": "💙 Historias que inspiran: un nuevo caso de éxito con nuestro equipo legal",
+      "duration_seconds": 64,
+      "published_at": "2025-08-20T00:00:00",
+      "episode_number": 6,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "-NZG65IEcps",
+      "series_slug": "historias-cortas",
+      "slug": "42b001-victor-benitez-001-mp4",
+      "title": "42B001 Victor Benitez #001.mp4",
+      "duration_seconds": 101,
+      "published_at": "2021-12-14T00:00:00",
+      "episode_number": 31,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "1jPDzxNNBsI",
+      "series_slug": "historias-cortas",
+      "slug": "que-es-una-certificacion-laboral-y-como-la-obtengo-checklist",
+      "title": "¿Qué es una Certificación Laboral y cómo la obtengo? checklist",
+      "duration_seconds": 60,
+      "published_at": "2019-01-11T00:00:00",
+      "episode_number": 32,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "2BGZx0izKlA",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-el-abogado-manuel-solis-contesta-dudas-a-cerca-de-inmigracion",
+      "title": "¡EN VIVO! El Abogado Manuel Solis contesta dudas a cerca de inmigración.",
+      "duration_seconds": 58,
+      "published_at": "2018-12-19T00:00:00",
+      "episode_number": 12,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "3QkjTjAgIwo",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-el-nuevo-comienzo-de-jose-y-laura",
+      "title": "Residencia permanente: el nuevo comienzo de José y Laura.",
+      "duration_seconds": 54,
+      "published_at": "2026-01-12T00:00:00",
+      "episode_number": 46,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "4VseBGdT9HM",
+      "series_slug": "guia-migratoria",
+      "slug": "regulariza-tu-estatus-con-la-visa-t-y-asegura-tu-futuro",
+      "title": "¡Regulariza tu estatus con la Visa T y asegura tu futuro!  🇺🇸",
+      "duration_seconds": 25,
+      "published_at": "2024-07-19T00:00:00",
+      "episode_number": 59,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "5uLbFEjTOgA",
+      "series_slug": "historias-cortas",
+      "slug": "cual-es-el-proceso-de-deportacion-en-estados-unidos-abogado-manuel-solis-lo-expl",
+      "title": "¿Cuál es el proceso de deportación en Estados Unidos? Abogado Manuel Solis lo explica (TV)",
+      "duration_seconds": 121,
+      "published_at": "2017-10-18T00:00:00",
+      "episode_number": 33,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "5wQhh4xj1L8",
+      "series_slug": "testimonios-reales",
+      "slug": "la-historia-de-stephanie-gonzalez-cuando-decides-avanzar",
+      "title": "La historia de Stephanie González: cuando decides avanzar",
+      "duration_seconds": 28,
+      "published_at": "2026-03-17T00:00:00",
+      "episode_number": 47,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "69Fb--NBLdo",
+      "series_slug": "guia-migratoria",
+      "slug": "en-vivo-boletin-informativo-reingreso-a-los-estados-unidos-despues-de-ser-deport",
+      "title": "¡EN VIVO! Boletín informativo: Reingreso a los Estados Unidos después de ser deportado.",
+      "duration_seconds": 52,
+      "published_at": "2016-02-19T00:00:00",
+      "episode_number": 60,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "6Wpjbd4DBSo",
+      "series_slug": "historias-cortas",
+      "slug": "perdon-migratorio-asi-te-acompanamos-paso-a-paso",
+      "title": "Perdón migratorio: así te acompañamos paso a paso",
+      "duration_seconds": 81,
+      "published_at": "2025-12-25T00:00:00",
+      "episode_number": 34,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "85Krpobpo3U",
+      "series_slug": "historias-cortas",
+      "slug": "venezolanos-obtienen-su-asilo-en-ee-uu",
+      "title": "🥳🇻🇪Venezolanos obtienen su #asilo en EE.UU🇺🇸",
+      "duration_seconds": 57,
+      "published_at": "2024-08-16T00:00:00",
+      "episode_number": 35,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "AacfVpLlr8A",
+      "series_slug": "historias-cortas",
+      "slug": "cuando-tenia-8-sonaba-con-vivir-en-ee-uu",
+      "title": "Cuando tenía 8 soñaba con vivir en EE.UU. 🙏🏼🇺🇸",
+      "duration_seconds": 20,
+      "published_at": "2024-09-24T00:00:00",
+      "episode_number": 36,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "AdJQMEp8glw",
+      "series_slug": "historias-cortas",
+      "slug": "su-pareja-utiliza-a-sus-hijos-para-manipularla",
+      "title": "¿Su pareja utiliza a sus hijos para manipularla? 🚫",
+      "duration_seconds": 14,
+      "published_at": "2024-09-24T00:00:00",
+      "episode_number": 37,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "B8DTcWiNq5M",
+      "series_slug": "guia-migratoria",
+      "slug": "en-vivo-quiere-ajustar-su-estatus-migratorio-llame-ahora",
+      "title": "¡EN VIVO! ¿Quiere ajustar su estatus migratorio? ¡Llame ahora!",
+      "duration_seconds": 35,
+      "published_at": "2018-12-19T00:00:00",
+      "episode_number": 61,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "BDWPeIu-5bc",
+      "series_slug": "guia-migratoria",
+      "slug": "que-es-la-visa-juvenil",
+      "title": "¿Qué es la Visa Juvenil?",
+      "duration_seconds": 20,
+      "published_at": "2025-08-15T00:00:00",
+      "episode_number": 62,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "Buhltztud7Y",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-tiene-dudas-o-preguntas-sobre-inmigracion",
+      "title": "¡EN VIVO! ¿Tiene dudas o preguntas sobre inmigración?",
+      "duration_seconds": 54,
+      "published_at": "2018-12-28T00:00:00",
+      "episode_number": 13,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Bx8sP04jXOk",
+      "series_slug": "guia-migratoria",
+      "slug": "vives-maltrato-silencioso-esto-podria-ayudarte-a-calificar-para-vawa-visa-t-o-vi",
+      "title": "¿Vives maltrato silencioso? Esto podría ayudarte a calificar para VAWA, Visa T o Visa U",
+      "duration_seconds": 120,
+      "published_at": "2025-05-23T00:00:00",
+      "episode_number": 63,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "C0R2HK2TTBk",
+      "series_slug": "historias-cortas",
+      "slug": "fuiste-deportado-esto-es-lo-que-debes-saber-si-quieres-volver-a-ee-uu",
+      "title": "¿Fuiste deportado? Esto es lo que debes saber si quieres volver a EE.UU",
+      "duration_seconds": 111,
+      "published_at": "2025-06-12T00:00:00",
+      "episode_number": 38,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "CeFmguJL7mg",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-aprobada-la-historia-de-marycruz-perales",
+      "title": "🎥 Residencia Permanente aprobada: La historia de Marycruz Perales",
+      "duration_seconds": 59,
+      "published_at": "2026-03-10T00:00:00",
+      "episode_number": 48,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "D20AJb7Ug5U",
+      "series_slug": "historias-cortas",
+      "slug": "testimoniales-5-sub",
+      "title": "testimoniales 5 sub",
+      "duration_seconds": 221,
+      "published_at": "2016-11-04T00:00:00",
+      "episode_number": 39,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "DYXU3I1Az6o",
+      "series_slug": "historias-cortas",
+      "slug": "accidente-en-el-trabajo-sin-papeles-lo-que-debes-saber",
+      "title": "🎥 Accidente en el trabajo sin papeles: lo que debes saber",
+      "duration_seconds": 37,
+      "published_at": "2026-03-09T00:00:00",
+      "episode_number": 40,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "EuGHiryORIc",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-t-lo-que-muchos-no-saben-que-si-califica",
+      "title": "Visa T: lo que muchos no saben que sí califica",
+      "duration_seconds": 66,
+      "published_at": "2025-12-03T00:00:00",
+      "episode_number": 64,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "EzBfHFevDZE",
+      "series_slug": "guia-migratoria",
+      "slug": "trabajar-con-un-numero-falso-podria-afectar-tu-estatus-migratorio",
+      "title": "Trabajar con un número falso podría afectar tu estatus migratorio",
+      "duration_seconds": 120,
+      "published_at": "2025-05-16T00:00:00",
+      "episode_number": 65,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "F4xeArwPoWg",
+      "series_slug": "historias-cortas",
+      "slug": "casad-con-residente-o-ciudadano",
+      "title": "¿Casad@ con residente o ciudadano? 🤔",
+      "duration_seconds": 10,
+      "published_at": "2024-09-10T00:00:00",
+      "episode_number": 41,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "GaMZcDv7jdo",
+      "series_slug": "historias-cortas",
+      "slug": "despues-de-tanto-luchar-clemente-ramos-hoy-ya-es-residente-permanente",
+      "title": "😱 Después de tanto luchar… Clemente Ramos hoy ya es Residente Permanente 🇺🇸",
+      "duration_seconds": 28,
+      "published_at": "2026-02-14T00:00:00",
+      "episode_number": 42,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "HrKGUY1MBOk",
+      "series_slug": "historias-cortas",
+      "slug": "llamanos-hoy-al-1-855-907-4600-y-da-el-primer-paso-hacia-tu-futuro",
+      "title": "Llámanos hoy al 📞+1 855 907 4600 y ¡Da el primer paso hacia tu futuro! 💫",
+      "duration_seconds": 24,
+      "published_at": "2024-08-21T00:00:00",
+      "episode_number": 43,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "J__tlpRmBk4",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-juvenil-en-ee-uu-si-fuiste-maltratado-o-descuidado-podrias-arreglar-tus-pap",
+      "title": "Visa Juvenil en EE.UU.: si fuiste maltratado o descuidado, podrías arreglar tus papeles 🇺🇸",
+      "duration_seconds": 21,
+      "published_at": null,
+      "episode_number": 66,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "KpL5FiQANpc",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-me-puede-ayudar-con-una-cancelacion-de-remocion",
+      "title": "¡EN VIVO! ¿Me puede ayudar con una cancelación de remoción?",
+      "duration_seconds": 268,
+      "published_at": "2018-12-04T00:00:00",
+      "episode_number": 14,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "KyMyllRF4ek",
+      "series_slug": "historias-cortas",
+      "slug": "asilo-en-ee-uu-plazos-y-cambios-importantes",
+      "title": "Asilo en EE. UU. : plazos y cambios importantes.",
+      "duration_seconds": 112,
+      "published_at": "2025-12-18T00:00:00",
+      "episode_number": 44,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "L4gJihP2K_8",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-t-descubre-sus-beneficios",
+      "title": "Visa T:  ¡descubre sus beneficios! 🇺🇸",
+      "duration_seconds": 68,
+      "published_at": "2025-04-16T00:00:00",
+      "episode_number": 67,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "LJccuLnV_iE",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-damaris-amador-una-historia-que-inspira",
+      "title": "Reacción al testimonio de Damaris Amador | Una historia que inspira",
+      "duration_seconds": 27,
+      "published_at": "2026-03-26T00:00:00",
+      "episode_number": 49,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "LpZr--Gilak",
+      "series_slug": "historias-cortas",
+      "slug": "te-controlan-te-humillan-o-te-amenazan-con-inmigracion",
+      "title": "¿Te controlan, te humillan o te amenazan con inmigración?",
+      "duration_seconds": 30,
+      "published_at": "2025-05-26T00:00:00",
+      "episode_number": 45,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "NF0OA1digQM",
+      "series_slug": "historias-cortas",
+      "slug": "quieres-arreglar-tu-estatus-en-ee-uu",
+      "title": "¿Quieres arreglar tu estatus en EE.UU?  🇺🇸",
+      "duration_seconds": 17,
+      "published_at": "2024-07-11T00:00:00",
+      "episode_number": 46,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "NIJJDZmh_OM",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-cuanto-tiempo-tarda-el-485",
+      "title": "¡EN VIVO! ¿Cuanto tiempo tarda el 485?",
+      "duration_seconds": 4092,
+      "published_at": "2019-01-10T00:00:00",
+      "episode_number": 15,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "NZe84ipiT84",
+      "series_slug": "historias-cortas",
+      "slug": "lina-martinez-casodeexito-por-tramite-de-residencia-en-ee-uu",
+      "title": "✅ Lina Martínez #CasoDeÉxito por Trámite de Residencia en EE.UU",
+      "duration_seconds": 234,
+      "published_at": "2024-10-01T00:00:00",
+      "episode_number": 47,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "NzDJ6FukQ-o",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-hilda-andrade-una-historia-que-inspira",
+      "title": "🎥 Reacción al testimonio de Hilda Andrade | Una historia que inspira",
+      "duration_seconds": 63,
+      "published_at": "2026-03-25T00:00:00",
+      "episode_number": 50,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "O0BtQLP4ha4",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-diga-no-a-la-salida-voluntaria-no-firme-nada",
+      "title": "¡EN VIVO! Diga no a la salida voluntaria. No firme nada.",
+      "duration_seconds": 19,
+      "published_at": "2015-11-10T00:00:00",
+      "episode_number": 16,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "PMvBVHFSC2I",
+      "series_slug": "en-vivo",
+      "slug": "consejos-con-el-abogado-manuel-solis-4",
+      "title": "Consejos con EL Abogado Manuel Solis",
+      "duration_seconds": 2276,
+      "published_at": "2020-12-01T00:00:00",
+      "episode_number": 17,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "PbUkNIlvpHk",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-que-hago-si-me-detienen-y-soy-inmigrante",
+      "title": "¡EN VIVO! ¿Qué hago si me detienen y soy inmigrante?",
+      "duration_seconds": 36,
+      "published_at": "2016-02-08T00:00:00",
+      "episode_number": 18,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "PbhmdX3g5qw",
+      "series_slug": "historias-cortas",
+      "slug": "por-que-uscis-podria-rechazar-tu-caso",
+      "title": "¿Por qué USCIS podría rechazar tu caso?",
+      "duration_seconds": 32,
+      "published_at": "2025-05-31T00:00:00",
+      "episode_number": 48,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "QT2S9HF68zA",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-cuales-son-las-imitaciones-de-una-visa-u",
+      "title": "¡EN VIVO! ¿Cuales son las imitaciones de una Visa-U?",
+      "duration_seconds": 69,
+      "published_at": "2016-02-05T00:00:00",
+      "episode_number": 19,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "R4-hwBUEdkM",
+      "series_slug": "historias-cortas",
+      "slug": "obtuvimos-nuestra-residencia-en-estados-unidos",
+      "title": "🥳Obtuvimos nuestra residencia en Estados Unidos",
+      "duration_seconds": 30,
+      "published_at": "2024-08-08T00:00:00",
+      "episode_number": 49,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "S6j3Gfo7yFI",
+      "series_slug": "historias-cortas",
+      "slug": "puede-inmigracion-ver-lo-que-publicas-en-redes-sociales-esto-debes-saber",
+      "title": "¿Puede inmigración ver lo que publicas en redes sociales? Esto debes saber",
+      "duration_seconds": 93,
+      "published_at": "2025-05-02T00:00:00",
+      "episode_number": 50,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "TBvL1y6oDqg",
+      "series_slug": "historias-cortas",
+      "slug": "sufriste-un-crimen-en-ee-uu-esto-podria-ayudarte-a-arreglar",
+      "title": "¿Sufriste un crimen en EE.UU.? esto podría ayudarte a arreglar",
+      "duration_seconds": 123,
+      "published_at": "2025-04-02T00:00:00",
+      "episode_number": 51,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "UaH3yCfUJtM",
+      "series_slug": "historias-cortas",
+      "slug": "actualizacion-importante-de-uscis",
+      "title": "¡Actualización importante de #USCIS! 📢",
+      "duration_seconds": 31,
+      "published_at": "2024-08-16T00:00:00",
+      "episode_number": 52,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "X3fIEc6uWSI",
+      "series_slug": "historias-cortas",
+      "slug": "asilo-politico-y-cancelacion-de-remocion-001-newcheck",
+      "title": "ASILO POLÍTICO Y CANCELACIÓN DE REMOCIÓN 001 NEWCHECK",
+      "duration_seconds": 502,
+      "published_at": "2019-01-15T00:00:00",
+      "episode_number": 53,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Y1-hH33vnTQ",
+      "series_slug": "historias-cortas",
+      "slug": "que-es-el-asilo-en-ee-uu-explicacion-del-abogado-manuel-solis-iii",
+      "title": "¿Qué es el asilo en EE.UU.? Explicación del Abogado Manuel Solís III",
+      "duration_seconds": 60,
+      "published_at": "2025-12-03T00:00:00",
+      "episode_number": 54,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Z9YjE9K56fU",
+      "series_slug": "historias-cortas",
+      "slug": "testimonial-con-el-abogado-manuel-solis-5",
+      "title": "testimonial con el abogado Manuel Solís (5).",
+      "duration_seconds": 231,
+      "published_at": "2016-08-31T00:00:00",
+      "episode_number": 55,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "ZSVU1QEqFOY",
+      "series_slug": "en-vivo",
+      "slug": "el-abogado-manuel-solis-en-vivo-live-07-18-2017",
+      "title": "El Abogado Manuel Solis en Vivo! Live! 07/18/2017",
+      "duration_seconds": 2374,
+      "published_at": "2019-01-10T00:00:00",
+      "episode_number": 20,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "_prs66M5wO0",
+      "series_slug": "guia-migratoria",
+      "slug": "penso-que-su-vida-estaba-destruida-hasta-que-descubrio-la-visa-vawa",
+      "title": "💔 Pensó que su vida estaba destruida… hasta que descubrió la Visa VAWA 🇺🇸✨",
+      "duration_seconds": 397,
+      "published_at": "2026-01-24T00:00:00",
+      "episode_number": 68,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "bGQb9ojrv-0",
+      "series_slug": "testimonios-reales",
+      "slug": "sijs-el-programa-poco-conocido-de-uscis-que-podria-ayudarte-a-obtener-la-green-c",
+      "title": "SIJS: El programa poco conocido de USCIS que podría ayudarte a obtener la Green Card",
+      "duration_seconds": 105,
+      "published_at": "2025-04-23T00:00:00",
+      "episode_number": 51,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "bMhUiuCHnhQ",
+      "series_slug": "testimonios-reales",
+      "slug": "gracias-a-los-abogados-manuel-solis-hoy-tengo-mi-residencia-greencard-inmigracio",
+      "title": "¡Gracias a los Abogados Manuel Solis, hoy tengo mi residencia! 🇺🇸✨ #greencard #inmigracion",
+      "duration_seconds": 16,
+      "published_at": "2025-03-29T00:00:00",
+      "episode_number": 52,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "bS7T_xFM8Dk",
+      "series_slug": "guia-migratoria",
+      "slug": "visas-u-t-y-vawa-todo-lo-que-debes-saber-live",
+      "title": "Visas U, T y VAWA: Todo lo que debes saber (LIVE)",
+      "duration_seconds": 1297,
+      "published_at": "2025-02-02T00:00:00",
+      "episode_number": 69,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "bkz6OQa1vDE",
+      "series_slug": "historias-cortas",
+      "slug": "su-caso-estaba-perdido-hasta-que-llegaron-los-abogados-manuel-solis",
+      "title": "Su caso estaba perdido… hasta que llegaron los Abogados Manuel Solis",
+      "duration_seconds": 36,
+      "published_at": "2025-04-05T00:00:00",
+      "episode_number": 56,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "cFp8so8efFk",
+      "series_slug": "historias-cortas",
+      "slug": "mi-mama-es-ciudadana-y-quiero-saber-si-mi-hermana-mayor-puede-arreglar-checklist",
+      "title": "¿Mi mama es ciudadana, y quiero saber si mi hermana mayor puede arreglar? checklist",
+      "duration_seconds": 316,
+      "published_at": "2017-12-26T00:00:00",
+      "episode_number": 57,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "cYrzjHwDLj4",
+      "series_slug": "historias-cortas",
+      "slug": "tengo-entrevista-con-inmigracion-y-tengo-miedo-que-no-me-dejen-salir-que-puedo-h",
+      "title": "Tengo entrevista con inmigración y tengo miedo que no me dejen salir, ¿Qué puedo hacer?",
+      "duration_seconds": 434,
+      "published_at": "2017-11-09T00:00:00",
+      "episode_number": 58,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "cxxRGi952qI",
+      "series_slug": "guia-migratoria",
+      "slug": "en-vivo-victima-de-un-crimen-en-los-estados-unidos-llame-ahora-para-sacar-su-vis",
+      "title": "¡EN VIVO! ¿Víctima de un crimen en los estados unidos? ¡Llame ahora para sacar su Visa U!",
+      "duration_seconds": 37,
+      "published_at": "2015-10-16T00:00:00",
+      "episode_number": 70,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "e3clzMAtqUQ",
+      "series_slug": "historias-cortas",
+      "slug": "llevas-anos-sin-papeles-en-ee-uu-podrias-tener-una-opcion-legal",
+      "title": "¿Llevas años sin papeles en EE.UU? Podrías tener una opción legal",
+      "duration_seconds": 31,
+      "published_at": "2025-05-19T00:00:00",
+      "episode_number": 59,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "eS-Yd7pg6Cc",
+      "series_slug": "historias-cortas",
+      "slug": "nadie-imaginaba-este-final-hoy-bella-gomez-ya-es-residente-permanente",
+      "title": "✨ Nadie imaginaba este final… Hoy Bella Gómez ya es Residente Permanente 🇺🇸",
+      "duration_seconds": 30,
+      "published_at": "2026-02-12T00:00:00",
+      "episode_number": 60,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "eywA5maFxZE",
+      "series_slug": "testimonios-reales",
+      "slug": "mas-que-testimonios-son-nuevos-comienzos",
+      "title": "✨ Más que testimonios: son nuevos comienzos.",
+      "duration_seconds": 33,
+      "published_at": "2025-12-11T00:00:00",
+      "episode_number": 53,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "hMXFYozhybM",
+      "series_slug": "guia-migratoria",
+      "slug": "puedo-aplicar-a-vawa-si-solo-sufri-violencia-psicologica-vawa-immigration",
+      "title": "¿Puedo aplicar a VAWA si solo sufrí violencia psicológica? #vawa #immigration",
+      "duration_seconds": 75,
+      "published_at": "2025-03-22T00:00:00",
+      "episode_number": 71,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "i6_MqD59apI",
+      "series_slug": "guia-migratoria",
+      "slug": "senales-claras-de-que-podrias-calificar-para-visa-u",
+      "title": "🚨 Señales claras de que podrías calificar para Visa U",
+      "duration_seconds": 46,
+      "published_at": "2026-03-13T00:00:00",
+      "episode_number": 72,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "i9zUJtWpSrY",
+      "series_slug": "historias-cortas",
+      "slug": "asilo-aprobado-gracias-al-abogadodeinmigracion-manuel-solis",
+      "title": "✅ #Asilo aprobado, gracias al #abogadodeinmigración Manuel Solis",
+      "duration_seconds": 19,
+      "published_at": "2024-08-14T00:00:00",
+      "episode_number": 61,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "jAB6nBtL5IU",
+      "series_slug": "testimonios-reales",
+      "slug": "el-sueno-de-rosalba-se-hizo-realidad-ahora-es-residente-en-ee-uu-testimonio-de-e",
+      "title": "El sueño de Rosalba se hizo realidad: ahora es residente en EE.UU. | Testimonio de esperanza",
+      "duration_seconds": 46,
+      "published_at": "2025-12-21T00:00:00",
+      "episode_number": 54,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "kXWwPaArS6s",
+      "series_slug": "historias-cortas",
+      "slug": "accidente-en-el-trabajo",
+      "title": "¿Accidente en el trabajo? 👷🏽‍♂️👷‍♀️",
+      "duration_seconds": 52,
+      "published_at": "2024-08-23T00:00:00",
+      "episode_number": 62,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "kZDi5IphLWk",
+      "series_slug": "en-vivo",
+      "slug": "live-quien-responde-por-danos-los-inquilinos-o-los-propietarios",
+      "title": "LIVE | “¿Quién responde por daños? ... Los Inquilinos o los Propietarios:”",
+      "duration_seconds": 2498,
+      "published_at": "2026-02-26T00:00:00",
+      "episode_number": 21,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "kkHOEPdxmPY",
+      "series_slug": "historias-cortas",
+      "slug": "historias-que-inspiran-lourdes-logro-cumplir-un-gran-sueno",
+      "title": "Historias que inspiran: Lourdes logró cumplir un gran sueño",
+      "duration_seconds": 90,
+      "published_at": "2025-08-13T00:00:00",
+      "episode_number": 63,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "koO41dC1dd0",
+      "series_slug": "historias-cortas",
+      "slug": "las-tacticas-de-las-aseguradoras-para-pagarte-menos-juan-solis",
+      "title": "Las tácticas de las aseguradoras para pagarte menos | Juan Solís",
+      "duration_seconds": 60,
+      "published_at": "2026-03-24T00:00:00",
+      "episode_number": 64,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "lqJemkl7CuU",
+      "series_slug": "en-vivo",
+      "slug": "consejos-con-el-abogado-manuel-solis-lobby3",
+      "title": "Consejos con EL Abogado Manuel Solis lobby3",
+      "duration_seconds": 12580,
+      "published_at": "2019-01-12T00:00:00",
+      "episode_number": 22,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "mtUrkw9BT5E",
+      "series_slug": "testimonios-reales",
+      "slug": "la-historia-de-hilda-andrade-cuando-decides-no-rendirte",
+      "title": "🎥 La historia de Hilda Andrade: cuando decides no rendirte",
+      "duration_seconds": 28,
+      "published_at": "2026-03-16T00:00:00",
+      "episode_number": 55,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "nmggQKshoYc",
+      "series_slug": "historias-cortas",
+      "slug": "otro-caso-ganado",
+      "title": "🎉 ¡Otro caso ganado! 💙",
+      "duration_seconds": 25,
+      "published_at": "2025-08-18T00:00:00",
+      "episode_number": 65,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "pOFEpAebLnI",
+      "series_slug": "guia-migratoria",
+      "slug": "necesito-un-abogado-para-solicitar-mi-visa-u",
+      "title": "¿Necesito un abogado para solicitar mi VISA U? 🤔",
+      "duration_seconds": 70,
+      "published_at": "2024-07-10T00:00:00",
+      "episode_number": 73,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "purUGqZ660o",
+      "series_slug": "historias-cortas",
+      "slug": "puedes-confiar-en-tu-abogado-de-inmigracion",
+      "title": "¿Puedes confiar en tu abogado de inmigración?",
+      "duration_seconds": 24,
+      "published_at": "2025-06-19T00:00:00",
+      "episode_number": 66,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "qeHrWbkP84c",
+      "series_slug": "historias-cortas",
+      "slug": "ten-mucho-cuidado-con-los-fraudes",
+      "title": "¡Ten mucho cuidado con los fraudes! ⚠️",
+      "duration_seconds": 86,
+      "published_at": "2025-08-19T00:00:00",
+      "episode_number": 67,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "sXgOYUItYJQ",
+      "series_slug": "historias-cortas",
+      "slug": "te-robaron-y-no-tienes-papeles-esto-podrias-hacer",
+      "title": "¿Te robaron y no tienes papeles? Esto podrías hacer",
+      "duration_seconds": 31,
+      "published_at": "2025-06-08T00:00:00",
+      "episode_number": 68,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "scyj-O25o64",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccion-al-testimonio-de-raul-luna-una-historia-que-inspira",
+      "title": "🎥 Reacción al testimonio de Raúl Luna | Una historia que inspira",
+      "duration_seconds": 17,
+      "published_at": "2026-03-24T00:00:00",
+      "episode_number": 56,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "t52B3Nm_rPE",
+      "series_slug": "testimonios-reales",
+      "slug": "me-ayudaron-cuando-mas-lo-necesitaba-testimonio-de-manuel-hernandez",
+      "title": "“Me ayudaron cuando más lo necesitaba” | Testimonio de Manuel Hernández",
+      "duration_seconds": 49,
+      "published_at": "2026-01-06T00:00:00",
+      "episode_number": 57,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "tMzfo1oauWM",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-aprobada-de-edgar-casodeexito",
+      "title": "✅Residencia aprobada de Edgar #CasodeÉxito",
+      "duration_seconds": 22,
+      "published_at": "2024-10-19T00:00:00",
+      "episode_number": 58,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "tlFAQnU_yUA",
+      "series_slug": "en-vivo",
+      "slug": "bienvenido-a-la-repeticion-del-podcast-con-el-abogado-manuel-solis",
+      "title": "🔴 ¡Bienvenido a la repetición del Podcast con el Abogado Manuel Solís! 📢.",
+      "duration_seconds": 2715,
+      "published_at": "2024-10-11T00:00:00",
+      "episode_number": 23,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "veWF22KI2Jg",
+      "series_slug": "testimonios-reales",
+      "slug": "grite-de-emocion-su-residencia-permanente-fue-aprobada",
+      "title": "“Grité de emoción”: su residencia permanente fue aprobada",
+      "duration_seconds": 37,
+      "published_at": "2025-12-30T00:00:00",
+      "episode_number": 59,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "vqCYYiu3nCs",
+      "series_slug": "historias-cortas",
+      "slug": "estas-listo-para-dar-el-siguiente-paso-en-tu-camino-hacia-la-ciudadania",
+      "title": "¿Estás listo para dar el siguiente paso en tu camino hacia la ciudadanía?",
+      "duration_seconds": 28,
+      "published_at": "2024-07-15T00:00:00",
+      "episode_number": 69,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "wTvQ75BebKk",
+      "series_slug": "el-bufete",
+      "slug": "por-que-recomiendan-al-abogado-manuel-solis-parte-2",
+      "title": "¿Por qué recomiendan al abogado Manuel Solís? Parte 2",
+      "duration_seconds": 18,
+      "published_at": "2025-07-08T00:00:00",
+      "episode_number": 7,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "wtrS9jzBuDQ",
+      "series_slug": "testimonios-reales",
+      "slug": "el-testimonio-de-bella-gomez-una-historia-que-inspira",
+      "title": "El testimonio de Bella Gómez | Una historia que inspira",
+      "duration_seconds": 28,
+      "published_at": "2026-03-23T00:00:00",
+      "episode_number": 60,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "x-2th1f2JqY",
+      "series_slug": "historias-cortas",
+      "slug": "a-mi-esposo-lo-asaltaron-puede-arreglar-sus-papeles",
+      "title": "A mi esposo lo asaltaron ¿puede arreglar sus papeles?",
+      "duration_seconds": 185,
+      "published_at": "2019-01-15T00:00:00",
+      "episode_number": 70,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "x_qNppmDpac",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-el-avance-que-abre-puertas-para-toda-una-familia",
+      "title": "Residencia Permanente: el avance que abre puertas para toda una familia",
+      "duration_seconds": 44,
+      "published_at": "2025-11-21T00:00:00",
+      "episode_number": 61,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "yDfBK80hV1k",
+      "series_slug": "en-vivo",
+      "slug": "el-abogado-manuel-solis-en-vivo-live",
+      "title": "El Abogado Manuel Solis en vivo! Live!",
+      "duration_seconds": 4191,
+      "published_at": "2017-04-29T00:00:00",
+      "episode_number": 24,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "yF9SqP17jmA",
+      "series_slug": "historias-cortas",
+      "slug": "penso-que-nunca-lo-lograria-hoy-mauro-ramirez-ya-es-residente-permanente",
+      "title": "Pensó que nunca lo lograría… hoy Mauro Ramírez ya es RESIDENTE PERMANENTE 🇺🇸✨",
+      "duration_seconds": 32,
+      "published_at": "2026-02-11T00:00:00",
+      "episode_number": 71,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "zjgkp7QP5xY",
+      "series_slug": "testimonios-reales",
+      "slug": "de-la-incertidumbre-a-una-nueva-oportunidad-la-historia-de-franco",
+      "title": "De la incertidumbre a una nueva oportunidad: la historia de Franco",
+      "duration_seconds": 51,
+      "published_at": "2026-03-24T00:00:00",
+      "episode_number": 62,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "-MrnKVnwduo",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-el-abogado-manuel-solis-contesta-todas-sus-preguntas",
+      "title": "¡EN VIVO! ¡El abogado Manuel Solis contesta todas sus preguntas!",
+      "duration_seconds": 16,
+      "published_at": "2018-12-28T00:00:00",
+      "episode_number": 25,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "-WJumpLl8ww",
+      "series_slug": "testimonios-reales",
+      "slug": "estas-pensando-en-obtener-la-green-card-por-matrimonio-en-2025",
+      "title": "¿Estás pensando en obtener la Green Card por matrimonio en 2025? 🇺🇸",
+      "duration_seconds": 47,
+      "published_at": "2025-10-08T00:00:00",
+      "episode_number": 63,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "0dfScMwOREw",
+      "series_slug": "testimonios-reales",
+      "slug": "me-trataron-con-respeto-y-eso-lo-cambio-todo-testimonio-de-rosa-granados",
+      "title": "“Me trataron con respeto, y eso lo cambió todo” | Testimonio de Rosa Granados",
+      "duration_seconds": 50,
+      "published_at": "2026-01-08T00:00:00",
+      "episode_number": 64,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "0lwmPvrI514",
+      "series_slug": "historias-cortas",
+      "slug": "esto-puede-cambiarlo-todo-lo-que-nadie-te-explica-sobre-tu-caso",
+      "title": "🚨 Esto Puede Cambiarlo TODO: Lo Que Nadie Te Explica Sobre Tu Caso",
+      "duration_seconds": 72,
+      "published_at": "2026-02-25T00:00:00",
+      "episode_number": 72,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "2LJ-Gq3N03M",
+      "series_slug": "historias-cortas",
+      "slug": "sufre-violencia-domestica",
+      "title": "¿Sufre violencia dómestica?",
+      "duration_seconds": 29,
+      "published_at": "2024-10-12T00:00:00",
+      "episode_number": 73,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "5O7GzpxYjJM",
+      "series_slug": "historias-cortas",
+      "slug": "obtuve-mi-permiso-de-trabajo-en-ee-uu-gracias-al-equipo-del-abogado-manuel-solis",
+      "title": "Obtuve mi permiso de trabajo en EE.UU. gracias al equipo del Abogado Manuel Solis 👨‍💼🙌🏼",
+      "duration_seconds": 24,
+      "published_at": "2024-09-26T00:00:00",
+      "episode_number": 74,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "5lXODlOCCUw",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-aprobada-abogado-manuel-solis",
+      "title": "Residencia Aprobada | Abogado Manuel Solís",
+      "duration_seconds": 28,
+      "published_at": "2026-01-25T00:00:00",
+      "episode_number": 65,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "63qWLWF9jEk",
+      "series_slug": "historias-cortas",
+      "slug": "cuidado-con-estas-estafas-de-inmigracion",
+      "title": "¡Cuidado con estas estafas de inmigración!",
+      "duration_seconds": 30,
+      "published_at": "2025-06-05T00:00:00",
+      "episode_number": 75,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "6rFLcisGqYc",
+      "series_slug": "testimonios-reales",
+      "slug": "la-historia-de-margarita-cuando-una-noticia-cambia-todo",
+      "title": "La historia de Margarita: cuando una noticia cambia todo",
+      "duration_seconds": 28,
+      "published_at": "2026-03-18T00:00:00",
+      "episode_number": 66,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "8rpj_U9N9u4",
+      "series_slug": "historias-cortas",
+      "slug": "entrevista-de-asilo-politico-por-que-es-tan-importante-deportacion-inmigracionus",
+      "title": "🚨Entrevista de asilo político, ¿por qué es tan importante? #deportación #inmigraciónusa",
+      "duration_seconds": 54,
+      "published_at": "2025-03-17T00:00:00",
+      "episode_number": 76,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Am62czkNu7Y",
+      "series_slug": "testimonios-reales",
+      "slug": "testimonio-real-residencia-permanente",
+      "title": "Testimonio Real | Residencia Permanente",
+      "duration_seconds": 43,
+      "published_at": "2026-01-23T00:00:00",
+      "episode_number": 67,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "AulaMlhdGS0",
+      "series_slug": "en-vivo",
+      "slug": "accidentes-laborales-lo-que-debes-saber-live-con-el-abogado-juan-solis",
+      "title": "🎥 Accidentes laborales: lo que debes saber (Live con el Abogado Juan Solís)",
+      "duration_seconds": 41,
+      "published_at": "2026-03-18T00:00:00",
+      "episode_number": 26,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "DKKwnwiQYmk",
+      "series_slug": "guia-migratoria",
+      "slug": "sabias-que-existen-visas-humanitarias-para-estados-unidos-que-pueden-cambiar-tu",
+      "title": "¿Sabías que existen visas humanitarias para Estados Unidos que pueden cambiar tu vida?",
+      "duration_seconds": 42,
+      "published_at": "2025-09-17T00:00:00",
+      "episode_number": 74,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "GH_F-TDqw7U",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-el-abogado-manuel-solis-te-puede-ayudar",
+      "title": "¡EN VIVO!  El Abogado Manuel Solis te puede ayudar.",
+      "duration_seconds": 53,
+      "published_at": "2018-12-08T00:00:00",
+      "episode_number": 27,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "H_gPHAG0Yzo",
+      "series_slug": "historias-cortas",
+      "slug": "miles-ya-arreglaron-su-estatus-legal-sin-salir-descubre-como",
+      "title": "Miles ya arreglaron su estatus legal sin salir ¡Descubre cómo!",
+      "duration_seconds": 31,
+      "published_at": "2025-06-09T00:00:00",
+      "episode_number": 77,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "ITGnOidw8XA",
+      "series_slug": "historias-cortas",
+      "slug": "accidentes-en-el-trabajo-lo-que-debes-saber",
+      "title": "🎥 Accidentes en el trabajo: lo que debes saber",
+      "duration_seconds": 31,
+      "published_at": "2026-03-13T00:00:00",
+      "episode_number": 78,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "IqQ_T97kh-o",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-ha-sido-victima-de-un-crimen-en-los-estados-unidos-explicacion-de-la-u-v",
+      "title": "¡EN VIVO! ¿Ha sido víctima de un crimen en los estados unidos? Explicación de la U-Visa",
+      "duration_seconds": 69,
+      "published_at": "2016-02-03T00:00:00",
+      "episode_number": 28,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "JESZEbU5Arw",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-en-la-firma-del-abogado-manuel-solis-i-testimonio",
+      "title": "Residencia Permanente en la Firma del Abogado Manuel Solís I Testimonio",
+      "duration_seconds": 25,
+      "published_at": "2025-11-22T00:00:00",
+      "episode_number": 68,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "JEXaAs1tgNs",
+      "series_slug": "historias-cortas",
+      "slug": "obten-tu-asilo-en-los-ee-uu",
+      "title": "Obtén tu asilo en los EE.UU 🇺🇸",
+      "duration_seconds": 40,
+      "published_at": "2024-08-24T00:00:00",
+      "episode_number": 79,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "LXxuZZebuJw",
+      "series_slug": "testimonios-reales",
+      "slug": "reaccionando-al-testimonio-de-olga-de-leon-una-historia-que-inspira",
+      "title": "🎥 Reaccionando al testimonio de Olga de León: Una historia que inspira",
+      "duration_seconds": 29,
+      "published_at": "2026-03-09T00:00:00",
+      "episode_number": 69,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "LxdenH-ZLyU",
+      "series_slug": "guia-migratoria",
+      "slug": "accidentes-automovilisticos-lo-que-debes-saber-live-con-el-abogado-juan-solis-2",
+      "title": "Accidentes automovilísticos: lo que debes saber (Live con el Abogado Juan Solís)",
+      "duration_seconds": 38,
+      "published_at": "2026-03-20T00:00:00",
+      "episode_number": 75,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "MVaZ1GV2wXg",
+      "series_slug": "historias-cortas",
+      "slug": "inquilinos-vs-propietarios-la-verdad-sobre-quien-paga-los-danos",
+      "title": "🎥 Inquilinos vs. Propietarios: La verdad sobre quién paga los daños",
+      "duration_seconds": 43,
+      "published_at": "2026-03-02T00:00:00",
+      "episode_number": 80,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "Pw9MxCmhDJo",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-lograda-testimonio-de-familia-migrante",
+      "title": "Residencia permanente lograda | Testimonio de familia migrante",
+      "duration_seconds": 44,
+      "published_at": "2026-01-11T00:00:00",
+      "episode_number": 70,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "QTm07ztRla4",
+      "series_slug": "testimonios-reales",
+      "slug": "asi-se-ve-un-proceso-migratorio-guiado-correctamente-testimonio-real",
+      "title": "Así se ve un proceso migratorio guiado correctamente (Testimonio real)",
+      "duration_seconds": 25,
+      "published_at": "2025-11-22T00:00:00",
+      "episode_number": 71,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "S4H-M3mhuNU",
+      "series_slug": "historias-cortas",
+      "slug": "fue-victima-de-violencia-cuando-cruzo-la-frontera",
+      "title": "¿Fue víctima de violencia cuando cruzó la frontera? 🇺🇸🇲🇽",
+      "duration_seconds": 17,
+      "published_at": "2024-09-21T00:00:00",
+      "episode_number": 81,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "UYDfjR6d_Wk",
+      "series_slug": "guia-migratoria",
+      "slug": "esperas-la-visa-u-y-no-puedes-trabajar-sabias-esto",
+      "title": "Esperas la Visa U y no puedes trabajar… ¿sabías esto?",
+      "duration_seconds": 38,
+      "published_at": "2026-01-30T00:00:00",
+      "episode_number": 76,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "VeSUVfhwP54",
+      "series_slug": "testimonios-reales",
+      "slug": "de-la-incertidumbre-a-la-residencia-permanente-la-historia-de-pedro-carreon",
+      "title": "De la incertidumbre… a la Residencia Permanente✨ ¡La historia de Pedro Carreón!",
+      "duration_seconds": 21,
+      "published_at": "2026-02-25T00:00:00",
+      "episode_number": 72,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "WvgOOS489qk",
+      "series_slug": "guia-migratoria",
+      "slug": "trabajaste-sin-paga-y-con-miedo-descubre-tu-derecho-a-la-visa-t",
+      "title": "¿Trabajaste sin paga y con miedo? Descubre tu derecho a la Visa T",
+      "duration_seconds": 94,
+      "published_at": null,
+      "episode_number": 77,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "Yi1JE83aCNM",
+      "series_slug": "guia-migratoria",
+      "slug": "tu-pareja-te-amenaza-con-deportarte-contactanos-vawa-inmigrantes",
+      "title": "¿Tu pareja te amenaza con deportarte? ¡Contáctanos! #vawa #inmigrantes",
+      "duration_seconds": 13,
+      "published_at": "2025-03-20T00:00:00",
+      "episode_number": 78,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "ZvTcx27l_k0",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-en-estados-unidos-caso-aprobado",
+      "title": "Residencia permanente en Estados Unidos: caso aprobado.",
+      "duration_seconds": 45,
+      "published_at": "2026-01-09T00:00:00",
+      "episode_number": 73,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "_ems6tARLOk",
+      "series_slug": "historias-cortas",
+      "slug": "despues-de-13-anos-por-fin-podra-ver-a-su-mama",
+      "title": "Después de 13 años... ¡por fin podrá ver a su mamá!",
+      "duration_seconds": 46,
+      "published_at": "2025-06-26T00:00:00",
+      "episode_number": 82,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "aXkXyvhKl7Q",
+      "series_slug": "historias-cortas",
+      "slug": "penso-que-no-habia-salida-hoy-juan-ya-es-residente-permanente",
+      "title": "🔥 “Pensó que no había salida… hoy Juan ya es Residente Permanente 🇺🇸”",
+      "duration_seconds": 32,
+      "published_at": "2026-02-09T00:00:00",
+      "episode_number": 83,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "aoKfzEFvFAg",
+      "series_slug": "en-vivo",
+      "slug": "en-vivo-llame-al-abogado-manuel-solis-para-aclarar-su-caso-de-inmigracion",
+      "title": "¡EN VIVO! ¡Llame al Abogado Manuel Solis para aclarar su caso de inmigración!",
+      "duration_seconds": 52,
+      "published_at": "2018-12-28T00:00:00",
+      "episode_number": 29,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "cTJ9M5PT-S4",
+      "series_slug": "historias-cortas",
+      "slug": "tu-tambien-puedes-obtener-tu-residencia-en-estados-unidos-asi-octavio-lo-logro",
+      "title": "¡Tú también puedes obtener tu residencia en Estados Unidos! Así Octavio lo logró",
+      "duration_seconds": 288,
+      "published_at": "2024-10-21T00:00:00",
+      "episode_number": 84,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "ccYnnIc88x8",
+      "series_slug": "testimonios-reales",
+      "slug": "mi-caso-estaba-abandonado-hasta-que-encontre-ayuda-real-testimonio-de-julian-ben",
+      "title": "“Mi caso estaba abandonado… hasta que encontré ayuda real” | Testimonio de Julián Benítez",
+      "duration_seconds": 42,
+      "published_at": "2026-01-04T00:00:00",
+      "episode_number": 74,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "d3c9_gu_BHE",
+      "series_slug": "testimonios-reales",
+      "slug": "el-testimonio-de-manuel-berumen-una-historia-que-inspira",
+      "title": "El testimonio de Manuel Berumen | Una historia que inspira",
+      "duration_seconds": 32,
+      "published_at": "2026-03-22T00:00:00",
+      "episode_number": 75,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "e9tyPL3PA14",
+      "series_slug": "historias-cortas",
+      "slug": "abogado-manuel-solis-abogado-de-inmigracion",
+      "title": "Abogado Manuel Solís | Abogado de Inmigración.",
+      "duration_seconds": 49,
+      "published_at": "2026-01-22T00:00:00",
+      "episode_number": 85,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "gwp76In7Wz0",
+      "series_slug": "en-vivo",
+      "slug": "consejos-con-el-abogado-manuel-solis-5",
+      "title": "Consejos con EL Abogado Manuel Solis",
+      "duration_seconds": 40,
+      "published_at": "2020-11-04T00:00:00",
+      "episode_number": 30,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "l7xApKpTOmI",
+      "series_slug": "historias-cortas",
+      "slug": "gracias-univision-asi-fue-la-participacion-de-manuel-solis-iii",
+      "title": "Gracias, Univisión: así fue la participación de Manuel Solís III 🙏",
+      "duration_seconds": 58,
+      "published_at": "2025-12-11T00:00:00",
+      "episode_number": 86,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "lTcO72LjeKo",
+      "series_slug": "testimonios-reales",
+      "slug": "residencia-permanente-cuando-el-proceso-se-siente-bien-testimonio-real",
+      "title": "Residencia permanente: cuando el proceso se siente bien | Testimonio real",
+      "duration_seconds": 37,
+      "published_at": "2026-01-24T00:00:00",
+      "episode_number": 76,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "oGSPh7gdYUQ",
+      "series_slug": "historias-cortas",
+      "slug": "fuiste-deportado-y-estas-pensando-en-regresar",
+      "title": "¿Fuiste deportado y estás pensando en regresar?",
+      "duration_seconds": 29,
+      "published_at": "2025-05-11T00:00:00",
+      "episode_number": 87,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "qOQ-YsWq6ME",
+      "series_slug": "testimonios-reales",
+      "slug": "testimonio-real-yo-no-lo-creia-pero-si-se-pudo-con-el-abogado-manuel-solis",
+      "title": "Testimonio real: Yo no lo creía… pero sí se pudo con el Abogado Manuel Solís.",
+      "duration_seconds": 54,
+      "published_at": "2026-01-13T00:00:00",
+      "episode_number": 77,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    },
+    {
+      "youtube_id": "rMJk8gD6vOY",
+      "series_slug": "historias-cortas",
+      "slug": "conoci-la-vi0l3nci-extrema-a-los-8-anos-parte-1-inmigrantes",
+      "title": "Conocí la vi0l3nci@ extrema a los 8 años - Parte 1 #inmigrantes",
+      "duration_seconds": 145,
+      "published_at": "2025-06-21T00:00:00",
+      "episode_number": 88,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "sgKkoOuR4ps",
+      "series_slug": "historias-cortas",
+      "slug": "penso-que-no-era-posible-hoy-alejandra-ya-es-residente-permanente",
+      "title": "🔥 Pensó que no era posible… hoy Alejandra ya es residente permanente 🇺🇸",
+      "duration_seconds": 32,
+      "published_at": "2026-02-10T00:00:00",
+      "episode_number": 89,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "syqSDu03XUg",
+      "series_slug": "historias-cortas",
+      "slug": "victima-de-violencia-pero-su-pareja-ya-fallecio",
+      "title": "¿Víctima de violencia pero su pareja ya falleció?",
+      "duration_seconds": 16,
+      "published_at": "2024-10-01T00:00:00",
+      "episode_number": 90,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "v7Nc-THbMNo",
+      "series_slug": "historias-cortas",
+      "slug": "con-nosotros-sabras-la-verdad-puedes-arreglar-tus-papeles-en-ee-uu-testimony",
+      "title": "Con nosotros sabrás la verdad: ¿puedes arreglar tus papeles en EE.UU.? #testimony",
+      "duration_seconds": 42,
+      "published_at": "2025-04-07T00:00:00",
+      "episode_number": 91,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "wen9_oPAgMQ",
+      "series_slug": "guia-migratoria",
+      "slug": "por-que-la-visa-u-podria-ayudarte-a-arreglar-tus-papeles-en-ee-uu",
+      "title": "¿Por qué la visa U podría ayudarte a arreglar tus papeles en EE.UU?",
+      "duration_seconds": 161,
+      "published_at": null,
+      "episode_number": 79,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "y-LStrAyuaI",
+      "series_slug": "guia-migratoria",
+      "slug": "visa-u-fuiste-victima-de-un-crimen-abogado-manuel-solis-iii-live",
+      "title": "Visa U: ¿Fuiste víctima de un crimen? | Abogado Manuel Solis III (LIVE)",
+      "duration_seconds": 2485,
+      "published_at": "2024-12-10T00:00:00",
+      "episode_number": 80,
+      "categories": [
+        "asilo"
+      ]
+    },
+    {
+      "youtube_id": "yVVLFB2DSX4",
+      "series_slug": "historias-cortas",
+      "slug": "arrestado-por-dwi",
+      "title": "¿Arrestado por DWI? 🚔",
+      "duration_seconds": 29,
+      "published_at": "2024-08-24T00:00:00",
+      "episode_number": 92,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "yxKBoKcOWgo",
+      "series_slug": "historias-cortas",
+      "slug": "agredida-o-agredido-fisica-o-emocionalmente",
+      "title": "¿Agredida, o agredido, física o emocionalmente? 😌",
+      "duration_seconds": 13,
+      "published_at": "2024-09-04T00:00:00",
+      "episode_number": 93,
+      "categories": [
+        "casos-reales"
+      ]
+    },
+    {
+      "youtube_id": "zP0qSiORg5o",
+      "series_slug": "testimonios-reales",
+      "slug": "oscar-obtuvo-su-residencia-permanente-con-el-abogado-manuel-solis-testimonio-rea",
+      "title": "Óscar obtuvo su residencia permanente con el abogado Manuel Solís | Testimonio real que inspira.",
+      "duration_seconds": 50,
+      "published_at": "2025-12-20T00:00:00",
+      "episode_number": 78,
+      "categories": [
+        "casos-reales",
+        "reunificacion-familiar"
+      ]
+    }
+  ]
+}

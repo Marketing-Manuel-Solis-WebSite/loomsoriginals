@@ -8,12 +8,14 @@ export const revalidate = 3600;
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = SITE.url;
   const now = new Date();
+
   const entries: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: now, changeFrequency: "daily", priority: 1 },
     { url: `${base}/series`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/categorias`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/buscar`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
-    { url: `${base}/sobre`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/sobre`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${base}/contacto`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/privacidad`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${base}/terminos`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${base}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
@@ -38,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             url: `${base}/series/${s.slug}/t${season.season_number}/${ep.slug}`,
             lastModified: published,
             changeFrequency: "monthly",
-            priority: 0.9,
+            priority: 0.95,
           });
         }
       }

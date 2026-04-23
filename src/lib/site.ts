@@ -2,22 +2,42 @@ export const SITE = {
   name: "Loom Originals",
   tagline: "Historias que reúnen familias",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://loomsoriginal.com",
+  description:
+    "Un estudio editorial de historias migrantes en Estados Unidos, producido por Bufete Manuel Solís.",
+
   lawFirm: {
     name: "Bufete Manuel Solís",
+    shortName: "Manuel Solís",
     url: "https://manuelsolis.com",
+    reviewsUrl: "https://manuelsolisreviews.com",
     consultationUrl: "https://manuelsolis.com/consulta",
-    phone: "+1-800-898-9338",
-    whatsapp: "https://wa.me/18008989338",
+    phone: "+1-346-460-7278",
+    phoneDisplay: "+1 (346) 460-7278",
+    whatsapp: "https://wa.me/13464607278",
+    addressLocality: "Houston",
+    addressRegion: "TX",
+    addressCountry: "US",
   },
+
   social: {
     youtube: "https://www.youtube.com/@BufeteManuelSolis",
-    instagram: "https://www.instagram.com/loomoriginals",
-    tiktok: "https://www.tiktok.com/@loomoriginals",
-    facebook: "https://www.facebook.com/loomoriginals",
-    x: "https://x.com/loomoriginals",
+    instagram: "https://www.instagram.com/abogadomanuelsolisoficial/",
+    facebook: "https://www.facebook.com/AbogadoManuelSolisOficial",
+    tiktok: "https://www.tiktok.com/@abogadosmanuelsolis",
   },
-  locales: ["es", "en"] as const,
+
+  sameAs: [
+    "https://manuelsolis.com",
+    "https://manuelsolisreviews.com",
+    "https://www.instagram.com/abogadomanuelsolisoficial/",
+    "https://www.facebook.com/AbogadoManuelSolisOficial",
+    "https://www.tiktok.com/@abogadosmanuelsolis",
+    "https://www.youtube.com/@BufeteManuelSolis",
+  ],
+
+  locales: ["es"] as const,
   defaultLocale: "es" as const,
+
   contactEmail: "contacto@loomsoriginal.com",
   legalEmail: "privacidad@loomsoriginal.com",
 } as const;
@@ -30,11 +50,5 @@ export const NAV = {
     { href: "/series", label: "Series" },
     { href: "/categorias", label: "Categorías" },
     { href: "/buscar", label: "Buscar" },
-  ],
-  en: [
-    { href: "/en", label: "Home" },
-    { href: "/en/series", label: "Series" },
-    { href: "/en/categories", label: "Categories" },
-    { href: "/en/search", label: "Search" },
   ],
 } as const;

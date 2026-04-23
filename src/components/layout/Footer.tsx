@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Scale } from "lucide-react";
+import { Scale, Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { SITE } from "@/lib/site";
@@ -20,7 +20,10 @@ const cols = [
     heading: "Bufete Manuel Solís",
     external: true,
     links: [
-      { href: withUtm(SITE.lawFirm.url, { source: "looms", medium: "footer", campaign: "home" }), label: "Sitio oficial del bufete" },
+      {
+        href: withUtm(SITE.lawFirm.url, { source: "looms", medium: "footer", campaign: "home" }),
+        label: "Sitio oficial del bufete",
+      },
       {
         href: withUtm(SITE.lawFirm.consultationUrl, {
           source: "looms",
@@ -29,8 +32,16 @@ const cols = [
         }),
         label: "Agendar consulta gratuita",
       },
+      {
+        href: withUtm(SITE.lawFirm.reviewsUrl, {
+          source: "looms",
+          medium: "footer",
+          campaign: "reviews",
+        }),
+        label: "Leer reseñas de clientes",
+      },
       { href: SITE.lawFirm.whatsapp, label: "WhatsApp del bufete" },
-      { href: `tel:${SITE.lawFirm.phone}`, label: SITE.lawFirm.phone },
+      { href: `tel:${SITE.lawFirm.phone}`, label: SITE.lawFirm.phoneDisplay },
     ],
   },
   {
@@ -46,19 +57,15 @@ const cols = [
 
 export function Footer() {
   return (
-    <footer className="relative mt-24 border-t border-gold-500/8 bg-navy-950">
-      <div
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/25 to-transparent"
-      />
+    <footer className="relative mt-32 border-t border-gray-200 bg-paper">
       <Container size="xl" className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
             <Logo subtitle className="scale-110 origin-left" />
-            <p className="mt-5 text-sm leading-relaxed text-ivory-200/80 text-pretty">
+            <p className="mt-5 text-sm leading-relaxed text-gray-600 text-pretty">
               Un estudio editorial de historias migrantes. Serie insignia:{" "}
-              <span className="italic text-ivory-50">Uniendo Familias con Manuel Solís</span>.
-              Producido por Bufete Manuel Solís, firma líder en inmigración en Estados Unidos.
+              <span className="italic text-ink">Uniendo Familias con Manuel Solís</span>. Producido
+              por Bufete Manuel Solís, firma líder en inmigración en Estados Unidos.
             </p>
             <div className="mt-6 flex items-center gap-1">
               <SocialIcon href={SITE.social.youtube} label="YouTube">
@@ -74,10 +81,23 @@ export function Footer() {
                 <FacebookIcon className="h-[18px] w-[18px]" />
               </SocialIcon>
             </div>
+            <a
+              href={withUtm(SITE.lawFirm.reviewsUrl, {
+                source: "looms",
+                medium: "footer-badge",
+                campaign: "reviews",
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold-400/40 bg-gold-50 px-4 py-2 text-[12px] font-medium text-gold-700 hover:bg-gold-100 transition-colors"
+            >
+              <Star className="h-3.5 w-3.5 fill-current" />
+              Ver reseñas de clientes
+            </a>
           </div>
           {cols.map((col) => (
             <div key={col.heading}>
-              <h4 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-500">
+              <h4 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-700">
                 {col.heading}
               </h4>
               <ul className="mt-5 space-y-3">
@@ -88,7 +108,7 @@ export function Footer() {
                       {external || link.href.startsWith("http") || link.href.startsWith("tel:") ? (
                         <a
                           href={link.href}
-                          className="text-sm text-ivory-200/80 transition-colors hover:text-gold-500"
+                          className="text-sm text-gray-600 transition-colors hover:text-ink"
                           target={link.href.startsWith("tel:") ? undefined : "_blank"}
                           rel="noopener noreferrer"
                         >
@@ -97,7 +117,7 @@ export function Footer() {
                       ) : (
                         <Link
                           href={link.href}
-                          className="text-sm text-ivory-200/80 transition-colors hover:text-gold-500"
+                          className="text-sm text-gray-600 transition-colors hover:text-ink"
                         >
                           {link.label}
                         </Link>
@@ -110,9 +130,9 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-6 border-t border-white/6 pt-8 md:flex-row md:items-center">
-          <div className="flex items-center gap-3 text-[13px] text-slate-400">
-            <Scale className="h-4 w-4 text-gold-500/80" />
+        <div className="mt-14 flex flex-col items-start justify-between gap-6 border-t border-gray-200 pt-8 md:flex-row md:items-center">
+          <div className="flex items-center gap-3 text-[13px] text-gray-500">
+            <Scale className="h-4 w-4 text-gold-600" />
             <p>
               Una producción de{" "}
               <a
@@ -123,16 +143,16 @@ export function Footer() {
                 })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-ivory-100 hover:text-gold-500"
+                className="text-ink hover:text-gold-700"
               >
                 Bufete Manuel Solís
               </a>
               . © {new Date().getFullYear()} Loom Originals.
             </p>
           </div>
-          <p className="max-w-md text-xs leading-relaxed text-slate-500">
-            El contenido en esta plataforma es informativo y no constituye asesoría legal. Cada
-            caso migratorio es único. Consulte con un abogado licenciado antes de tomar decisiones.
+          <p className="max-w-md text-xs leading-relaxed text-gray-500">
+            El contenido en esta plataforma es informativo y no constituye asesoría legal. Cada caso
+            migratorio es único. Consulte con un abogado licenciado antes de tomar decisiones.
           </p>
         </div>
       </Container>
@@ -155,7 +175,7 @@ function SocialIcon({
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className="grid h-10 w-10 place-items-center rounded-full text-ivory-200 transition-all hover:bg-white/5 hover:text-gold-500 hover:scale-110"
+      className="grid h-10 w-10 place-items-center rounded-full text-gray-600 transition-all hover:bg-gray-100 hover:text-ink hover:scale-110"
     >
       {children}
     </a>
@@ -180,7 +200,16 @@ function YouTubeIcon({ className }: { className?: string }) {
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />

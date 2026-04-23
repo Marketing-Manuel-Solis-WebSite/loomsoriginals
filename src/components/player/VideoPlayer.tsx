@@ -17,7 +17,7 @@ import { cn, formatTimestamp, youtubeThumbnailUrl } from "@/lib/utils";
 import { Logo } from "@/components/ui/Logo";
 import { loadYouTubeApi } from "./loadYouTubeApi";
 import type { YTPlayer } from "./youtube-types";
-import { trackCtaClick, trackVideoEvent, upsertWatchHistory } from "@/lib/tracking";
+import { trackCtaClick, trackMilestone, trackVideoEvent, upsertWatchHistory } from "@/lib/tracking";
 
 type NextUp = {
   title: string;
@@ -80,39 +80,46 @@ function FacadeOverlay({
     <button
       type="button"
       onClick={onActivate}
-      className="group relative block w-full overflow-hidden rounded-3xl bg-navy-900 aspect-video text-left ring-1 ring-white/8 hover:ring-gold-500/50 transition-all duration-500 ease-apple shadow-[0_32px_80px_-20px_rgba(0,0,0,0.6)]"
+      className="group relative block w-full overflow-hidden rounded-3xl bg-gray-900 aspect-video text-left ring-1 ring-gray-200 hover:ring-gold-400 transition-all duration-500 ease-apple shadow-xl"
       aria-label={`Reproducir ${episodeTitle}`}
     >
-      <Image
-        src={youtubeThumbnailUrl(youtubeId, "maxres")}
-        alt=""
-        aria-hidden
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover transition-transform duration-700 ease-apple group-hover:scale-[1.02]"
-        unoptimized
-      />
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-navy-950/20" />
+      <YouTubeImageBg youtubeId={youtubeId} />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
       <div className="absolute left-6 top-6 flex items-center gap-3">
-        <Logo />
+        <Logo tone="light" />
       </div>
       <div className="absolute inset-0 grid place-items-center">
-        <div className="grid h-24 w-24 place-items-center rounded-full bg-gold-500 text-navy-950 shadow-[0_20px_60px_-10px_rgba(212,175,55,0.6)] transition-transform duration-400 ease-apple group-hover:scale-110">
+        <div className="grid h-24 w-24 place-items-center rounded-full bg-white text-ink shadow-[0_20px_60px_rgba(0,0,0,0.3)] transition-transform duration-400 ease-apple group-hover:scale-110 animate-float">
           <Play className="h-9 w-9 translate-x-1" fill="currentColor" />
         </div>
       </div>
       <div className="absolute left-6 right-6 bottom-6">
         {episodeNumberLabel ? (
-          <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-500">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-300">
             {episodeNumberLabel}
           </p>
         ) : null}
-        <h2 className="mt-2 font-display text-2xl italic text-ivory-50 sm:text-3xl md:text-4xl">
+        <h2 className="mt-2 font-display text-2xl italic text-white sm:text-3xl md:text-4xl">
           {episodeTitle}
         </h2>
       </div>
     </button>
+  );
+}
+
+function YouTubeImageBg({ youtubeId }: { youtubeId: string }) {
+  // Thumbnail with fallback — uses standard unoptimized Image
+  return (
+    <Image
+      src={youtubeThumbnailUrl(youtubeId, "hq")}
+      alt=""
+      aria-hidden
+      fill
+      priority
+      sizes="100vw"
+      className="object-cover transition-transform duration-700 ease-apple group-hover:scale-[1.02]"
+      unoptimized
+    />
   );
 }
 
@@ -141,6 +148,12 @@ function ActivePlayer({
   const hideTimer = useRef<number | null>(null);
   const [nextUpShown, setNextUpShown] = useState(false);
   const lastProgressPush = useRef(0);
+  const milestoneFired = useRef<Record<25 | 50 | 75 | 90, boolean>>({
+    25: false,
+    50: false,
+    75: false,
+    90: false,
+  });
 
   useEffect(() => {
     let destroyed = false;
@@ -225,10 +238,24 @@ function ActivePlayer({
         setNextUpShown(true);
       }
 
+      // Milestones at 25/50/75/90 percent — fire once each
+      if (dur > 0) {
+        const pct = Math.floor((time / dur) * 100);
+        for (const m of [25, 50, 75, 90] as const) {
+          if (pct >= m && !milestoneFired.current[m]) {
+            milestoneFired.current[m] = true;
+            trackMilestone(episodeId, m, { durationSeconds: dur });
+          }
+        }
+      }
+
       const now = Date.now();
       if (now - lastProgressPush.current > 10000) {
         lastProgressPush.current = now;
-        trackVideoEvent(episodeId, "progress", { progressSeconds: Math.floor(time) });
+        trackVideoEvent(episodeId, "progress", {
+          progressSeconds: Math.floor(time),
+          durationSeconds: dur,
+        });
         upsertWatchHistory(episodeId, Math.floor(time), dur);
       }
     }, 500);

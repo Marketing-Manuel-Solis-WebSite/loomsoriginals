@@ -98,27 +98,29 @@ export default async function SeriesPage({ params }: { params: Params }) {
         ]}
       />
 
-      <section className="relative min-h-[70dvh] overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          {backdrop ? (
-            <Image
-              src={backdrop}
-              alt=""
+      <section className="relative bg-paper overflow-hidden">
+        {backdrop ? (
+          <>
+            <div className="absolute inset-0 -z-10">
+              <Image
+                src={backdrop}
+                alt=""
+                aria-hidden
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover opacity-30"
+                unoptimized={backdrop.includes("ytimg.com")}
+              />
+            </div>
+            <div
               aria-hidden
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover opacity-70"
-              unoptimized={backdrop.includes("ytimg.com")}
+              className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-white/85 to-white"
             />
-          ) : (
-            <div className="h-full w-full bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950" />
-          )}
-        </div>
-        <div aria-hidden className="pointer-events-none absolute inset-0 gradient-hero-fade" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 gradient-hero-side" />
+          </>
+        ) : null}
 
-        <Container size="xl" className="relative grid gap-10 pb-12 pt-32 md:grid-cols-[220px_1fr] md:gap-12 md:pt-40">
+        <Container size="xl" className="relative grid gap-10 pb-14 pt-28 md:grid-cols-[240px_1fr] md:gap-14 md:pt-36">
           <div className="hidden md:block">
             {series.poster_url ? (
               <Image
@@ -126,30 +128,44 @@ export default async function SeriesPage({ params }: { params: Params }) {
                 alt={`${series.title_es} poster`}
                 width={240}
                 height={360}
-                className="rounded-2xl ring-1 ring-gold-500/20 shadow-[0_32px_64px_-20px_rgba(0,0,0,0.6)]"
+                className="rounded-2xl ring-1 ring-gray-200 shadow-lg"
               />
+            ) : backdrop ? (
+              <div className="relative aspect-[2/3] overflow-hidden rounded-2xl ring-1 ring-gray-200 shadow-lg">
+                <Image
+                  src={backdrop}
+                  alt={series.title_es}
+                  fill
+                  sizes="240px"
+                  className="object-cover"
+                  unoptimized={backdrop.includes("ytimg.com")}
+                />
+              </div>
             ) : null}
           </div>
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-500">
+          <div className="animate-blur-in">
+            <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-700">
+              <span className="h-px w-8 bg-gold-500" />
               Serie original de Loom
             </p>
-            <h1 className="mt-3 font-display text-[clamp(2.5rem,7vw,5.5rem)] italic leading-[0.95] text-ivory-50 text-balance">
+            <h1 className="mt-5 font-display text-[clamp(2.5rem,7vw,5.5rem)] italic leading-[0.98] text-ink text-balance">
               {series.title_es}
             </h1>
-            <div className="mt-5 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-ivory-100/80">
+            <div className="mt-5 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-600">
               {series.release_year ? (
-                <span className="glass-flat rounded-full px-3 py-1">{series.release_year}</span>
+                <span className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1.5">
+                  {series.release_year}
+                </span>
               ) : null}
-              <span className="glass-flat rounded-full px-3 py-1">
+              <span className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1.5">
                 {totalEpisodes} episodios
               </span>
-              <span className="glass-flat rounded-full px-3 py-1">
+              <span className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1.5">
                 {series.seasons.length} temporada{series.seasons.length > 1 ? "s" : ""}
               </span>
             </div>
             {series.synopsis_es ? (
-              <p className="mt-6 max-w-2xl text-[16px] leading-relaxed text-ivory-200/85 text-pretty">
+              <p className="mt-6 max-w-2xl text-[16.5px] leading-relaxed text-gray-700 text-pretty">
                 {series.synopsis_es}
               </p>
             ) : null}
@@ -171,13 +187,13 @@ export default async function SeriesPage({ params }: { params: Params }) {
       </section>
 
       {series.seasons.map((season) => (
-        <section key={season.id} className="py-12">
+        <section key={season.id} className="py-14">
           <Container size="xl">
             <div className="mb-8 flex items-center justify-between">
-              <h2 className="font-display text-3xl italic text-ivory-50">
+              <h2 className="font-display text-3xl italic text-ink">
                 {season.title_es ?? `Temporada ${season.season_number}`}
               </h2>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-gold-500">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-700">
                 {season.episodes?.length ?? 0} episodios
               </span>
             </div>
@@ -187,9 +203,9 @@ export default async function SeriesPage({ params }: { params: Params }) {
                   <Link
                     href={`/series/${series.slug}/t${season.season_number}/${ep.slug}`}
                     prefetch
-                    className="group grid grid-cols-[100px_1fr] items-center gap-4 rounded-2xl p-3 transition-colors hover:bg-white/[0.04] sm:grid-cols-[240px_auto_1fr_auto]"
+                    className="group grid grid-cols-[100px_1fr] items-center gap-4 rounded-2xl p-3 transition-all duration-300 hover:bg-paper sm:grid-cols-[auto_240px_1fr_auto] sm:gap-5"
                   >
-                    <span className="hidden sm:block font-display text-5xl italic leading-none text-gold-500/40 group-hover:text-gold-500 transition-colors">
+                    <span className="hidden sm:block w-10 font-display text-5xl italic leading-none text-gray-300 group-hover:text-gold-500 transition-colors">
                       {String(ep.episode_number).padStart(2, "0")}
                     </span>
                     <Thumbnail
@@ -200,20 +216,20 @@ export default async function SeriesPage({ params }: { params: Params }) {
                       sizes="240px"
                     />
                     <div className="min-w-0">
-                      <h3 className="line-clamp-1 text-[17px] font-medium text-ivory-50 group-hover:text-gold-500 transition-colors">
+                      <h3 className="line-clamp-1 text-[17px] font-medium text-ink group-hover:text-gold-700 transition-colors">
                         {ep.title_es}
                       </h3>
                       {ep.synopsis_es ? (
-                        <p className="mt-1 line-clamp-2 text-[13.5px] leading-relaxed text-ivory-200/70">
+                        <p className="mt-1 line-clamp-2 text-[13.5px] leading-relaxed text-gray-600">
                           {ep.synopsis_es}
                         </p>
                       ) : null}
-                      <div className="mt-2 flex items-center gap-3 text-[11px] font-mono uppercase tracking-widest text-slate-400">
+                      <div className="mt-2 flex items-center gap-3 text-[11px] font-mono uppercase tracking-widest text-gray-500">
                         {ep.duration_seconds ? <span>{formatDuration(ep.duration_seconds)}</span> : null}
                         <span>T{season.season_number}:E{ep.episode_number}</span>
                       </div>
                     </div>
-                    <ChevronRight className="hidden sm:block h-5 w-5 text-ivory-200/40 transition-all group-hover:text-gold-500 group-hover:translate-x-1" />
+                    <ChevronRight className="hidden sm:block h-5 w-5 text-gray-300 transition-all group-hover:text-gold-700 group-hover:translate-x-1" />
                   </Link>
                 </li>
               ))}

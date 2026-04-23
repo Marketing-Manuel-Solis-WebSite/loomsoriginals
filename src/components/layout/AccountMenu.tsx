@@ -54,11 +54,7 @@ export function AccountMenu({ locale }: { locale: "es" | "en" }) {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Menú de cuenta"
-        className={cn(
-          "grid h-9 w-9 place-items-center rounded-full transition-all",
-          "ring-1 ring-gold-500/40 hover:ring-gold-400 hover:scale-105",
-          "overflow-hidden"
-        )}
+        className="grid h-9 w-9 place-items-center rounded-full overflow-hidden ring-2 ring-gold-400/50 hover:ring-gold-400 transition-all hover:scale-105"
       >
         {me.user.avatar_url ? (
           <Image
@@ -70,7 +66,7 @@ export function AccountMenu({ locale }: { locale: "es" | "en" }) {
             className="h-full w-full rounded-full object-cover"
           />
         ) : (
-          <span className="bg-gradient-to-br from-gold-500 to-gold-700 text-navy-950 text-sm font-semibold h-full w-full grid place-items-center">
+          <span className="bg-gradient-to-br from-gold-300 to-gold-500 text-ink text-sm font-semibold h-full w-full grid place-items-center">
             {initial}
           </span>
         )}
@@ -79,17 +75,17 @@ export function AccountMenu({ locale }: { locale: "es" | "en" }) {
       {open ? (
         <div
           role="menu"
-          className="absolute right-0 top-11 z-50 w-64 glass-strong rounded-2xl p-2 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.7)]"
+          className="absolute right-0 top-11 z-50 w-64 glass-strong rounded-2xl p-2 animate-rise"
         >
-          <div className="px-3 py-3 border-b border-white/8">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-500">
+          <div className="px-3 py-3 border-b border-gray-200/60">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-600">
               Sesión activa
             </p>
-            <p className="mt-1 truncate text-[13px] text-ivory-50">
+            <p className="mt-1 truncate text-[13px] font-medium text-ink">
               {me.user.name ?? me.user.email}
             </p>
             {me.user.name && me.user.email ? (
-              <p className="truncate text-[11px] text-ivory-200/70">{me.user.email}</p>
+              <p className="truncate text-[11px] text-gray-500">{me.user.email}</p>
             ) : null}
           </div>
           <nav className="flex flex-col py-1">
@@ -126,11 +122,11 @@ export function AccountMenu({ locale }: { locale: "es" | "en" }) {
           <form
             action="/api/auth/signout"
             method="post"
-            className="border-t border-white/8 pt-1"
+            className="border-t border-gray-200/60 pt-1"
           >
             <button
               type="submit"
-              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] text-ivory-200 hover:bg-white/5 hover:text-ivory-50 transition-colors"
+              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] text-gray-700 hover:bg-gray-100 hover:text-ink transition-colors"
             >
               <LogOut className="h-4 w-4" />
               {locale === "en" ? "Sign out" : "Cerrar sesión"}
@@ -162,8 +158,8 @@ function MenuItem({
       className={cn(
         "flex items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] transition-colors",
         highlight
-          ? "text-gold-400 hover:bg-gold-500/10"
-          : "text-ivory-100 hover:bg-white/5 hover:text-ivory-50"
+          ? "text-gold-700 font-medium hover:bg-gold-50"
+          : "text-ink hover:bg-gray-100"
       )}
     >
       {icon}

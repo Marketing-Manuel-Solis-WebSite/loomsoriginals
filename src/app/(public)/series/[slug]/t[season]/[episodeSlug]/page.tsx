@@ -21,18 +21,28 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!ep) return { title: "Episodio" };
   const title = `${ep.title_es}`;
   const description = ep.synopsis_es ?? `Episodio de ${ep.series.title_es}`;
-  const image = `/api/og/${ep.id}`;
+  const ogImage = `/api/og/${ep.id}`;
   const canonical = `/series/${slug}/t${ep.season.season_number}/${ep.slug}`;
   const embedUrl = `${SITE.url}/embed/${ep.id}`;
+  const keywords = (ep.tags ?? []).concat([
+    ep.series.title_es,
+    "inmigración",
+    "Manuel Solís",
+    "residencia permanente",
+    "reunificación familiar",
+  ]);
   return {
     title,
     description,
+    keywords,
     alternates: { canonical },
     openGraph: {
       type: "video.episode",
       title: `${title} — ${ep.series.title_es}`,
       description,
       url: `${SITE.url}${canonical}`,
+      siteName: SITE.name,
+      locale: "es_US",
       videos: [
         {
           url: `https://www.youtube.com/watch?v=${ep.youtube_id}`,
@@ -41,13 +51,14 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
           height: 720,
         },
       ],
-      images: [{ url: image, width: 1280, height: 720, alt: ep.title_es }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: ep.title_es }],
     },
     twitter: {
       card: "player",
       title,
       description,
-      images: [image],
+      site: "@loomoriginals",
+      images: [ogImage],
       players: [
         {
           playerUrl: embedUrl,
@@ -57,15 +68,21 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
         },
       ],
     },
+    other: {
+      "video:duration": String(ep.duration_seconds ?? ""),
+      "video:release_date": ep.published_at ?? "",
+      "video:series": ep.series.title_es,
+      "article:published_time": ep.published_at ?? "",
+      "article:author": SITE.lawFirm.name,
+      "article:publisher": SITE.social.facebook,
+    },
   };
 }
 
 export default async function EpisodePage({ params }: { params: Params }) {
-  const { slug, season, episodeSlug } = await params;
+  const { slug, episodeSlug } = await params;
   const ep = await getEpisodeBySlug(slug, episodeSlug).catch(() => null);
   if (!ep) notFound();
-  const seasonNumber = parseInt(String(season).replace(/^t/i, ""), 10);
-  if (!Number.isFinite(seasonNumber) || seasonNumber !== ep.season.season_number) notFound();
 
   const [seriesDetail, related] = await Promise.all([
     getSeriesBySlug(slug),
@@ -77,7 +94,7 @@ export default async function EpisodePage({ params }: { params: Params }) {
     ?.episodes ?? [];
   const nextEp = allEpisodesInSeason.find((e) => e.episode_number === ep.episode_number + 1);
 
-  const canonical = `/series/${slug}/t${seasonNumber}/${ep.slug}`;
+  const canonical = `/series/${slug}/t${ep.season.season_number}/${ep.slug}`;
 
   const videoJsonLd = {
     "@context": "https://schema.org",
@@ -98,13 +115,21 @@ export default async function EpisodePage({ params }: { params: Params }) {
       "@type": "Organization",
       name: SITE.name,
       url: SITE.url,
-      logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` },
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE.url}/android-chrome-512x512.png`,
+        width: 512,
+        height: 512,
+      },
     },
     isPartOf: {
       "@type": "TVSeries",
       name: ep.series.title_es,
       url: `${SITE.url}/series/${ep.series.slug}`,
     },
+    regionsAllowed: "US",
+    genre: "Documentary",
+    keywords: (ep.tags ?? []).join(", "),
   } as const;
 
   const episodeJsonLd = {
@@ -144,14 +169,14 @@ export default async function EpisodePage({ params }: { params: Params }) {
 
       <article className="pt-24 pb-20">
         <Container size="lg">
-          <nav aria-label="Ruta" className="mb-6 flex flex-wrap items-center gap-1.5 text-[11.5px] font-medium uppercase tracking-[0.18em] text-slate-400">
-            <Link href="/series" className="hover:text-gold-500">Series</Link>
+          <nav aria-label="Ruta" className="mb-6 flex flex-wrap items-center gap-1.5 text-[11.5px] font-medium uppercase tracking-[0.18em] text-gray-500">
+            <Link href="/series" className="hover:text-ink">Series</Link>
             <span aria-hidden>·</span>
-            <Link href={`/series/${ep.series.slug}`} className="hover:text-gold-500">
+            <Link href={`/series/${ep.series.slug}`} className="hover:text-ink">
               {ep.series.title_es}
             </Link>
             <span aria-hidden>·</span>
-            <span className="text-ivory-200">T{ep.season.season_number}:E{ep.episode_number}</span>
+            <span className="text-ink">T{ep.season.season_number}·E{ep.episode_number}</span>
           </nav>
 
           <VideoPlayer
@@ -171,29 +196,32 @@ export default async function EpisodePage({ params }: { params: Params }) {
             }
           />
 
-          <header className="mt-8">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-500">
+          <header className="mt-10">
+            <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-700">
+              <span className="h-px w-8 bg-gold-500" />
               Temporada {ep.season.season_number} · Episodio {ep.episode_number}
             </p>
-            <h1 className="mt-3 font-display text-[clamp(2rem,5vw,3.5rem)] italic leading-[1.02] text-ivory-50 text-balance">
+            <h1 className="mt-4 font-display text-[clamp(2rem,5vw,3.5rem)] italic leading-[1.05] text-ink text-balance">
               {ep.title_es}
             </h1>
-            <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-ivory-100/80">
+            <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-600">
               {ep.duration_seconds ? (
-                <span className="glass-flat rounded-full px-3 py-1">{formatDuration(ep.duration_seconds)}</span>
+                <span className="inline-flex items-center rounded-full border border-gray-200 bg-paper px-3 py-1.5">
+                  {formatDuration(ep.duration_seconds)}
+                </span>
               ) : null}
               {ep.categories?.map((c) => (
                 <Link
                   key={c.id}
                   href={`/categorias/${c.slug}`}
-                  className="glass-flat rounded-full px-3 py-1 transition-colors hover:border-gold-500/40 hover:text-gold-400"
+                  className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1.5 transition-colors hover:border-gold-400 hover:text-gold-700"
                 >
                   {c.name_es}
                 </Link>
               ))}
             </div>
             {ep.synopsis_es ? (
-              <p className="mt-6 max-w-3xl text-[16.5px] leading-relaxed text-ivory-200/90 text-pretty">
+              <p className="mt-6 max-w-3xl text-[16.5px] leading-relaxed text-gray-700 text-pretty">
                 {ep.synopsis_es}
               </p>
             ) : null}

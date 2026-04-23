@@ -3,22 +3,24 @@ import { forwardRef, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 font-medium transition-all duration-400 ease-apple focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap select-none",
+  "inline-flex items-center justify-center gap-2 font-medium transition-all duration-400 ease-apple focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap select-none",
   {
     variants: {
       variant: {
         primary:
-          "bg-gold-500 text-navy-950 hover:bg-gold-400 active:bg-gold-600 shadow-[0_8px_24px_-4px_rgba(212,175,55,0.4)] hover:shadow-[0_16px_40px_-8px_rgba(212,175,55,0.55)] hover:-translate-y-0.5",
+          "btn-sheen bg-ink text-white hover:bg-gray-800 active:bg-gray-900 shadow-[0_12px_32px_-8px_rgba(9,9,11,0.25)] hover:shadow-[0_20px_40px_-10px_rgba(9,9,11,0.3)] hover:-translate-y-0.5",
+        gold:
+          "btn-sheen bg-gold-400 text-ink hover:bg-gold-300 active:bg-gold-500 shadow-[0_12px_32px_-8px_rgba(212,175,55,0.45)] hover:shadow-[0_20px_40px_-10px_rgba(212,175,55,0.55)] hover:-translate-y-0.5",
         secondary:
-          "glass text-ivory-50 hover:bg-navy-700/60 hover:border-gold-500/40 hover:-translate-y-0.5",
+          "glass text-ink hover:bg-white/90 hover:border-gold-400/40 hover:-translate-y-0.5",
         ghost:
-          "bg-transparent text-ivory-50 border border-gold-500/40 hover:border-gold-400 hover:bg-gold-500/8 hover:text-gold-400",
+          "bg-transparent text-ink border border-gray-200 hover:border-ink hover:bg-gray-50",
         subtle:
-          "bg-navy-800/40 text-ivory-200 hover:bg-navy-700/60 hover:text-ivory-50",
+          "bg-gray-100 text-ink hover:bg-gray-200",
         link:
-          "bg-transparent text-gold-500 hover:text-gold-400 underline-offset-4 hover:underline p-0",
+          "bg-transparent text-ink hover:text-gold-600 underline-offset-4 hover:underline p-0",
         danger:
-          "bg-red-500/10 text-red-300 border border-red-500/30 hover:bg-red-500/20",
+          "bg-red-50 text-red-700 border border-red-200 hover:bg-red-100",
       },
       size: {
         sm: "h-9 px-4 text-sm rounded-full",

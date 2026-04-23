@@ -79,7 +79,22 @@ export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
 }
 
-export function youtubeThumbnailUrl(videoId: string, quality: "default" | "hq" | "maxres" = "maxres"): string {
-  const q = quality === "maxres" ? "maxresdefault" : quality === "hq" ? "hqdefault" : "hqdefault";
+export function youtubeThumbnailUrl(
+  videoId: string,
+  quality: "hq" | "sd" | "maxres" = "hq"
+): string {
+  // hqdefault.jpg is always available (480x360) — safe default.
+  // maxresdefault.jpg (1280x720) is nicer but not uploaded for every video.
+  // sddefault.jpg (640x480) is an alternative, also not universally available.
+  const q = quality === "maxres" ? "maxresdefault" : quality === "sd" ? "sddefault" : "hqdefault";
   return `https://i.ytimg.com/vi/${videoId}/${q}.jpg`;
+}
+
+/** Returns a list of candidate URLs in decreasing quality, all guaranteed valid formats. */
+export function youtubeThumbnailCandidates(videoId: string): string[] {
+  return [
+    `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/sddefault.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+  ];
 }

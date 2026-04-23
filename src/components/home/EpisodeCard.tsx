@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Play } from "lucide-react";
-import { Thumbnail } from "./Thumbnail";
+import { YouTubeImage } from "@/components/ui/YouTubeImage";
 import { formatDuration } from "@/lib/utils";
 import type { EpisodeCard as EpisodeCardType } from "@/lib/queries/types";
 import type { Series } from "@/lib/supabase/types";
@@ -31,50 +31,45 @@ export function EpisodeCard({
       className="group relative block w-[280px] shrink-0 snap-start sm:w-[340px] lg:w-[360px] outline-none"
       aria-label={episode.title_es}
     >
-      <div className="relative overflow-hidden rounded-2xl transition-all duration-400 ease-apple group-hover:-translate-y-1 group-hover:scale-[1.025] group-focus-visible:-translate-y-1 group-focus-visible:scale-[1.025] shadow-[0_2px_12px_rgba(6,15,31,0.3)] group-hover:shadow-[0_20px_60px_-10px_rgba(212,175,55,0.2)] ring-1 ring-white/5 group-hover:ring-gold-500/35">
-        <Thumbnail
+      <div className="relative aspect-video overflow-hidden rounded-2xl bg-gray-100 transition-all duration-500 ease-apple group-hover:-translate-y-1 group-focus-visible:-translate-y-1 shadow-sm group-hover:shadow-lg ring-1 ring-gray-200 group-hover:ring-gold-400/60">
+        <YouTubeImage
           youtubeId={episode.youtube_id}
-          thumbnailUrl={episode.thumbnail_url}
           alt={episode.title_es}
           priority={priority}
-          sizes={
-            size === "lg"
-              ? "(max-width: 768px) 80vw, 360px"
-              : "(max-width: 768px) 70vw, 300px"
-          }
+          sizes={size === "lg" ? "(max-width: 768px) 80vw, 360px" : "(max-width: 768px) 70vw, 300px"}
+          className="object-cover transition-transform duration-700 ease-apple group-hover:scale-105"
         />
-        <div className="pointer-events-none absolute inset-0 gradient-card-bottom" />
-        <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-apple group-hover:opacity-100 group-focus-visible:opacity-100 bg-gradient-to-b from-navy-950/30 via-transparent to-navy-950/70" />
+        <div className="pointer-events-none absolute inset-0 gradient-card-bottom opacity-60 group-hover:opacity-80 transition-opacity" />
 
-        <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-navy-950/70 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-ivory-100 backdrop-blur-md">
-          T{seasonNumber}:E{episode.episode_number}
+        <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-white/95 backdrop-blur-md px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-ink shadow-sm">
+          T{seasonNumber}·E{episode.episode_number}
         </span>
 
         {duration ? (
-          <span className="absolute right-3 bottom-3 rounded-full bg-navy-950/75 px-2.5 py-1 font-mono text-[10px] text-ivory-100 backdrop-blur-md">
+          <span className="absolute right-3 bottom-3 rounded-full bg-ink/85 backdrop-blur-md px-2.5 py-1 font-mono text-[10px] text-white">
             {duration}
           </span>
         ) : null}
 
         <div className="absolute inset-0 grid place-items-center opacity-0 transition-all duration-400 ease-apple group-hover:opacity-100 group-focus-visible:opacity-100">
-          <div className="grid h-16 w-16 place-items-center rounded-full bg-gold-500/95 text-navy-950 shadow-[0_12px_32px_rgba(212,175,55,0.45)]">
+          <div className="grid h-16 w-16 place-items-center rounded-full bg-white text-ink shadow-[0_16px_40px_rgba(0,0,0,0.25)] scale-90 group-hover:scale-100 transition-transform">
             <Play className="h-6 w-6 translate-x-0.5" fill="currentColor" />
           </div>
         </div>
 
         {progress !== undefined && progress > 0 ? (
-          <div className="absolute inset-x-0 bottom-0 h-1 bg-navy-950/60">
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-black/20">
             <div className="h-full bg-gold-500" style={{ width: `${Math.min(100, progress)}%` }} />
           </div>
         ) : null}
       </div>
 
       <div className="mt-3 px-1">
-        <h3 className="line-clamp-2 text-[15px] font-medium leading-snug text-ivory-100 group-hover:text-gold-500 transition-colors">
+        <h3 className="line-clamp-2 text-[15px] font-medium leading-snug text-ink group-hover:text-gold-700 transition-colors">
           {episode.title_es}
         </h3>
         {episode.synopsis_es ? (
-          <p className="mt-1 line-clamp-2 text-[12.5px] leading-relaxed text-slate-400">
+          <p className="mt-1 line-clamp-2 text-[12.5px] leading-relaxed text-gray-500">
             {episode.synopsis_es}
           </p>
         ) : null}

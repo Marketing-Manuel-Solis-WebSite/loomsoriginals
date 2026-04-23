@@ -14,10 +14,10 @@ export function SeriesCard({
 }) {
   const src =
     series.poster_url ??
-    (series.trailer_youtube_id ? youtubeThumbnailUrl(series.trailer_youtube_id) : null);
+    (series.trailer_youtube_id ? youtubeThumbnailUrl(series.trailer_youtube_id, "hq") : null);
   const backdropSrc =
     series.backdrop_url ??
-    (series.trailer_youtube_id ? youtubeThumbnailUrl(series.trailer_youtube_id) : null);
+    (series.trailer_youtube_id ? youtubeThumbnailUrl(series.trailer_youtube_id, "hq") : null);
 
   return (
     <Link
@@ -31,7 +31,7 @@ export function SeriesCard({
     >
       <div
         className={cn(
-          "relative overflow-hidden rounded-2xl ring-1 ring-white/5 transition-all duration-400 ease-apple group-hover:-translate-y-1 group-hover:ring-gold-500/40 shadow-[0_2px_12px_rgba(6,15,31,0.3)] group-hover:shadow-[0_20px_60px_-10px_rgba(212,175,55,0.18)]",
+          "relative overflow-hidden rounded-2xl bg-gray-100 ring-1 ring-gray-200 transition-all duration-500 ease-apple group-hover:-translate-y-1 group-hover:ring-gold-400/60 shadow-sm group-hover:shadow-lg",
           variant === "poster" ? "aspect-[2/3]" : "aspect-video"
         )}
       >
@@ -42,7 +42,7 @@ export function SeriesCard({
               alt={series.title_es}
               fill
               sizes="(max-width: 640px) 50vw, 220px"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 ease-apple group-hover:scale-105"
               priority={priority}
               unoptimized={src.includes("ytimg.com")}
             />
@@ -62,13 +62,13 @@ export function SeriesCard({
         ) : (
           <PosterPlaceholder title={series.title_es} />
         )}
-        <div className="pointer-events-none absolute inset-0 gradient-card-bottom" />
-        <div className="absolute inset-x-0 bottom-0 p-3">
-          <p className="line-clamp-2 font-display text-base italic leading-tight text-ivory-50">
+        <div className="pointer-events-none absolute inset-0 gradient-card-bottom opacity-70" />
+        <div className="absolute inset-x-0 bottom-0 p-3.5">
+          <p className="line-clamp-2 font-display text-base italic leading-tight text-white">
             {series.title_es}
           </p>
           {series.release_year ? (
-            <p className="mt-0.5 text-[10px] font-mono uppercase tracking-widest text-gold-500">
+            <p className="mt-1 text-[10px] font-mono uppercase tracking-widest text-gold-300">
               {series.release_year}
             </p>
           ) : null}
@@ -80,11 +80,9 @@ export function SeriesCard({
 
 function PosterPlaceholder({ title }: { title: string }) {
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300">
       <div className="absolute inset-0 grid place-items-center">
-        <span className="px-4 text-center font-display text-2xl italic text-gold-500/80">
-          {title}
-        </span>
+        <span className="px-4 text-center font-display text-2xl italic text-gold-700">{title}</span>
       </div>
     </div>
   );

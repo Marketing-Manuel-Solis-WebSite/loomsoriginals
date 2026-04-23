@@ -4,7 +4,7 @@ export default function Loading() {
       <div className="glass flex items-center gap-4 rounded-full px-6 py-3">
         <svg
           aria-hidden
-          className="h-5 w-5 animate-spin text-gold-500"
+          className="h-5 w-5 animate-spin text-gold-600"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -13,7 +13,7 @@ export default function Loading() {
           <circle cx="12" cy="12" r="9" opacity=".2" />
           <path d="M21 12a9 9 0 0 1-9 9" strokeLinecap="round" />
         </svg>
-        <span className="text-sm text-ivory-200">Cargando…</span>
+        <span className="text-sm text-gray-700">Cargando…</span>
       </div>
     </div>
   );
