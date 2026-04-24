@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* ───────────── Neutral scale (white base) ───────────── */
+  /* ───────────── Neutral scale (warm white base) ───────────── */
   --color-white: #ffffff;
-  --color-paper: #fafafa;
+  --color-paper: #fafaf7;
+  --color-cream: #f7f3eb;
+  --color-parchment: #efe9db;
   --color-surface: #f4f4f5;
   --color-surface-2: #e4e4e7;
-  --color-border: #e4e4e7;
+  --color-border: #e7e3da;
   --color-border-strong: #d4d4d8;
 
   --color-gray-50: #fafafa;
@@ -118,6 +120,40 @@
 }
 
 @layer components {
+  /* ─── Editorial divider with center gold ornament ─── */
+  .divider-ornament {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--color-gold-700);
+  }
+  .divider-ornament::before,
+  .divider-ornament::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(184, 134, 11, 0.35),
+      transparent
+    );
+  }
+
+  /* ─── Editorial number (for "Issue 01", section counters) ─── */
+  .edition-number {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+    background: linear-gradient(180deg, rgba(9, 9, 11, 0.1) 0%, rgba(9, 9, 11, 0.02) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
   /* ─── Glass on white: softly tinted + blur ─── */
   .glass {
     background: rgba(255, 255, 255, 0.65);

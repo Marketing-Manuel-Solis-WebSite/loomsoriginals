@@ -5,12 +5,14 @@ import { cn, youtubeThumbnailUrl } from "@/lib/utils";
 
 export function SeriesCard({
   series,
-  variant = "poster",
+  variant = "backdrop",
   priority,
+  fullWidth = false,
 }: {
   series: SeriesCardType;
   variant?: "poster" | "backdrop";
   priority?: boolean;
+  fullWidth?: boolean;
 }) {
   const src =
     series.poster_url ??
@@ -24,8 +26,9 @@ export function SeriesCard({
       href={`/series/${series.slug}`}
       prefetch
       className={cn(
-        "group relative block shrink-0 snap-start outline-none",
-        variant === "poster" ? "w-[190px] sm:w-[220px]" : "w-[340px] sm:w-[400px]"
+        "group relative block outline-none",
+        fullWidth ? "w-full" : "shrink-0 snap-start",
+        !fullWidth && (variant === "poster" ? "w-[190px] sm:w-[220px]" : "w-[280px] sm:w-[340px] lg:w-[380px]")
       )}
       aria-label={series.title_es}
     >
@@ -54,8 +57,8 @@ export function SeriesCard({
             src={backdropSrc}
             alt={series.title_es}
             fill
-            sizes="(max-width: 640px) 80vw, 400px"
-            className="object-cover"
+            sizes={fullWidth ? "(max-width: 768px) 100vw, 33vw" : "(max-width: 640px) 80vw, 380px"}
+            className="object-cover transition-transform duration-700 ease-apple group-hover:scale-[1.03]"
             priority={priority}
             unoptimized={backdropSrc.includes("ytimg.com")}
           />
@@ -63,8 +66,8 @@ export function SeriesCard({
           <PosterPlaceholder title={series.title_es} />
         )}
         <div className="pointer-events-none absolute inset-0 gradient-card-bottom opacity-70" />
-        <div className="absolute inset-x-0 bottom-0 p-3.5">
-          <p className="line-clamp-2 font-display text-base italic leading-tight text-white">
+        <div className="absolute inset-x-0 bottom-0 p-4">
+          <p className="line-clamp-2 font-display text-lg italic leading-tight text-white">
             {series.title_es}
           </p>
           {series.release_year ? (

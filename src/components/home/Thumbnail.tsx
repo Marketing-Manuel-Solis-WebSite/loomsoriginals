@@ -46,6 +46,7 @@ export function Thumbnail({
           priority={priority}
           sizes={sizes}
           className="object-cover"
+          fallbackLabel={alt}
         />
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200" />

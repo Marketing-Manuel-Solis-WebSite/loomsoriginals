@@ -79,10 +79,10 @@ export default async function MiListaPage() {
 
       {favorites.length ? (
         <section className="mt-16">
-          <h2 className="mb-6 font-display text-2xl italic text-ivory-50">Series favoritas</h2>
-          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:gap-6 lg:grid-cols-4">
+          <h2 className="mb-6 font-display text-2xl italic text-ink">Series favoritas</h2>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {favorites.map((s) => (
-              <SeriesCard key={s.id} series={s} />
+              <SeriesCard key={s.id} series={s} variant="backdrop" fullWidth />
             ))}
           </div>
         </section>
