@@ -1,0 +1,17 @@
+# Dependencias Python de los scripts de datos en scripts/
+# (ingesta de catálogo, clasificación, enriquecimiento de metadata de YouTube,
+# push a Supabase). Requiere Python 3.10+ (los scripts usan sintaxis de unión
+# de tipos PEP 604, p. ej. `str | None`).
+#
+# Instalación:
+#   python -m pip install -r requirements.txt
+#
+# Todo lo demás que usan los scripts es de la librería estándar (no se lista).
+# La carga de .env.local la hace scripts/_env.py con stdlib (sin python-dotenv).
+
+# Lectura del catálogo fuente en Excel (.xlsx) — read-catalog.py, classify-catalog.py
+openpyxl>=3.1,<4
+
+# Clasificación con LLM (Fase 2) — classify-llm.py. Requiere una versión con
+# soporte de structured outputs / strict tool use (output_config / strict).
+anthropic>=0.69

@@ -57,14 +57,14 @@ export function ProfileForm({ defaultValues }: { defaultValues: Values }) {
           value={values.display_name}
           onChange={(e) => setValues((v) => ({ ...v, display_name: e.target.value }))}
           maxLength={60}
-          className="h-11 w-full rounded-full border border-white/10 bg-navy-900/60 px-5 text-[15px] text-ivory-50 outline-none focus:border-gold-500/60"
+          className="h-12 w-full rounded-full border border-gray-200 bg-paper px-5 text-[15px] text-ink outline-none transition-colors focus:border-gold-400 focus:bg-cream"
         />
       </Field>
       <Field label="Idioma preferido">
         <select
           value={values.preferred_language}
           onChange={(e) => setValues((v) => ({ ...v, preferred_language: e.target.value }))}
-          className="h-11 w-full rounded-full border border-white/10 bg-navy-900/60 px-5 text-[15px] text-ivory-50 outline-none focus:border-gold-500/60"
+          className="h-12 w-full rounded-full border border-gray-200 bg-paper px-5 text-[15px] text-ink outline-none transition-colors focus:border-gold-400 focus:bg-cream"
         >
           <option value="es">Español</option>
           <option value="en">English</option>
@@ -76,7 +76,7 @@ export function ProfileForm({ defaultValues }: { defaultValues: Values }) {
           value={values.avatar_url}
           onChange={(e) => setValues((v) => ({ ...v, avatar_url: e.target.value }))}
           placeholder="https://…"
-          className="h-11 w-full rounded-full border border-white/10 bg-navy-900/60 px-5 text-[15px] text-ivory-50 outline-none focus:border-gold-500/60"
+          className="h-12 w-full rounded-full border border-gray-200 bg-paper px-5 text-[15px] text-ink outline-none transition-colors focus:border-gold-400 focus:bg-cream"
         />
       </Field>
 
@@ -85,17 +85,17 @@ export function ProfileForm({ defaultValues }: { defaultValues: Values }) {
           className={cn(
             "rounded-2xl px-4 py-3 text-sm",
             message.kind === "success"
-              ? "border border-gold-500/30 bg-gold-500/10 text-gold-200"
-              : "border border-red-500/30 bg-red-500/10 text-red-200"
+              ? "border border-gold-300 bg-gold-50 text-gold-800"
+              : "border border-red-200 bg-red-50 text-red-700"
           )}
         >
           {message.text}
         </p>
       ) : null}
 
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex flex-wrap items-center gap-3 pt-2">
         <Button type="submit" disabled={saving} variant="primary">
-          {saving ? "Guardando…" : "Guardar"}
+          {saving ? "Guardando…" : "Guardar cambios"}
         </Button>
         <Button type="button" onClick={onSignOut} variant="ghost">
           Cerrar sesión
@@ -107,8 +107,8 @@ export function ProfileForm({ defaultValues }: { defaultValues: Values }) {
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <label className="flex flex-col gap-1.5">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-ivory-200/80">
+    <label className="flex flex-col gap-2">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-gold-700">
         {label}
       </span>
       {children}

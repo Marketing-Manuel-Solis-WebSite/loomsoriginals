@@ -3,6 +3,7 @@ import { getSupabaseServerClient } from "@/lib/supabase/server";
 import { youtubeThumbnailUrl } from "@/lib/utils";
 
 export const runtime = "edge";
+export const revalidate = 86400; // re-generate at most once per day
 
 export async function GET(
   _request: Request,
@@ -23,9 +24,9 @@ export async function GET(
   const backdrop =
     ep?.thumbnail_url ??
     (ep?.youtube_id ? youtubeThumbnailUrl(ep.youtube_id) : null);
-  const title = ep?.title_es ?? "Loom Originals";
+  const title = ep?.title_es ?? "Looms Originals";
   const seriesTitle =
-    (ep?.series as unknown as { title_es?: string } | null)?.title_es ?? "Loom Originals";
+    (ep?.series as unknown as { title_es?: string } | null)?.title_es ?? "Looms Originals";
   const ep_label = ep
     ? `T${(ep.season as unknown as { season_number?: number } | null)?.season_number ?? 1} · Episodio ${ep.episode_number}`
     : "";
@@ -128,6 +129,13 @@ export async function GET(
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    {
+      width: 1200,
+      height: 630,
+      headers: {
+        "Cache-Control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
+        "Content-Type": "image/png",
+      },
+    }
   );
 }

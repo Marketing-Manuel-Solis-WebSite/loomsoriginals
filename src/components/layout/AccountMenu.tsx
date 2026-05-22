@@ -66,7 +66,7 @@ export function AccountMenu({ locale }: { locale: "es" | "en" }) {
             className="h-full w-full rounded-full object-cover"
           />
         ) : (
-          <span className="bg-gradient-to-br from-gold-300 to-gold-500 text-ink text-sm font-semibold h-full w-full grid place-items-center">
+          <span className="bg-gradient-to-br from-gold-300 to-gold-500 text-white text-sm font-semibold h-full w-full grid place-items-center">
             {initial}
           </span>
         )}
@@ -81,7 +81,7 @@ export function AccountMenu({ locale }: { locale: "es" | "en" }) {
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-gold-600">
               Sesión activa
             </p>
-            <p className="mt-1 truncate text-[13px] font-medium text-ink">
+            <p className="mt-1 truncate text-[13px] font-medium text-white">
               {me.user.name ?? me.user.email}
             </p>
             {me.user.name && me.user.email ? (
@@ -126,7 +126,7 @@ export function AccountMenu({ locale }: { locale: "es" | "en" }) {
           >
             <button
               type="submit"
-              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] text-gray-700 hover:bg-gray-100 hover:text-ink transition-colors"
+              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] text-gray-700 hover:bg-gray-100 hover:text-white transition-colors"
             >
               <LogOut className="h-4 w-4" />
               {locale === "en" ? "Sign out" : "Cerrar sesión"}
@@ -159,7 +159,7 @@ function MenuItem({
         "flex items-center gap-3 rounded-xl px-3 py-2.5 text-[13px] transition-colors",
         highlight
           ? "text-gold-700 font-medium hover:bg-gold-50"
-          : "text-ink hover:bg-gray-100"
+          : "text-white hover:bg-gray-100"
       )}
     >
       {icon}

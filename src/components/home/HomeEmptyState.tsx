@@ -3,17 +3,13 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export function HomeEmptyState() {
   return (
-    <section className="relative grid min-h-[80dvh] place-items-center overflow-hidden bg-white">
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.12),transparent_60%)]"
-      />
+    <section className="relative grid min-h-[80dvh] place-items-center overflow-hidden bg-paper depth-wash">
       <div aria-hidden className="pointer-events-none absolute inset-0 grain" />
       <Container size="xl" className="relative z-10 text-center">
         <p className="text-[11px] font-semibold uppercase tracking-[0.36em] text-gold-700">
-          Serie original de Loom
+          Serie original de Looms
         </p>
-        <h1 className="mt-6 font-display text-[clamp(3rem,10vw,9rem)] italic leading-[0.95] tracking-[-0.02em] text-ink text-balance">
+        <h1 className="mt-6 font-display text-[clamp(3rem,10vw,9rem)] italic leading-[0.95] tracking-[-0.02em] text-white text-balance">
           Historias que <br />
           <span className="text-gold-gradient">reúnen familias</span>
         </h1>
@@ -23,7 +19,7 @@ export function HomeEmptyState() {
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <ButtonLink href="/sobre" variant="ghost" size="lg">
-            Sobre Loom Originals
+            Sobre Looms Originals
           </ButtonLink>
           <ButtonLink
             href="https://manuelsolis.com?utm_source=looms&utm_medium=empty-home&utm_campaign=launch"
@@ -32,7 +28,7 @@ export function HomeEmptyState() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Conocer al Bufete Manuel Solís
+            Conocer al Law Offices of Manuel Solís
           </ButtonLink>
         </div>
       </Container>

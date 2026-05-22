@@ -73,10 +73,11 @@ export function FavoriteButton({
       disabled={pending}
       aria-pressed={active ?? undefined}
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-[13px] font-medium transition-colors",
+        "inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-[13px] font-medium transition-all duration-300 ease-apple",
+        "hover:-translate-y-0.5",
         active
-          ? "border-gold-500 bg-gold-500/10 text-gold-400"
-          : "border-white/15 text-ivory-100 hover:border-gold-500/50 hover:text-gold-400"
+          ? "border-gold-400 bg-gold-50 text-gold-700 shadow-[0_8px_24px_-8px_rgba(212,175,55,0.4)]"
+          : "border-gray-200 bg-white text-ink hover:border-gold-400 hover:text-gold-700 hover:shadow-md"
       )}
     >
       <Heart className="h-4 w-4" fill={active ? "currentColor" : "none"} />

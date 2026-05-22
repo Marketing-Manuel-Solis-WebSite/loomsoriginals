@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Children, useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +11,7 @@ export function ContentRail({
   seeAllHref,
   seeAllLabel = "Ver todo",
   railNumber,
+  minItems = 1,
   children,
   className,
 }: {
@@ -19,6 +20,8 @@ export function ContentRail({
   seeAllHref?: string;
   seeAllLabel?: string;
   railNumber?: string;
+  /** Si el rail tiene menos de `minItems` hijos, no se renderiza (evita rails "rotos"). */
+  minItems?: number;
   children: React.ReactNode;
   className?: string;
 }) {
@@ -49,23 +52,26 @@ export function ContentRail({
     scrollerRef.current?.scrollBy({ left: delta, behavior: "smooth" });
   };
 
+  // Guarda de rails thin: con pocos items se ve roto → mejor esconderlo.
+  if (Children.count(children) < minItems) return null;
+
   return (
     <section className={cn("relative", className)}>
-      <div className="mx-auto flex max-w-[1440px] items-end justify-between gap-6 px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto flex max-w-[1440px] items-end justify-between gap-6 px-8 sm:px-14 md:px-24 lg:px-40 xl:px-56 2xl:px-72">
         <div className="flex items-end gap-5">
           {railNumber ? (
-            <span className="hidden sm:inline-block font-display text-6xl italic leading-none text-gray-200 select-none">
+            <span className="hidden sm:inline-block font-display text-6xl italic leading-none text-gray-200 select-none transition-colors duration-500 group-hover/rail-header:text-gold-300">
               {railNumber}
             </span>
           ) : null}
-          <div>
+          <div className="group/rail-title">
             {eyebrow ? (
               <p className="mb-2.5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-700">
-                <span className="h-px w-8 bg-gold-500" />
+                <span className="h-px w-8 bg-gold-500 transition-all duration-500 group-hover/rail-title:w-14" />
                 {eyebrow}
               </p>
             ) : null}
-            <h2 className="font-display text-[28px] italic leading-tight text-ink sm:text-[34px]">
+            <h2 className="font-display text-[28px] italic leading-tight text-white sm:text-[34px] transition-colors duration-500 group-hover/rail-title:text-gold-700">
               {title}
             </h2>
           </div>
@@ -73,7 +79,7 @@ export function ContentRail({
         {seeAllHref ? (
           <Link
             href={seeAllHref}
-            className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink hover:text-gold-700 transition-colors whitespace-nowrap"
+            className="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-white hover:text-gold-700 transition-colors whitespace-nowrap"
           >
             {seeAllLabel}
             <ArrowUpRight className="h-3.5 w-3.5" />
@@ -87,29 +93,33 @@ export function ContentRail({
           onClick={() => scrollBy(-600)}
           aria-label="Desplazar a la izquierda"
           className={cn(
-            "absolute left-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-2.5 shadow-lg transition-all duration-300 ease-apple lg:grid",
-            "place-items-center ring-1 ring-gray-200 hover:ring-gold-400 hover:shadow-xl",
-            canLeft ? "opacity-0 group-hover/rail:opacity-100" : "opacity-0 pointer-events-none"
+            "absolute left-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-ink/80 backdrop-blur-md p-3 shadow-lg transition-all duration-400 ease-apple lg:grid",
+            "place-items-center ring-1 ring-white/10 hover:ring-gold-400 hover:shadow-xl hover:scale-110 active:scale-95",
+            canLeft
+              ? "opacity-0 -translate-x-2 group-hover/rail:opacity-100 group-hover/rail:translate-x-0"
+              : "opacity-0 pointer-events-none"
           )}
         >
-          <ChevronLeft className="h-5 w-5 text-ink" />
+          <ChevronLeft className="h-5 w-5 text-white transition-transform duration-300 group-hover/rail:-translate-x-0.5" />
         </button>
         <button
           type="button"
           onClick={() => scrollBy(600)}
           aria-label="Desplazar a la derecha"
           className={cn(
-            "absolute right-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-2.5 shadow-lg transition-all duration-300 ease-apple lg:grid",
-            "place-items-center ring-1 ring-gray-200 hover:ring-gold-400 hover:shadow-xl",
-            canRight ? "opacity-0 group-hover/rail:opacity-100" : "opacity-0 pointer-events-none"
+            "absolute right-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-ink/80 backdrop-blur-md p-3 shadow-lg transition-all duration-400 ease-apple lg:grid",
+            "place-items-center ring-1 ring-white/10 hover:ring-gold-400 hover:shadow-xl hover:scale-110 active:scale-95",
+            canRight
+              ? "opacity-0 translate-x-2 group-hover/rail:opacity-100 group-hover/rail:translate-x-0"
+              : "opacity-0 pointer-events-none"
           )}
         >
-          <ChevronRight className="h-5 w-5 text-ink" />
+          <ChevronRight className="h-5 w-5 text-white transition-transform duration-300 group-hover/rail:translate-x-0.5" />
         </button>
 
         <div
           ref={scrollerRef}
-          className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 pb-6 sm:gap-5 sm:px-6 lg:px-10"
+          className="no-scrollbar flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-8 pb-6 sm:gap-5 sm:px-14 md:px-24 lg:px-40 xl:px-56 2xl:px-72"
         >
           {children}
         </div>

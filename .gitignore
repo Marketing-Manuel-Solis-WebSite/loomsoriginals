@@ -13,6 +13,12 @@
 # testing
 /coverage
 
+# python (scripts/ tooling)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
 # next.js
 /.next/
 /out/
@@ -30,8 +36,14 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# run logs & data-script preview artifacts (ephemeral, not source)
+*.log
+scripts/*-preview.csv
+
 # env files (can opt-in for committing if needed)
 .env*
+# ...but the placeholder template MUST be committable
+!.env.local.example
 
 # vercel
 .vercel

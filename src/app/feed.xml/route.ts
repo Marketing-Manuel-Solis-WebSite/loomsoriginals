@@ -54,7 +54,7 @@ export async function GET() {
     <title>${escape(SITE.name)}</title>
     <link>${SITE.url}</link>
     <atom:link href="${SITE.url}/feed.xml" rel="self" type="application/rss+xml" />
-    <description>${escape("Historias migrantes producidas por Bufete Manuel Solís.")}</description>
+    <description>${escape("Historias migrantes producidas por Law Offices of Manuel Solís.")}</description>
     <language>es-US</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${items}

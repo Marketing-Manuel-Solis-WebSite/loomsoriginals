@@ -80,7 +80,7 @@ function FacadeOverlay({
     <button
       type="button"
       onClick={onActivate}
-      className="group relative block w-full overflow-hidden rounded-3xl bg-gray-900 aspect-video text-left ring-1 ring-gray-200 hover:ring-gold-400 transition-all duration-500 ease-apple shadow-xl"
+      className="group relative block w-full overflow-hidden rounded-3xl bg-gray-900 aspect-video text-left ring-1 ring-white/10 hover:ring-gold-400 transition-all duration-500 ease-apple shadow-xl"
       aria-label={`Reproducir ${episodeTitle}`}
     >
       <YouTubeImageBg youtubeId={youtubeId} />
@@ -139,6 +139,7 @@ function ActivePlayer({
   const playerRef = useRef<YTPlayer | null>(null);
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [buffering, setBuffering] = useState(false);
   const [muted, setMuted] = useState(false);
   const [volume, setVolume] = useState(80);
   const [currentTime, setCurrentTime] = useState(initialProgress);
@@ -189,6 +190,7 @@ function ActivePlayer({
             e.target.playVideo();
           },
           onStateChange: (e) => {
+            setBuffering(e.data === 3);
             if (e.data === 1) {
               setPlaying(true);
               trackVideoEvent(episodeId, "play", {
@@ -367,11 +369,33 @@ function ActivePlayer({
       onMouseMove={bumpControls}
       onTouchStart={bumpControls}
       className={cn(
-        "group/player relative overflow-hidden rounded-3xl bg-black ring-1 ring-white/8 shadow-[0_32px_80px_-20px_rgba(0,0,0,0.6)]",
+        "group/player relative overflow-hidden rounded-3xl bg-black ring-1 ring-white/10 shadow-[0_32px_80px_-20px_rgba(0,0,0,0.6)]",
         fullscreen ? "rounded-none" : "aspect-video"
       )}
     >
       <div ref={playerHostRef} className="absolute inset-0 [&>iframe]:h-full [&>iframe]:w-full" />
+
+      {/* Doble-tap para saltar ±10s (móvil + desktop). z-0: debajo de los controles. */}
+      <button
+        type="button"
+        tabIndex={-1}
+        aria-label="Retroceder 10 segundos"
+        onDoubleClick={() => onSeek(Math.max(0, currentTime - 10))}
+        className="absolute inset-y-0 left-0 z-0 w-[28%]"
+      />
+      <button
+        type="button"
+        tabIndex={-1}
+        aria-label="Adelantar 10 segundos"
+        onDoubleClick={() => onSeek(Math.min(duration, currentTime + 10))}
+        className="absolute inset-y-0 right-0 z-0 w-[28%]"
+      />
+
+      {!ready || buffering ? (
+        <div aria-hidden className="pointer-events-none absolute inset-0 grid place-items-center">
+          <span className="h-12 w-12 rounded-full border-2 border-white/25 border-t-gold-400 animate-spin" />
+        </div>
+      ) : null}
       <div
         aria-hidden
         className={cn(
@@ -379,8 +403,8 @@ function ActivePlayer({
           controlsVisible ? "opacity-100" : "opacity-0"
         )}
       />
-      <div className="pointer-events-none absolute left-5 top-5 flex items-center gap-2 opacity-80">
-        <Logo />
+      <div className="pointer-events-none absolute left-5 top-5 flex items-center gap-2 opacity-90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
+        <Logo tone="light" />
       </div>
 
       <div
@@ -390,12 +414,12 @@ function ActivePlayer({
         )}
       >
         <ProgressBar current={currentTime} duration={duration} progressPct={progressPct} onSeek={onSeek} />
-        <div className="flex items-center gap-4 text-ivory-50">
+        <div className="flex items-center gap-4 text-white">
           <button
             type="button"
             onClick={togglePlay}
             aria-label={playing ? "Pausar" : "Reproducir"}
-            className="grid h-11 w-11 place-items-center rounded-full bg-gold-500 text-navy-950 transition-transform hover:scale-105 active:scale-95"
+            className="grid h-11 w-11 place-items-center rounded-full bg-gold-400 text-ink shadow-[0_8px_24px_-6px_rgba(212,175,55,0.55)] transition-transform hover:scale-105 hover:bg-gold-300 active:scale-95"
           >
             {playing ? (
               <Pause className="h-5 w-5" fill="currentColor" />
@@ -408,7 +432,7 @@ function ActivePlayer({
               type="button"
               onClick={toggleMute}
               aria-label={muted ? "Activar sonido" : "Silenciar"}
-              className="grid h-10 w-10 place-items-center rounded-full text-ivory-100 hover:bg-white/10"
+              className="grid h-10 w-10 place-items-center rounded-full text-white/90 hover:bg-white/15 hover:text-white transition-colors"
             >
               {muted || volume === 0 ? (
                 <VolumeX className="h-5 w-5" />
@@ -423,10 +447,10 @@ function ActivePlayer({
               value={muted ? 0 : volume}
               onChange={(e) => onVolume(parseInt(e.target.value, 10))}
               aria-label="Volumen"
-              className="h-1 w-24 cursor-pointer accent-gold-500"
+              className="h-1 w-24 cursor-pointer accent-gold-400"
             />
           </div>
-          <span className="font-mono text-xs text-ivory-200/80">
+          <span className="font-mono text-xs text-white/80 tabular-nums">
             {formatTimestamp(currentTime)} / {formatTimestamp(duration)}
           </span>
           <div className="ml-auto flex items-center gap-2">
@@ -438,7 +462,7 @@ function ActivePlayer({
                 trackCtaClick("youtube", `https://www.youtube.com/watch?v=${youtubeId}`, episodeId)
               }
               aria-label="Ver en YouTube"
-              className="hidden sm:inline-flex h-10 items-center gap-1.5 rounded-full bg-white/10 px-3 text-xs font-medium hover:bg-white/20"
+              className="hidden sm:inline-flex h-10 items-center gap-1.5 rounded-full bg-white/10 px-3 text-xs font-medium text-white hover:bg-white/20 transition-colors"
             >
               <ExternalLink className="h-4 w-4" />
               Ver en YouTube
@@ -447,7 +471,7 @@ function ActivePlayer({
               type="button"
               onClick={toggleFullscreen}
               aria-label={fullscreen ? "Salir de pantalla completa" : "Pantalla completa"}
-              className="grid h-10 w-10 place-items-center rounded-full text-ivory-100 hover:bg-white/10"
+              className="grid h-10 w-10 place-items-center rounded-full text-white/90 hover:bg-white/15 hover:text-white transition-colors"
             >
               {fullscreen ? <Minimize className="h-5 w-5" /> : <Maximize className="h-5 w-5" />}
             </button>
@@ -516,18 +540,19 @@ function NextUpCard({ nextEpisode, onDismiss }: { nextEpisode: NextUp; onDismiss
   return (
     <div
       role="complementary"
-      className="absolute bottom-20 right-4 w-[320px] max-w-[calc(100%-2rem)] rounded-2xl bg-navy-900/90 p-4 backdrop-blur-md ring-1 ring-gold-500/40 animate-rise"
+      aria-label="Próximo episodio"
+      className="absolute bottom-20 right-4 w-[320px] max-w-[calc(100%-2rem)] rounded-2xl bg-ink/90 p-4 backdrop-blur-xl ring-1 ring-gold-400/50 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] animate-rise"
     >
-      <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500">
+      <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-300">
         Próximo episodio
       </p>
-      <p className="mt-1 line-clamp-2 font-display text-lg italic text-ivory-50">
+      <p className="mt-1 line-clamp-2 font-display text-lg italic text-white">
         {nextEpisode.title}
       </p>
       <div className="mt-3 flex items-center gap-2">
         <Link
           href={nextEpisode.href}
-          className="inline-flex items-center gap-1 rounded-full bg-gold-500 px-4 py-2 text-xs font-semibold text-navy-950 hover:bg-gold-400"
+          className="inline-flex items-center gap-1 rounded-full bg-gold-400 px-4 py-2 text-xs font-semibold text-ink hover:bg-gold-300 transition-colors"
         >
           Ver ahora
           <ChevronRight className="h-4 w-4" />
@@ -535,7 +560,7 @@ function NextUpCard({ nextEpisode, onDismiss }: { nextEpisode: NextUp; onDismiss
         <button
           type="button"
           onClick={onDismiss}
-          className="rounded-full px-3 py-2 text-xs text-ivory-200/80 hover:text-ivory-50"
+          className="rounded-full px-3 py-2 text-xs text-white/70 hover:text-white transition-colors"
         >
           Descartar
         </button>

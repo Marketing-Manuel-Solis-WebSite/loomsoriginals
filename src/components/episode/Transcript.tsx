@@ -17,14 +17,14 @@ export function Transcript({
 
   return (
     <section
-      className="mt-10 rounded-3xl border border-gray-200 bg-paper overflow-hidden"
+      className="mt-10 rounded-3xl glass-card overflow-hidden"
       aria-label={language === "en" ? "Transcript" : "Transcripción"}
     >
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white"
+        className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white/5"
       >
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-gold-700">
@@ -50,7 +50,7 @@ export function Transcript({
         )}
       >
         <div className="overflow-hidden">
-          <div className="border-t border-gray-200 bg-white px-6 py-6 space-y-4 text-[15.5px] leading-[1.75] text-gray-800 max-h-[70vh] overflow-y-auto">
+          <div className="border-t border-white/10 bg-cream px-6 py-6 space-y-4 text-[15.5px] leading-[1.75] text-gray-700 max-h-[70vh] overflow-y-auto">
             {paragraphs.map((p, i) => (
               <p key={i} className="text-pretty">
                 {p}

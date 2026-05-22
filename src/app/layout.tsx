@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SITE } from "@/lib/site";
 import { Analytics } from "@/components/analytics/Analytics";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
+import { PageTransition } from "@/components/ui/PageTransition";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -31,11 +32,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
-  colorScheme: "light",
+  themeColor: "#08080c",
+  colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -45,7 +47,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Loom Originals es un estudio editorial de historias migrantes en Estados Unidos. Serie insignia: Uniendo Familias con Manuel Solís, historias reales de reunificación familiar, asilo, visas y ciudadanía.",
+    "Looms Originals es un estudio editorial de historias migrantes en Estados Unidos. Serie insignia: Uniendo Familias con Manuel Solís, historias reales de reunificación familiar, asilo, visas y ciudadanía.",
   applicationName: SITE.name,
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
@@ -62,11 +64,11 @@ export const metadata: Metadata = {
     "I-130",
     "VAWA",
     "deportación",
-    "Loom Originals",
+    "Looms Originals",
   ],
-  authors: [{ name: "Bufete Manuel Solís", url: SITE.lawFirm.url }],
-  creator: "Loom Originals",
-  publisher: "Bufete Manuel Solís",
+  authors: [{ name: "Law Offices of Manuel Solís", url: SITE.lawFirm.url }],
+  creator: "Looms Originals",
+  publisher: "Law Offices of Manuel Solís",
   formatDetection: { email: false, address: false, telephone: false },
   alternates: {
     canonical: "/",
@@ -81,7 +83,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} — ${SITE.tagline}`,
     description:
-      "Historias reales de familias migrantes, contadas por el Bufete Manuel Solís. Reunificación, asilo, visas, ciudadanía.",
+      "Historias reales de familias migrantes, contadas por Law Offices of Manuel Solís. Reunificación, asilo, visas, ciudadanía.",
     images: [{ url: "/og-default.jpg", width: 1200, height: 630, alt: SITE.name }],
   },
   twitter: {
@@ -89,7 +91,7 @@ export const metadata: Metadata = {
     site: "@loomoriginals",
     creator: "@manuelsolisabg",
     title: `${SITE.name} — ${SITE.tagline}`,
-    description: "Historias migrantes producidas por el Bufete Manuel Solís.",
+    description: "Historias migrantes producidas por Law Offices of Manuel Solís.",
     images: ["/og-default.jpg"],
   },
   robots: {
@@ -136,9 +138,31 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="preconnect" href="https://www.youtube.com" />
         <link rel="preconnect" href="https://www.youtube-nocookie.com" />
         <link rel="dns-prefetch" href="https://s.ytimg.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+        {process.env.NEXT_PUBLIC_SUPABASE_URL ? (
+          <link rel="dns-prefetch" href={process.env.NEXT_PUBLIC_SUPABASE_URL} />
+        ) : null}
+        {process.env.NEXT_PUBLIC_GA_ID ? (
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        ) : null}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${SITE.name} — RSS`}
+          href="/feed.xml"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content={SITE.name} />
+        <meta name="format-detection" content="telephone=no" />
+        {/* JS-disabled fallback: reveal animations stay hidden by default → make all visible */}
+        <noscript>
+          <style>{`.reveal{opacity:1!important;transform:none!important;}`}</style>
+        </noscript>
         <OrganizationJsonLd />
       </head>
-      <body className="min-h-dvh bg-white text-ink antialiased">
+      <body className="min-h-dvh bg-paper text-foreground antialiased">
         <a
           href="#contenido-principal"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-gold-400 focus:px-4 focus:py-2 focus:text-ink focus:font-semibold"
@@ -147,7 +171,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </a>
         <Navbar />
         <main id="contenido-principal" className="flex min-h-dvh flex-col">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
         <Analytics />
@@ -157,9 +181,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="ga4-init" strategy="afterInteractive">
+            <Script id="ga4-init" strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -170,7 +194,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </>
         ) : null}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID ? (
-          <Script id="meta-pixel" strategy="afterInteractive">
+          <Script id="meta-pixel" strategy="lazyOnload">
             {`
               !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
               if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -182,7 +206,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </Script>
         ) : null}
         {process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID ? (
-          <Script id="tiktok-pixel" strategy="afterInteractive">
+          <Script id="tiktok-pixel" strategy="lazyOnload">
             {`
               !function (w, d, t) {
                 w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];

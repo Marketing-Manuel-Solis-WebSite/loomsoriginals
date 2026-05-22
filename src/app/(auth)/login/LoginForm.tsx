@@ -71,22 +71,23 @@ export function LoginForm({
   };
 
   return (
-    <div className="mt-8 flex flex-col gap-3">
+    <div className="flex flex-col gap-3">
       {sent ? (
-        <div className="rounded-2xl border border-gold-500/30 bg-gold-500/10 px-4 py-3 text-sm text-gold-300">
-          Le enviamos un enlace mágico a <strong className="text-gold-200">{email || "su correo"}</strong>.
-          Revise su bandeja para continuar.
+        <div className="rounded-2xl border border-gold-300 bg-gold-50 px-4 py-3 text-sm text-gold-800">
+          Le enviamos un enlace mágico a{" "}
+          <strong className="text-white">{email || "su correo"}</strong>. Revise su bandeja para
+          continuar.
         </div>
       ) : null}
       {errorMsg ? (
-        <div className="rounded-2xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+        <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
           {errorMsg}
         </div>
       ) : null}
 
       <form onSubmit={onSubmit} className="flex flex-col gap-3">
-        <label className="flex flex-col gap-1.5">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-ivory-200/80">
+        <label className="flex flex-col gap-2">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-gold-700">
             Correo electrónico
           </span>
           <input
@@ -96,14 +97,14 @@ export function LoginForm({
             placeholder="usted@ejemplo.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 rounded-full border border-white/10 bg-navy-900/60 px-5 text-[15px] text-ivory-50 placeholder:text-ivory-200/40 outline-none transition-colors focus:border-gold-500/60"
+            className="h-12 rounded-full border border-gray-200 bg-paper px-5 text-[15px] text-ink placeholder:text-gray-400 outline-none transition-colors focus:border-gold-400 focus:bg-cream"
           />
         </label>
         <button
           type="submit"
           disabled={pending}
           className={cn(
-            "h-12 rounded-full bg-gold-500 px-5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-400",
+            "btn-sheen h-12 rounded-full bg-ink px-5 text-sm font-semibold text-white shadow-[0_12px_32px_-8px_rgba(9,9,11,0.25)] transition-all hover:bg-gray-800 hover:-translate-y-0.5",
             pending && "opacity-60"
           )}
         >
@@ -111,33 +112,21 @@ export function LoginForm({
         </button>
       </form>
 
-      <div className="my-1 flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-ivory-200/40">
-        <span className="h-px flex-1 bg-white/10" />
+      <div className="my-1 flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-gray-400">
+        <span className="h-px flex-1 bg-gray-200" />
         <span>o</span>
-        <span className="h-px flex-1 bg-white/10" />
+        <span className="h-px flex-1 bg-gray-200" />
       </div>
 
       <button
         type="button"
         onClick={onGoogle}
         disabled={pending}
-        className="flex h-12 items-center justify-center gap-3 rounded-full border border-white/10 bg-white text-[14px] font-medium text-navy-900 transition-colors hover:bg-ivory-100"
+        className="flex h-12 items-center justify-center gap-3 rounded-full border border-gray-200 bg-white text-[14px] font-medium text-ink transition-all hover:border-gold-400 hover:-translate-y-0.5 hover:shadow-md"
       >
         <GoogleMark />
         Continuar con Google
       </button>
-
-      <p className="mt-2 text-center text-[11.5px] leading-relaxed text-ivory-200/60">
-        Al continuar acepta nuestros{" "}
-        <a href="/terminos" className="text-gold-500 hover:text-gold-400">
-          Términos
-        </a>{" "}
-        y{" "}
-        <a href="/privacidad" className="text-gold-500 hover:text-gold-400">
-          Política de Privacidad
-        </a>
-        .
-      </p>
     </div>
   );
 }

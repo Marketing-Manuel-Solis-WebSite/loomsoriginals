@@ -1,3 +1,6 @@
+# DEPRECADO (Fase 1): inspeccionaba el Excel manual hardcodeado. La ingesta ya
+# no usa Excel (ver ingest-youtube.py). Se conserva como referencia, no se usa.
+# Ver scripts/README.md.
 import io
 import sys
 import openpyxl

@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SITE } from "@/lib/site";
+import { ShieldCheck, Database, BarChart3, UserCheck, Building2 } from "lucide-react";
+import { BreadcrumbJsonLd, WebPageJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
   description:
-    "Cómo Loom Originals recopila, usa y protege sus datos. Producción del Bufete Manuel Solís.",
+    "Cómo Looms Originals recopila, usa y protege sus datos. Producción de Law Offices of Manuel Solís.",
   alternates: { canonical: "/privacidad" },
+  openGraph: {
+    title: "Política de Privacidad — Looms Originals",
+    description: "Cómo recopilamos, usamos y protegemos sus datos.",
+    url: `${SITE.url}/privacidad`,
+    type: "article",
+  },
 };
 
-const SECTIONS: { heading: string; body: string[] }[] = [
+const SECTIONS: { heading: string; body: string[]; icon: typeof ShieldCheck }[] = [
   {
     heading: "Información que recopilamos",
+    icon: Database,
     body: [
       "Correo electrónico y nombre cuando usted crea una cuenta.",
       "Historial de visualización, favoritos y preferencias de idioma mientras usa la plataforma.",
@@ -20,6 +29,7 @@ const SECTIONS: { heading: string; body: string[] }[] = [
   },
   {
     heading: "Cómo usamos sus datos",
+    icon: ShieldCheck,
     body: [
       "Para ofrecer funciones personalizadas como 'Continuar viendo' y 'Mi lista'.",
       "Para medir qué episodios son más útiles para nuestra audiencia.",
@@ -28,6 +38,7 @@ const SECTIONS: { heading: string; body: string[] }[] = [
   },
   {
     heading: "Pixeles y analítica de terceros",
+    icon: BarChart3,
     body: [
       "Usamos Google Analytics 4, Meta Pixel y TikTok Pixel para medir rendimiento.",
       "Puede ver más en nuestra Política de Cookies. Todos estos servicios respetan Do Not Track.",
@@ -35,15 +46,17 @@ const SECTIONS: { heading: string; body: string[] }[] = [
   },
   {
     heading: "Sus derechos",
+    icon: UserCheck,
     body: [
       "Puede solicitar acceso, rectificación, portabilidad o eliminación de sus datos escribiendo a privacidad@loomsoriginal.com.",
       "Cumplimos con GDPR para residentes en la Unión Europea y con CCPA para residentes en California.",
     ],
   },
   {
-    heading: "Relación con el Bufete Manuel Solís",
+    heading: "Relación con Law Offices of Manuel Solís",
+    icon: Building2,
     body: [
-      "Loom Originals es una producción editorial del Bufete Manuel Solís. Sus datos en esta plataforma son distintos y separados de cualquier expediente legal que tenga con el bufete.",
+      "Looms Originals es una producción editorial de Law Offices of Manuel Solís. Sus datos en esta plataforma son distintos y separados de cualquier expediente legal que tenga con la firma.",
       "No enviaremos sus datos de usuario al equipo legal sin su consentimiento explícito.",
     ],
   },
@@ -51,30 +64,85 @@ const SECTIONS: { heading: string; body: string[] }[] = [
 
 export default function PrivacyPage() {
   return (
-    <Container size="md" className="pt-28 pb-24">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-500">Legal</p>
-      <h1 className="mt-4 font-display text-[clamp(2.25rem,5vw,4rem)] italic leading-tight text-ivory-50">
-        Política de Privacidad
-      </h1>
-      <p className="mt-3 text-sm text-ivory-200/70">Última actualización: 22 de abril de 2026</p>
-      <div className="mt-10 space-y-10">
-        {SECTIONS.map((s) => (
-          <section key={s.heading}>
-            <h2 className="font-display text-2xl italic text-ivory-50">{s.heading}</h2>
-            <ul className="mt-4 space-y-2.5 text-[15.5px] leading-relaxed text-ivory-200/90">
-              {s.body.map((b, i) => (
-                <li key={i} className="flex gap-3">
-                  <span className="mt-2 h-1 w-1.5 shrink-0 rounded-full bg-gold-500" />
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
-      <p className="mt-12 text-sm text-ivory-200/70">
-        Contacto: <a href={`mailto:${SITE.legalEmail}`} className="text-gold-500 hover:text-gold-400">{SITE.legalEmail}</a>
-      </p>
-    </Container>
+    <>
+      <WebPageJsonLd
+        url={`${SITE.url}/privacidad`}
+        name="Política de Privacidad — Looms Originals"
+        description="Cómo recopilamos, usamos y protegemos sus datos."
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Inicio", url: `${SITE.url}/` },
+          { name: "Privacidad", url: `${SITE.url}/privacidad` },
+        ]}
+      />
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-paper pt-32 pb-16 md:pt-40 md:pb-20">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[640px] -translate-x-1/2 rounded-full bg-gold-100/70 blur-[140px]"
+        />
+        <Container size="md" className="relative">
+          <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-gold-700">
+            <span className="h-px w-10 bg-gold-500" />
+            Legal · Privacidad
+          </p>
+          <h1 className="mt-6 font-display text-[clamp(2.5rem,7vw,5.25rem)] italic leading-[0.95] tracking-[-0.018em] text-white text-balance">
+            Política de <span className="text-gold-gradient">Privacidad</span>
+          </h1>
+          <p className="mt-5 text-[14px] uppercase tracking-[0.22em] text-gray-500">
+            Última actualización · 22 de abril de 2026
+          </p>
+        </Container>
+      </section>
+
+      <section className="bg-paper py-20 border-t border-gray-200">
+        <Container size="md">
+          <div className="space-y-10">
+            {SECTIONS.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <article
+                  key={s.heading}
+                  className="grid gap-5 rounded-3xl glass-card p-7 sm:grid-cols-[auto_1fr] sm:gap-8 sm:p-9"
+                >
+                  <div className="flex sm:flex-col sm:items-start sm:gap-4">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl glass-card text-gold-700 shrink-0">
+                      <Icon className="h-5 w-5" strokeWidth={1.6} />
+                    </div>
+                    <span className="ml-auto sm:ml-0 font-display text-3xl italic leading-none text-gray-300">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <div>
+                    <h2 className="font-display text-[26px] italic leading-tight text-white">
+                      {s.heading}
+                    </h2>
+                    <ul className="mt-4 space-y-3 text-[15.5px] leading-[1.65] text-gray-700">
+                      {s.body.map((b, j) => (
+                        <li key={j} className="flex gap-3">
+                          <span className="mt-2.5 h-1 w-1.5 shrink-0 rounded-full bg-gold-500" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          <p className="mt-12 text-[15px] text-gray-600">
+            ¿Preguntas?{" "}
+            <a
+              href={`mailto:${SITE.legalEmail}`}
+              className="text-gold-700 underline-offset-4 hover:text-gold-800 hover:underline"
+            >
+              {SITE.legalEmail}
+            </a>
+          </p>
+        </Container>
+      </section>
+    </>
   );
 }

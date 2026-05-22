@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Loom Originals — Historias que reúnen familias";
+export const alt = "Looms Originals — Historias que reúnen familias";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -78,7 +78,7 @@ export default async function OpenGraphImage() {
               fontFamily: "sans-serif",
             }}
           >
-            Serie original de Loom
+            Serie original de Looms
           </span>
           <span
             style={{
@@ -100,7 +100,7 @@ export default async function OpenGraphImage() {
             </span>
           </span>
           <span style={{ color: "#52525b", fontSize: 22, fontFamily: "sans-serif" }}>
-            Una producción de Bufete Manuel Solís.
+            Una producción de Law Offices of Manuel Solís.
           </span>
         </div>
       </div>

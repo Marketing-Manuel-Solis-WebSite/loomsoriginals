@@ -4,18 +4,16 @@ Also rewrites titles to clean CTAs/emoji-only names where possible.
 """
 import io
 import json
-import os
 import re
 import sys
 import urllib.request
 
+from _env import require_env
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-SUPABASE_URL = "https://lvuikquwactdxofgilsa.supabase.co"
-SRK = os.environ.get(
-    "SUPABASE_SERVICE_ROLE_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx2dWlrcXV3YWN0ZHhvZmdpbHNhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjkzNzA1OCwiZXhwIjoyMDkyNTEzMDU4fQ._tTT9_Uhj1OJ4in15RfYt5MjZGQaOK4Qt4kVGnzpeWc",
-)
+SUPABASE_URL = require_env("SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_URL")
+SRK = require_env("SUPABASE_SERVICE_ROLE_KEY")
 HEADERS = {"apikey": SRK, "Authorization": f"Bearer {SRK}", "Content-Type": "application/json"}
 
 
@@ -28,6 +26,19 @@ def rest(method: str, path: str, body=None, prefer_minimal=False):
     with urllib.request.urlopen(req, timeout=30) as resp:
         raw = resp.read().decode("utf-8")
         return json.loads(raw) if raw else None
+
+
+def rest_get_all(path: str) -> list:
+    """GET paginado con offset (PostgREST topa en 1000 filas por respuesta)."""
+    sep = "&" if "?" in path else "?"
+    out, off = [], 0
+    while True:
+        chunk = rest("GET", f"{path}{sep}limit=1000&offset={off}") or []
+        out.extend(chunk)
+        if len(chunk) < 1000:
+            break
+        off += 1000
+    return out
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -231,13 +242,12 @@ def main():
     uf_series_id = series_by_slug.get(UF_SLUG)
 
     # Episodes with their slugs
-    eps = rest(
-        "GET",
-        "/rest/v1/episodes?select=id,title_es,synopsis_es,series_id,season_id,episode_number,slug,youtube_id",
-    ) or []
+    eps = rest_get_all(
+        "/rest/v1/episodes?select=id,title_es,synopsis_es,series_id,season_id,episode_number,slug,youtube_id"
+    )
 
     # Current categories per episode
-    ec = rest("GET", "/rest/v1/episode_categories?select=episode_id,category_id") or []
+    ec = rest_get_all("/rest/v1/episode_categories?select=episode_id,category_id")
     cur_cats: dict[str, set[str]] = {}
     for row in ec:
         cur_cats.setdefault(row["episode_id"], set()).add(row["category_id"])

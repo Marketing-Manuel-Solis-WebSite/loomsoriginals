@@ -13,7 +13,7 @@ type Props = {
 
 const DEFAULT_HEADLINE = "¿Su caso se parece a esta historia?";
 const DEFAULT_SUB =
-  "Hable hoy con un abogado licenciado del equipo del Bufete Manuel Solís. La consulta inicial es gratuita.";
+  "Hable hoy con un abogado licenciado del equipo de Law Offices of Manuel Solís.";
 
 const HEADLINES_BY_CATEGORY: Record<string, { headline: string; sub: string }> = {
   "reunificacion-familiar": {
@@ -24,7 +24,7 @@ const HEADLINES_BY_CATEGORY: Record<string, { headline: string; sub: string }> =
   asilo: {
     headline: "¿Necesita protección legal?",
     sub:
-      "Nuestro equipo ha ganado casos de asilo complejos durante tres décadas. La primera consulta es gratuita y confidencial.",
+      "Nuestro equipo ha trabajado casos de asilo complejos durante tres décadas. Toda conversación es confidencial.",
   },
   "visas-de-trabajo": {
     headline: "¿Busca patrocinio laboral?",
@@ -74,9 +74,9 @@ export function EpisodeCta({ episodeId, episodeSlug, categoryLabel }: Props) {
         <div className="max-w-xl">
           <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-gold-700">
             <span className="h-px w-8 bg-gold-500" />
-            Bufete Manuel Solís — consulta gratuita
+            Law Offices of Manuel Solís
           </p>
-          <h3 className="mt-4 font-display text-3xl italic text-ink sm:text-4xl text-balance">
+          <h3 className="mt-4 font-display text-3xl italic text-white sm:text-4xl text-balance">
             {headline}
           </h3>
           <p className="mt-3 text-[15px] leading-relaxed text-gray-700 text-pretty">{sub}</p>

@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Menu, Search, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV } from "@/lib/site";
 import { Logo } from "@/components/ui/Logo";
 import { AccountMenu } from "./AccountMenu";
+import { NavSearch } from "./NavSearch";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -42,19 +43,28 @@ export function Navbar() {
     };
   }, [open]);
 
+  // Site is dark mode — navbar always uses light text.
+  const overDarkHero = true;
+
   return (
     <>
       <div ref={sentinelRef} aria-hidden className="h-px w-full" />
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-apple",
-          scrolled ? "glass-strong" : "bg-white/0 border-b border-transparent"
+          scrolled
+            ? "glass-strong border-b border-white/10"
+            : "bg-gradient-to-b from-paper/80 via-paper/40 to-transparent backdrop-blur-md border-b border-transparent"
         )}
       >
-        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-8 sm:px-14 md:px-24 lg:px-40 xl:px-56 2xl:px-72">
           <div className="flex items-center gap-10">
-            <Link href="/" className="shrink-0" aria-label="Loom Originals">
-              <Logo subtitle />
+            <Link
+              href="/"
+              className="shrink-0 transition-transform duration-400 ease-apple hover:scale-[1.04]"
+              aria-label="Looms Originals"
+            >
+              <Logo subtitle tone={overDarkHero ? "light" : "dark"} />
             </Link>
             <nav aria-label="Navegación principal" className="hidden md:flex items-center gap-8">
               {links.map((link) => {
@@ -66,12 +76,18 @@ export function Navbar() {
                     href={link.href}
                     className={cn(
                       "relative text-[13px] font-medium uppercase tracking-[0.14em] transition-colors",
-                      active ? "text-ink" : "text-gray-500 hover:text-ink"
+                      overDarkHero
+                        ? active
+                          ? "text-white"
+                          : "text-white/70 hover:text-white"
+                        : active
+                          ? "text-white"
+                          : "text-gray-500 hover:text-white"
                     )}
                   >
                     {link.label}
                     {active ? (
-                      <span className="absolute -bottom-1.5 left-0 right-0 mx-auto h-[2px] w-4 rounded-full bg-gold-500" />
+                      <span className="absolute -bottom-1.5 left-0 right-0 mx-auto h-[2px] w-4 rounded-full bg-gold-400" />
                     ) : null}
                   </Link>
                 );
@@ -79,20 +95,19 @@ export function Navbar() {
             </nav>
           </div>
           <div className="flex items-center gap-1 md:gap-2">
-            <Link
-              href="/buscar"
-              aria-label="Buscar"
-              className="hidden sm:grid h-10 w-10 place-items-center rounded-full text-gray-600 hover:text-ink hover:bg-gray-100 transition-colors"
-            >
-              <Search className="h-[18px] w-[18px]" />
-            </Link>
+            <NavSearch tone={overDarkHero ? "light" : "dark"} />
             <AccountMenu locale="es" />
             <button
               type="button"
               aria-label={open ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              className="md:hidden grid h-10 w-10 place-items-center rounded-full text-ink hover:bg-gray-100"
+              className={cn(
+                "md:hidden grid h-10 w-10 place-items-center rounded-full transition-colors",
+                overDarkHero
+                  ? "text-white hover:bg-white/15"
+                  : "text-white hover:bg-gray-100"
+              )}
               onClick={() => setOpen((v) => !v)}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -107,7 +122,7 @@ export function Navbar() {
         onClose={() => setOpen(false)}
         links={links}
       />
-      <div aria-hidden className="h-16" />
+      {pathname === "/" ? null : <div aria-hidden className="h-16" />}
     </>
   );
 }
@@ -134,7 +149,7 @@ function MobileMenu({
         open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       )}
     >
-      <div className="absolute inset-0 bg-white/95 backdrop-blur-2xl" onClick={onClose} />
+      <div className="absolute inset-0 bg-paper/95 backdrop-blur-2xl" onClick={onClose} />
       <div className="absolute inset-x-0 top-16 bottom-0 flex flex-col px-6 pt-10 pb-12">
         <nav className="flex flex-col gap-1">
           {links.map((link, i) => (
@@ -143,7 +158,7 @@ function MobileMenu({
               href={link.href}
               onClick={onClose}
               className={cn(
-                "font-display text-5xl italic text-ink hover:text-gold-600 transition-colors py-3",
+                "font-display text-5xl italic text-white hover:text-gold-300 transition-colors py-3",
                 open ? "animate-rise" : ""
               )}
               style={{ animationDelay: `${i * 60}ms` }}

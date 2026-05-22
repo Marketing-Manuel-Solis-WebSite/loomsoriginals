@@ -170,13 +170,13 @@ export default async function EpisodePage({ params }: { params: Params }) {
       <article className="pt-24 pb-20">
         <Container size="lg">
           <nav aria-label="Ruta" className="mb-6 flex flex-wrap items-center gap-1.5 text-[11.5px] font-medium uppercase tracking-[0.18em] text-gray-500">
-            <Link href="/series" className="hover:text-ink">Series</Link>
+            <Link href="/series" className="hover:text-white">Series</Link>
             <span aria-hidden>·</span>
-            <Link href={`/series/${ep.series.slug}`} className="hover:text-ink">
+            <Link href={`/series/${ep.series.slug}`} className="hover:text-white">
               {ep.series.title_es}
             </Link>
             <span aria-hidden>·</span>
-            <span className="text-ink">T{ep.season.season_number}·E{ep.episode_number}</span>
+            <span className="text-white">T{ep.season.season_number}·E{ep.episode_number}</span>
           </nav>
 
           <VideoPlayer
@@ -201,7 +201,7 @@ export default async function EpisodePage({ params }: { params: Params }) {
               <span className="h-px w-8 bg-gold-500" />
               Temporada {ep.season.season_number} · Episodio {ep.episode_number}
             </p>
-            <h1 className="mt-4 font-display text-[clamp(2rem,5vw,3.5rem)] italic leading-[1.05] text-ink text-balance">
+            <h1 className="mt-4 font-display text-[clamp(2rem,5vw,3.5rem)] italic leading-[1.05] text-white text-balance">
               {ep.title_es}
             </h1>
             <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-600">

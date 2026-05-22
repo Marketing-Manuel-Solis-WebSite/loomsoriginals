@@ -1,3 +1,6 @@
+# DEPRECADO (Fase 1): reemplazado por ingest-youtube.py (YouTube Data API v3).
+# Scrapeaba el HTML de YouTube — fragil. Se conserva como referencia, no se usa.
+# Ver scripts/README.md.
 """Fetch duration and description for YouTube videos."""
 import io
 import json

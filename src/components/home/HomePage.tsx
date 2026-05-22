@@ -3,15 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { getFeaturedSeries } from "@/lib/queries/getFeatured";
 import { getAllSeries, getSeriesBySlug } from "@/lib/queries/getSeries";
-import { getLatestEpisodes } from "@/lib/queries/getEpisode";
+import { getLatestEpisodes, getEpisodeSeasonMap, getTop10Episodes } from "@/lib/queries/getEpisode";
 import { getCategoriesWithEpisodes } from "@/lib/queries/getCategories";
 import { HeroFeatured } from "./HeroFeatured";
 import { ContentRail } from "./ContentRail";
 import { EpisodeCard } from "./EpisodeCard";
+import { Top10Card } from "./Top10Card";
 import { SeriesCard } from "./SeriesCard";
 import { HomeEmptyState } from "./HomeEmptyState";
 import { InterRailCta } from "./InterRailCta";
 import { YouTubeImage } from "@/components/ui/YouTubeImage";
+import { Reveal } from "@/components/ui/Reveal";
 import { formatDuration, youtubeThumbnailUrl, withUtm } from "@/lib/utils";
 import { Play, ArrowUpRight } from "lucide-react";
 import { SITE } from "@/lib/site";
@@ -26,37 +28,36 @@ export async function HomePage() {
   let allSeries = [] as Awaited<ReturnType<typeof getAllSeries>>;
   let latest = [] as Awaited<ReturnType<typeof getLatestEpisodes>>;
   let categoryRails = [] as Awaited<ReturnType<typeof getCategoriesWithEpisodes>>;
+  let top10 = [] as Awaited<ReturnType<typeof getLatestEpisodes>>;
   const firstEpisodeMap: FirstEpisodeMap = {};
   let seriesSlugById: Record<string, string> = {};
   const seasonNumberById: Record<string, number> = {};
 
+  let episodeSeasonMap: Record<string, number> = {};
   try {
-    [featured, allSeries, latest, categoryRails] = await Promise.all([
+    [featured, allSeries, latest, categoryRails, episodeSeasonMap, top10] = await Promise.all([
       getFeaturedSeries(3),
       getAllSeries(),
       getLatestEpisodes(12),
       getCategoriesWithEpisodes(12),
+      getEpisodeSeasonMap(),
+      getTop10Episodes(),
     ]);
 
     seriesSlugById = Object.fromEntries(allSeries.map((s) => [s.id, s.slug]));
+    // season_number de TODOS los episodios publicados en una sola query (sin N+1).
+    Object.assign(seasonNumberById, episodeSeasonMap);
 
+    // Solo el primer episodio de cada serie destacada (1-3) para el CTA del hero.
     const seasonLookups = await Promise.all(
       featured.map(async (s) => {
         const detail = await getSeriesBySlug(s.slug);
-        if (!detail) return null;
-        const season = detail.seasons[0];
+        const season = detail?.seasons[0];
         const firstEp = season?.episodes?.[0];
-        if (!season || !firstEp) return null;
-        return {
-          seriesId: s.id,
-          slug: s.slug,
-          seasonNumber: season.season_number,
-          episodeSlug: firstEp.slug,
-          seasons: detail.seasons,
-        };
+        if (!detail || !season || !firstEp) return null;
+        return { slug: s.slug, seasonNumber: season.season_number, episodeSlug: firstEp.slug };
       })
     );
-
     for (const hit of seasonLookups) {
       if (hit) {
         firstEpisodeMap[hit.slug] = {
@@ -64,21 +65,6 @@ export async function HomePage() {
           seasonNumber: hit.seasonNumber,
           episodeSlug: hit.episodeSlug,
         };
-        for (const season of hit.seasons) {
-          for (const ep of season.episodes ?? []) {
-            seasonNumberById[ep.id] = season.season_number;
-          }
-        }
-      }
-    }
-
-    for (const s of allSeries) {
-      const detail = await getSeriesBySlug(s.slug);
-      if (!detail) continue;
-      for (const season of detail.seasons) {
-        for (const ep of season.episodes ?? []) {
-          seasonNumberById[ep.id] = season.season_number;
-        }
       }
     }
   } catch (err) {
@@ -107,8 +93,8 @@ export async function HomePage() {
 
       {/* ─── Featured editorial story (big card) ─── */}
       {ufEpisode && ufSeries ? (
-        <section aria-label="Historia destacada" className="relative bg-white pt-20 pb-14 sm:pt-24 sm:pb-16">
-          <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-14">
+        <section aria-label="Historia destacada" className="relative bg-paper pt-20 pb-14 sm:pt-24 sm:pb-16">
+          <div className="mx-auto max-w-[1440px] px-8 sm:px-14 md:px-24 lg:px-40 xl:px-56 2xl:px-72">
             <div className="divider-ornament mb-12">
               <span className="text-[11px] font-semibold uppercase tracking-[0.32em]">
                 Historia destacada
@@ -118,7 +104,7 @@ export async function HomePage() {
               href={`/series/${ufSeries.slug}/t${seasonNumberById[ufEpisode.id] ?? 1}/${ufEpisode.slug}`}
               className="group grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16"
             >
-              <div className="relative aspect-video overflow-hidden rounded-[28px] ring-1 ring-black/5 shadow-lg">
+              <div className="relative aspect-video overflow-hidden rounded-[28px] ring-gold-inset bg-paper">
                 {ufBackdrop ? (
                   <Image
                     src={ufBackdrop}
@@ -152,7 +138,7 @@ export async function HomePage() {
                 <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-700">
                   Capítulo recomendado
                 </p>
-                <h3 className="mt-5 font-display text-[clamp(2.25rem,5vw,3.5rem)] italic leading-[1.03] text-ink text-balance">
+                <h3 className="mt-5 font-display text-[clamp(2.25rem,5vw,3.5rem)] italic leading-[1.03] text-white text-balance">
                   {ufEpisode.title_es}
                 </h3>
                 {ufEpisode.synopsis_es ? (
@@ -167,7 +153,7 @@ export async function HomePage() {
                   <span aria-hidden>·</span>
                   <span>Español</span>
                 </div>
-                <span className="mt-8 inline-flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-[0.2em] text-ink group-hover:text-gold-700 transition-colors">
+                <span className="mt-8 inline-flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-[0.2em] text-white group-hover:text-gold-700 transition-colors">
                   Ver ahora
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
@@ -204,10 +190,32 @@ export async function HomePage() {
           </div>
         ) : null}
 
-        {otherLatest.length ? (
+        {top10.length >= 4 ? (
+          <div className="mb-12">
+            <ContentRail title="Top 10 en Loom" eyebrow="Lo más visto" railNumber="★" minItems={4}>
+              {top10.map((ep, i) => {
+                const seriesSlug = seriesSlugById[ep.series_id] ?? "uniendo-familias-manuel-solis";
+                const seasonNumber = seasonNumberById[ep.id] ?? 1;
+                return (
+                  <Top10Card
+                    key={ep.id}
+                    episode={ep}
+                    seriesSlug={seriesSlug}
+                    seasonNumber={seasonNumber}
+                    rank={i + 1}
+                    priority={i < 2}
+                  />
+                );
+              })}
+            </ContentRail>
+          </div>
+        ) : null}
+
+        {otherLatest.length >= 4 ? (
           <div className="mb-12">
             <ContentRail
               title="Nuevos episodios"
+              minItems={4}
               eyebrow="Recién estrenados"
               railNumber="02"
               seeAllHref="/series"
@@ -228,13 +236,14 @@ export async function HomePage() {
           </div>
         ) : null}
 
-        {categoryRails.map((cat, i) => (
+        {categoryRails.filter((c) => c.episodes.length >= 4).map((cat, i) => (
           <div key={cat.id} className="mb-12">
             <ContentRail
               title={cat.name_es}
               eyebrow={cat.description_es ?? undefined}
               railNumber={String(i + 3).padStart(2, "0")}
               seeAllHref={`/categorias/${cat.slug}`}
+              minItems={4}
             >
               {cat.episodes.map((ep) => {
                 const seriesSlug = seriesSlugById[ep.series_id] ?? "uniendo-familias-manuel-solis";
@@ -250,10 +259,10 @@ export async function HomePage() {
               })}
             </ContentRail>
             {i === 1 ? (
-              <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-14 mt-10">
+              <div className="mx-auto max-w-[1440px] px-8 sm:px-14 md:px-24 lg:px-40 xl:px-56 2xl:px-72 mt-10">
                 <InterRailCta
                   headline="¿Un caso similar al que vio?"
-                  body="Agendar una consulta gratuita con el Bufete Manuel Solís toma 2 minutos."
+                  body="Agendar una consulta con Law Offices of Manuel Solís toma 2 minutos."
                   href={withUtm(SITE.lawFirm.consultationUrl, {
                     source: "looms",
                     medium: "inter-rail",
@@ -267,33 +276,28 @@ export async function HomePage() {
         ))}
       </div>
 
-      {/* ─── Dark editorial section breaking the whites ─── */}
-      <section className="relative overflow-hidden bg-ink py-24 text-white">
-        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-60 grain" />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -left-32 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-gold-500/20 blur-3xl"
-        />
-        <div className="mx-auto max-w-[1440px] px-6 sm:px-10 lg:px-14 relative">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-20">
+      {/* ─── Manifiesto editorial — clean light style ─── */}
+      <section className="relative bg-paper py-24">
+        <div className="mx-auto max-w-[1440px] px-8 sm:px-14 md:px-24 lg:px-40 xl:px-56 2xl:px-72 relative">
+          <Reveal className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-20">
             <div>
-              <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-gold-300">
-                <span className="h-px w-8 bg-gold-400" />
+              <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-gold-700">
+                <span className="h-px w-8 bg-gold-500" />
                 Manifiesto editorial
               </p>
-              <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,3.75rem)] italic leading-[1.05] text-balance">
-                <span className="text-white/60">Las leyes cambian.</span>
+              <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,3.75rem)] italic leading-[1.05] text-white text-balance">
+                <span className="text-gray-400">Las leyes cambian.</span>
                 <br />
                 Las historias permanecen.
               </h2>
             </div>
-            <div className="space-y-5 text-[16.5px] leading-[1.8] text-white/80 text-pretty">
+            <div className="space-y-5 text-[16.5px] leading-[1.8] text-gray-700 text-pretty">
               <p>
                 Creemos que la inmigración se cuenta mejor en voz de quienes la viven. Durante más
-                de tres décadas el Bufete Manuel Solís ha acompañado a familias en su proceso —
+                de tres décadas Law Offices of Manuel Solís ha acompañado a familias en su proceso —
                 esta es la plataforma donde esas historias encuentran su forma final.
               </p>
-              <p className="text-white/60 text-[14.5px]">
+              <p className="text-gray-500 text-[14.5px]">
                 Cada episodio es un caso real. Cada familia dio su consentimiento. Cada silencio es
                 intencional.
               </p>
@@ -306,14 +310,14 @@ export async function HomePage() {
                   })}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-gold-400/40 bg-gold-400/10 px-5 py-2.5 text-[13px] font-semibold text-gold-300 hover:border-gold-400 hover:bg-gold-400/20 transition-colors"
+                  className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.2em] text-white hover:text-gold-700 transition-colors"
                 >
                   Conozca al Bufete
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -321,7 +325,7 @@ export async function HomePage() {
       {allSeries.length ? (
         <div className="bg-paper py-16">
           <ContentRail
-            title="Biblioteca Loom"
+            title="Biblioteca Looms"
             eyebrow="Explora todas las series"
             railNumber="∞"
             seeAllHref="/series"

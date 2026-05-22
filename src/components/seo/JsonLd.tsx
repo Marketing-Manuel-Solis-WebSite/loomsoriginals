@@ -22,8 +22,8 @@ export function OrganizationJsonLd() {
     "@type": "Organization",
     "@id": `${SITE.url}#organization`,
     name: SITE.name,
-    legalName: "Loom Originals",
-    alternateName: "Loom",
+    legalName: "Looms Originals",
+    alternateName: "Looms",
     url: SITE.url,
     logo: {
       "@type": "ImageObject",
@@ -74,7 +74,7 @@ export function WebSiteJsonLd() {
     "@type": "WebSite",
     "@id": `${SITE.url}#website`,
     name: SITE.name,
-    alternateName: "Loom",
+    alternateName: "Looms",
     url: SITE.url,
     inLanguage: ["es-US"],
     publisher: { "@id": `${SITE.url}#organization` },
@@ -153,6 +153,110 @@ export function CollectionPageJsonLd({
       name: it.name,
       url: it.url,
     })),
+  } as const;
+  return <JsonLd data={data} />;
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// Service — for the law firm consultation funnel (Service rich result)
+// ─────────────────────────────────────────────────────────────────────
+export function LawFirmServiceJsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "@id": `${SITE.lawFirm.url}#legal-service`,
+    name: SITE.lawFirm.name,
+    url: SITE.lawFirm.url,
+    image: `${SITE.url}/og-default.jpg`,
+    telephone: SITE.lawFirm.phone,
+    priceRange: "$$",
+    description:
+      "Bufete de inmigración con más de 30 años de experiencia. Reunificación familiar, asilo, visas de trabajo, ciudadanía y defensa contra la deportación.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: SITE.lawFirm.addressLocality,
+      addressRegion: SITE.lawFirm.addressRegion,
+      addressCountry: SITE.lawFirm.addressCountry,
+    },
+    areaServed: { "@type": "Country", name: "United States" },
+    knowsLanguage: ["Spanish", "English"],
+    serviceType: [
+      "Immigration Law",
+      "Family Reunification",
+      "Asylum",
+      "Work Visas",
+      "Citizenship",
+      "Deportation Defense",
+    ],
+    sameAs: SITE.sameAs,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios legales de inmigración",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Reunificación familiar (I-130)",
+            description:
+              "Petición de familiar inmediato y categorías preferenciales para cónyuges, hijos y hermanos.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Asilo político y VAWA",
+            description:
+              "Solicitudes de asilo, suspensión de remoción y protección bajo VAWA.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Visas de trabajo (H-1B / O-1 / EB)",
+            description: "Visas temporales y residencia permanente basada en empleo.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Naturalización (N-400)",
+            description: "Asesoría completa para la examinación de ciudadanía.",
+          },
+        },
+      ],
+    },
+  } as const;
+  return <JsonLd data={data} />;
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// WebPage primary entity wrapper
+// ─────────────────────────────────────────────────────────────────────
+export function WebPageJsonLd({
+  url,
+  name,
+  description,
+  type = "WebPage",
+}: {
+  url: string;
+  name: string;
+  description: string;
+  type?: "WebPage" | "AboutPage" | "ContactPage" | "SearchResultsPage";
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": type,
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description,
+    isPartOf: { "@id": `${SITE.url}#website` },
+    publisher: { "@id": `${SITE.url}#organization` },
+    inLanguage: "es-US",
   } as const;
   return <JsonLd data={data} />;
 }

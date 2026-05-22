@@ -1,12 +1,12 @@
 export const SITE = {
-  name: "Loom Originals",
+  name: "Looms Originals",
   tagline: "Historias que reúnen familias",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://loomsoriginal.com",
   description:
-    "Un estudio editorial de historias migrantes en Estados Unidos, producido por Bufete Manuel Solís.",
+    "Un estudio editorial de historias migrantes en Estados Unidos, producido por Law Offices of Manuel Solís.",
 
   lawFirm: {
-    name: "Bufete Manuel Solís",
+    name: "Law Offices of Manuel Solís",
     shortName: "Manuel Solís",
     url: "https://manuelsolis.com",
     reviewsUrl: "https://manuelsolisreviews.com",
@@ -49,6 +49,5 @@ export const NAV = {
     { href: "/", label: "Inicio" },
     { href: "/series", label: "Series" },
     { href: "/categorias", label: "Categorías" },
-    { href: "/buscar", label: "Buscar" },
   ],
 } as const;

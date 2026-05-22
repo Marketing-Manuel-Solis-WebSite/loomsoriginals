@@ -30,9 +30,9 @@ export function InterRailCta({
       />
       <div className="relative max-w-2xl">
         <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-gold-700">
-          Bufete Manuel Solís
+          Law Offices of Manuel Solís
         </p>
-        <p className="mt-1.5 font-display text-xl italic text-ink text-balance sm:text-2xl">
+        <p className="mt-1.5 font-display text-xl italic text-white text-balance sm:text-2xl">
           {headline}
         </p>
         {variant === "default" ? (

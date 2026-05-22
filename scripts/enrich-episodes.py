@@ -1,3 +1,6 @@
+# DEPRECADO (Fase 1): reemplazado por ingest-youtube.py (YouTube Data API v3).
+# Scrapeaba el HTML de YouTube — fragil. Se conserva como referencia, no se usa.
+# Ver scripts/README.md.
 """Batch-scrape YouTube descriptions + durations for all episodes missing them.
 
 Strips the boilerplate (phone numbers, copyright, CTAs, license notices) and
@@ -5,20 +8,18 @@ keeps a clean editorial synopsis. Updates episodes via Supabase REST.
 """
 import io
 import json
-import os
 import re
 import sys
 import time
 import urllib.error
 import urllib.request
 
+from _env import require_env
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-SUPABASE_URL = "https://lvuikquwactdxofgilsa.supabase.co"
-SRK = os.environ.get(
-    "SUPABASE_SERVICE_ROLE_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx2dWlrcXV3YWN0ZHhvZmdpbHNhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjkzNzA1OCwiZXhwIjoyMDkyNTEzMDU4fQ._tTT9_Uhj1OJ4in15RfYt5MjZGQaOK4Qt4kVGnzpeWc",
-)
+SUPABASE_URL = require_env("SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_URL")
+SRK = require_env("SUPABASE_SERVICE_ROLE_KEY")
 HEADERS = {
     "apikey": SRK,
     "Authorization": f"Bearer {SRK}",
@@ -37,6 +38,19 @@ def rest(method: str, path: str, body=None):
     with urllib.request.urlopen(req, timeout=30) as resp:
         raw = resp.read().decode("utf-8")
         return json.loads(raw) if raw else None
+
+
+def rest_get_all(path: str) -> list:
+    """GET paginado con offset (PostgREST topa en 1000 filas por respuesta)."""
+    sep = "&" if "?" in path else "?"
+    out, off = [], 0
+    while True:
+        chunk = rest("GET", f"{path}{sep}limit=1000&offset={off}") or []
+        out.extend(chunk)
+        if len(chunk) < 1000:
+            break
+        off += 1000
+    return out
 
 
 def fetch_yt(video_id: str) -> tuple[str | None, int | None]:
@@ -112,7 +126,7 @@ def clean_description(desc: str, title: str) -> str | None:
 def fetch_all_candidates():
     # All episodes where synopsis_es IS NULL OR duration_seconds IS NULL
     q = "/rest/v1/episodes?select=id,youtube_id,title_es,synopsis_es,duration_seconds&or=(synopsis_es.is.null,duration_seconds.is.null)&order=episode_number.asc"
-    return rest("GET", q) or []
+    return rest_get_all(q)
 
 
 def main():

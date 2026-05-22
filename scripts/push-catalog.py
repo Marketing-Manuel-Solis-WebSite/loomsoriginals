@@ -1,20 +1,21 @@
+# DEPRECADO (Fase 1): reemplazado por ingest-youtube.py (YouTube Data API v3).
+# Dependia del Excel manual via catalog-manifest.json. Referencia, no se usa.
+# Ver scripts/README.md.
 """Push the catalog manifest to Supabase via REST API."""
 import io
 import json
-import os
 import sys
 import time
 from pathlib import Path
 import urllib.error
 import urllib.request
 
+from _env import require_env
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-SUPABASE_URL = "https://lvuikquwactdxofgilsa.supabase.co"
-SRK = os.environ.get(
-    "SUPABASE_SERVICE_ROLE_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx2dWlrcXV3YWN0ZHhvZmdpbHNhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjkzNzA1OCwiZXhwIjoyMDkyNTEzMDU4fQ._tTT9_Uhj1OJ4in15RfYt5MjZGQaOK4Qt4kVGnzpeWc",
-)
+SUPABASE_URL = require_env("SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_URL")
+SRK = require_env("SUPABASE_SERVICE_ROLE_KEY")
 
 HEADERS = {
     "apikey": SRK,
@@ -39,6 +40,19 @@ def rest(method: str, path: str, body=None, prefer_minimal=False):
         print(f"HTTP {e.code} on {method} {path}")
         print(e.read().decode("utf-8", errors="replace")[:500])
         raise
+
+
+def rest_get_all(path: str) -> list:
+    """GET paginado con offset (PostgREST topa en 1000 filas por respuesta)."""
+    sep = "&" if "?" in path else "?"
+    out, off = [], 0
+    while True:
+        chunk = rest("GET", f"{path}{sep}limit=1000&offset={off}") or []
+        out.extend(chunk)
+        if len(chunk) < 1000:
+            break
+        off += 1000
+    return out
 
 
 def main():
@@ -99,12 +113,12 @@ def main():
     cat_ids = {c["slug"]: c["id"] for c in categories or []}
 
     # ─── 4. Build list of episodes to insert — skip those already present ──
-    existing_eps = rest("GET", "/rest/v1/episodes?select=youtube_id")
+    existing_eps = rest_get_all("/rest/v1/episodes?select=youtube_id")
     existing_yt_ids = {e["youtube_id"] for e in existing_eps or []}
     print(f"Existing episodes in DB: {len(existing_yt_ids)}")
 
     # Track max episode_number already used per (series_id)
-    ep_existing = rest("GET", "/rest/v1/episodes?select=series_id,episode_number")
+    ep_existing = rest_get_all("/rest/v1/episodes?select=series_id,episode_number")
     series_counter: dict[str, int] = {}
     for e in ep_existing or []:
         sid = e["series_id"]

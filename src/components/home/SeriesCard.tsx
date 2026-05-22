@@ -34,7 +34,7 @@ export function SeriesCard({
     >
       <div
         className={cn(
-          "relative overflow-hidden rounded-2xl bg-gray-100 ring-1 ring-gray-200 transition-all duration-500 ease-apple group-hover:-translate-y-1 group-hover:ring-gold-400/60 shadow-sm group-hover:shadow-lg",
+          "relative overflow-hidden rounded-2xl bg-gray-100 ring-1 ring-white/10 transition-all duration-500 ease-apple group-hover:-translate-y-1 group-hover:ring-gold-400/60 shadow-sm group-hover:shadow-lg",
           variant === "poster" ? "aspect-[2/3]" : "aspect-video"
         )}
       >

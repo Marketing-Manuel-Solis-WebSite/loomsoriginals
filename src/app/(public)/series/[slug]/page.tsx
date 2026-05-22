@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!series) return { title: "Serie" };
   const description =
     series.synopsis_es ??
-    `Serie original de Loom Originals producida por el Bufete Manuel Solís.`;
+    `Serie original de Looms Originals producida por Law Offices of Manuel Solís.`;
   const url = `${SITE.url}/series/${series.slug}`;
   const image =
     series.backdrop_url ??
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     },
     openGraph: {
       type: "video.tv_show",
-      title: `${series.title_es} — Loom Originals`,
+      title: `${series.title_es} — Looms Originals`,
       description,
       url,
       siteName: SITE.name,
@@ -108,6 +108,7 @@ export default async function SeriesPage({ params }: { params: Params }) {
                 aria-hidden
                 fill
                 priority
+                fetchPriority="high"
                 sizes="100vw"
                 className="object-cover opacity-30"
                 unoptimized={backdrop.includes("ytimg.com")}
@@ -128,10 +129,10 @@ export default async function SeriesPage({ params }: { params: Params }) {
                 alt={`${series.title_es} poster`}
                 width={240}
                 height={360}
-                className="rounded-2xl ring-1 ring-gray-200 shadow-lg"
+                className="rounded-2xl ring-1 ring-white/10 shadow-lg"
               />
             ) : backdrop ? (
-              <div className="relative aspect-[2/3] overflow-hidden rounded-2xl ring-1 ring-gray-200 shadow-lg">
+              <div className="relative aspect-[2/3] overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-lg">
                 <Image
                   src={backdrop}
                   alt={series.title_es}
@@ -146,9 +147,9 @@ export default async function SeriesPage({ params }: { params: Params }) {
           <div className="animate-blur-in">
             <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-700">
               <span className="h-px w-8 bg-gold-500" />
-              Serie original de Loom
+              Serie original de Looms
             </p>
-            <h1 className="mt-5 font-display text-[clamp(2.5rem,7vw,5.5rem)] italic leading-[0.98] text-ink text-balance">
+            <h1 className="mt-5 font-display text-[clamp(2.5rem,7vw,5.5rem)] italic leading-[0.98] text-white text-balance">
               {series.title_es}
             </h1>
             <div className="mt-5 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-600">
@@ -190,7 +191,7 @@ export default async function SeriesPage({ params }: { params: Params }) {
         <section key={season.id} className="py-14">
           <Container size="xl">
             <div className="mb-8 flex items-center justify-between">
-              <h2 className="font-display text-3xl italic text-ink">
+              <h2 className="font-display text-3xl italic text-white">
                 {season.title_es ?? `Temporada ${season.season_number}`}
               </h2>
               <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-700">
@@ -216,7 +217,7 @@ export default async function SeriesPage({ params }: { params: Params }) {
                       sizes="240px"
                     />
                     <div className="min-w-0">
-                      <h3 className="line-clamp-1 text-[17px] font-medium text-ink group-hover:text-gold-700 transition-colors">
+                      <h3 className="line-clamp-1 text-[17px] font-medium text-white group-hover:text-gold-700 transition-colors">
                         {ep.title_es}
                       </h3>
                       {ep.synopsis_es ? (

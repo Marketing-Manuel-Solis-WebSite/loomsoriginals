@@ -64,7 +64,7 @@ export function Footer() {
             <Logo subtitle className="scale-110 origin-left" />
             <p className="mt-5 text-sm leading-relaxed text-gray-600 text-pretty">
               Un estudio editorial de historias migrantes. Serie insignia:{" "}
-              <span className="italic text-ink">Uniendo Familias con Manuel Solís</span>. Producido
+              <span className="italic text-white">Uniendo Familias con Manuel Solís</span>. Producido
               por Bufete Manuel Solís, firma líder en inmigración en Estados Unidos.
             </p>
             <div className="mt-6 flex items-center gap-1">
@@ -108,7 +108,7 @@ export function Footer() {
                       {external || link.href.startsWith("http") || link.href.startsWith("tel:") ? (
                         <a
                           href={link.href}
-                          className="text-sm text-gray-600 transition-colors hover:text-ink"
+                          className="text-sm text-gray-600 transition-colors hover:text-white"
                           target={link.href.startsWith("tel:") ? undefined : "_blank"}
                           rel="noopener noreferrer"
                         >
@@ -117,7 +117,7 @@ export function Footer() {
                       ) : (
                         <Link
                           href={link.href}
-                          className="text-sm text-gray-600 transition-colors hover:text-ink"
+                          className="text-sm text-gray-600 transition-colors hover:text-white"
                         >
                           {link.label}
                         </Link>
@@ -143,11 +143,11 @@ export function Footer() {
                 })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-ink hover:text-gold-700"
+                className="text-white hover:text-gold-700"
               >
                 Bufete Manuel Solís
               </a>
-              . © {new Date().getFullYear()} Loom Originals.
+              . © {new Date().getFullYear()} Looms Originals.
             </p>
           </div>
           <p className="max-w-md text-xs leading-relaxed text-gray-500">
@@ -175,7 +175,7 @@ function SocialIcon({
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className="grid h-10 w-10 place-items-center rounded-full text-gray-600 transition-all hover:bg-gray-100 hover:text-ink hover:scale-110"
+      className="grid h-10 w-10 place-items-center rounded-full text-gray-600 transition-all duration-400 ease-apple hover:bg-white hover:text-ink hover:scale-110 hover:shadow-md hover:ring-1 hover:ring-gold-300/40"
     >
       {children}
     </a>

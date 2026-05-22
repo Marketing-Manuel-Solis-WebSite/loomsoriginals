@@ -22,7 +22,7 @@ export function Thumbnail({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-2xl bg-gray-100 ring-1 ring-gray-200",
+        "relative overflow-hidden rounded-2xl bg-gray-100 ring-1 ring-white/10",
         aspect === "video" && "aspect-video",
         aspect === "poster" && "aspect-[2/3]",
         aspect === "backdrop" && "aspect-[21/9]",
